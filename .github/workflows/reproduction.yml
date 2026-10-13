@@ -26,6 +26,7 @@ jobs:
           python3 scripts/test-publication-checksums.py
           python3 scripts/test-https-config.py
           python3 scripts/test-rootfs-image-builder.py
+          sudo python3 scripts/test-overlay-integration.py
           python3 scripts/test-reboot-bootloader.py
   fixed-kernel-build:
     runs-on: ubuntu-24.04
