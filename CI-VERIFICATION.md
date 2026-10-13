@@ -15,7 +15,9 @@ bc5e01f3dc4d2c950f61d542a77ae1e3b2104e6fa16d75992a1bc15e944852f9。
 
 首轮upload-artifact默认排除隐藏文件，.config未包含在下载包中。
 已核对固定版本action参数并添加include-hidden-files:true，重新验证的
-运行38366464641尚在进行，不能提前声称新产物包含实际配置。
+运行38366464641也已完成，两个job均success。下载的新产物包含实际.config，
+直接计算SHA256与公开最终配置相同。新zImage SHA256为
+bd81340ba1ddf733c19a69800ee0c50301a7160761f2babbb165f5c4559d975c。
 
 该CI zImage和之前实机候选的哈希不同。Linux构建时间、版本和构建环境
 等可能影响二进制；本轮没有建立逐字节可重复构建的保证。CI程序是新的
