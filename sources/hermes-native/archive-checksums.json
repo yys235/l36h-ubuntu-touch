@@ -1,0 +1,40 @@
+{
+  "status": "source-archives-preserved; build-dependency-recipe-pending",
+  "archives": [
+    {
+      "name": "cffi-2.1.1.tar.gz",
+      "bytes": 530807,
+      "sha256": "dd31f52ea1086513bb9df30f8fcee9b8918323ae067a3d5b78bc826a000712be"
+    },
+    {
+      "name": "firecrawl_anydoc-0.2.4.tar.gz",
+      "bytes": 270706,
+      "sha256": "3e29460272fea81cde08fd5af11f6b0f1ff05919214ddc939867f72362c83032"
+    },
+    {
+      "name": "httptools-0.8.0.tar.gz",
+      "bytes": 271342,
+      "sha256": "6b2a32f18d97e16e90827d7a819ffa8dbd8cc245fc4e1fa9d1095b54ef4bd999"
+    },
+    {
+      "name": "libheif-1.23.6.tar.gz",
+      "bytes": 2311710,
+      "sha256": "c9a00b0452f5c16d72ef71e5e40c0e90fbe2ad37148d27a1b2f9bb21546f5f03"
+    },
+    {
+      "name": "pillow_heif-1.8.1.tar.gz",
+      "bytes": 17395786,
+      "sha256": "521ebffb8a181d56c3904e5a61f20903edee0d9d3275967b8fb345f866215c06"
+    },
+    {
+      "name": "pillow-12.3.0.tar.gz",
+      "bytes": 47025035,
+      "sha256": "3b8182a766685eaa002637e28b4ec8d6b18819a0c71f579bf0dbaa5830297cce"
+    },
+    {
+      "name": "psutil-7.2.2.tar.gz",
+      "bytes": 493740,
+      "sha256": "0746f5f8d406af344fd547f1c8daa5f5c33dbc293bb8d6a16d80b4bb88f59372"
+    }
+  ]
+}

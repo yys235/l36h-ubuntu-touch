@@ -1,0 +1,99 @@
+{
+  "files": [
+    {
+      "sha256": "354549aa7385e83356bf6fa0357169d61881a34fb015f9cfad9534b3562bcc31",
+      "path": "overlay/README.md",
+      "bytes": 2405
+    },
+    {
+      "sha256": "877bf7983e3ad2632ee7dcbaae0e6ca7f38eb8a3b9e012ea64d3d8c0dca6c112",
+      "path": "overlay/etc/systemd/system/yuga-backlight-interface.service",
+      "bytes": 370
+    },
+    {
+      "sha256": "eb1322d785bbe2950538251bb3fe14e52ecb7f18a33226e9967ede8ef05f390d",
+      "path": "overlay/etc/systemd/system/yuga-server-awake.service",
+      "bytes": 382
+    },
+    {
+      "sha256": "90ff4cbcc97aa5cf7fd7f4af7204cd6fb923804c0be287de61aca10972a34d40",
+      "path": "overlay/etc/systemd/system/yuga-wlan-init.service",
+      "bytes": 268
+    },
+    {
+      "sha256": "aa35b438bd12b6d67620bce293b8a00e9d2ac649e313911f18e1a35a70963fb9",
+      "path": "overlay/etc/systemd/system/bluetooth-touch.service.d/30-yuga-smd.conf",
+      "bytes": 248
+    },
+    {
+      "sha256": "51186d245345235c4afafe8d71f485e154eae193ff02420fc9da8ef1c344eb75",
+      "path": "overlay/etc/systemd/system/repowerd.service.d/yuga-backlight.conf",
+      "bytes": 88
+    },
+    {
+      "sha256": "2c1f162faeb7bd926a6e41c0624133cf11bceac199d1aa60801ad21bddd702b3",
+      "path": "overlay/etc/systemd/system/upower.service.d/10-yuga-kernel.conf",
+      "bytes": 26
+    },
+    {
+      "sha256": "62147015563667b698486e2f8b51d73a11e5aa06c86e26abb71cbc12d9f501d2",
+      "path": "overlay/etc/systemd/system/usb-moded.service.d/10-yuga-usb.conf",
+      "bytes": 364
+    },
+    {
+      "sha256": "c7f4144ec44865b655b4e293a0daa707c6c77513aa56ae30b0b1daec91f7de56",
+      "path": "overlay/userdata/yuga-port/bluetooth-init.sh",
+      "bytes": 553
+    },
+    {
+      "sha256": "da704bc4caaaf508664d15058c6d89de5443ef68128de7201fe5094e729c0602",
+      "path": "overlay/usr/lib/lxc-android-config/70-yuga.rules",
+      "bytes": 12384
+    },
+    {
+      "sha256": "95b2da27ff0a28523e9fd439dd77b12c6becd37086576dff65035f25d5702bae",
+      "path": "overlay/usr/lib/tmpfiles.d/yuga-sysfs.conf",
+      "bytes": 1848
+    },
+    {
+      "sha256": "3bdf747e4260af2c691c3da449b35d59ac955f5e4d8d28d12176154e0a685de6",
+      "path": "scripts/generate-yuga-udev.py",
+      "bytes": 3334
+    },
+    {
+      "sha256": "7f60bd252812f8884915037f5eff52f9d52b2d3da935a42f12dda5ca10f12e05",
+      "path": "scripts/test-yuga-udev.py",
+      "bytes": 1718
+    },
+    {
+      "sha256": "b0ea766634e386f707d4e204151fda12abb621464de623a10fdcf22a884fe198",
+      "path": "scripts/__pycache__/generate-yuga-udev.cpython-314.pyc",
+      "bytes": 5564
+    },
+    {
+      "sha256": "93e9ea9cde0058aedc3582becf3f9ed8aaad981f5918e673fcf71d9124c38279",
+      "path": "patches/yuga-lxc-no-console.patch",
+      "bytes": 255
+    },
+    {
+      "sha256": "951e34d5381cbc0cb399c5d549e6e0a0fce04bc074c78a2823bcfbe253778394",
+      "path": "sources/inputs/android_filesystem_config.h",
+      "bytes": 11298
+    },
+    {
+      "sha256": "3685a3d4fa879f65983c16219348e7123c82c3170eb43eb2d4fad0ba8aa2b41c",
+      "path": "sources/inputs/README.md",
+      "bytes": 747
+    },
+    {
+      "sha256": "5439b2967086849d1977e43719aa248fd6ca4459693f581a22d75911b4de5f49",
+      "path": "sources/inputs/ueventd.qcom.rc",
+      "bytes": 10590
+    }
+  ],
+  "regenerated_device_rules": 130,
+  "scope": "partial-system-overlay-and-generation-inputs",
+  "regenerated_sysfs_adjustments": 27,
+  "unit_tests_passed": 6,
+  "cold_boot_verified": false
+}

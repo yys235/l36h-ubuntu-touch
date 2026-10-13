@@ -1,0 +1,17 @@
+--- a/src/storage/phrase_index.h
++++ b/src/storage/phrase_index.h
+@@ -122,7 +122,13 @@
+      */
+     guint32 get_unigram_frequency(){
+         char * buf_begin = (char *)m_chunk.begin();
+-        return (*(guint32 *)(buf_begin + sizeof(guint8) + sizeof(guint8)));
++        // The serialized header has two bytes before the frequency.
++        // Copy into an aligned value: a guint32* cast can become an unaligned
++        // VFP load on ARM, which Linux 3.4 cannot emulate.
++        guint32 frequency;
++        memcpy(&frequency, buf_begin + sizeof(guint8) + sizeof(guint8),
++               sizeof(frequency));
++        return frequency;
+     }
+ 
+     /**

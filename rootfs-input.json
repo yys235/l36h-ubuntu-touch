@@ -1,0 +1,11 @@
+{
+  "device_package_included": false,
+  "bytes": 479463512,
+  "signature_verification_in_release_pipeline": "pending",
+  "upstream_url": "https://system-image.ubports.com/pool/rootfs-772a991f14920f49812dbbee764e2cff666ac351526f7d9f2661827595ebd66c.tar.xz",
+  "source_description": "2026-10-05T02:10:00Z_armhf_ubports/focal_392_5b311389261fe657e207034639a0a342e39f92d8",
+  "status": "official input archive, not integrated yuga release rootfs",
+  "archive": "assets/ut-focal-armhf-rootfs.tar.xz",
+  "signature": "assets/ut-focal-armhf-rootfs.tar.xz.asc",
+  "sha256": "44c0e3a6efb26be826d79df6bccf5371b540e42eb2aeb1bf46c010db5fbdd975"
+}

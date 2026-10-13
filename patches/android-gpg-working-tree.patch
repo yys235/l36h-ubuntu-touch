@@ -1,0 +1,26 @@
+diff --git a/cipher/dynload.c b/cipher/dynload.c
+index a68ef49..8f940fd 100644
+--- a/cipher/dynload.c
++++ b/cipher/dynload.c
+@@ -95,7 +95,7 @@ dynload_enum_module_names (int seq)
+ {
+   EXTLIST el = extensions;
+ 
+-  for (; el && el->name && seq; el = el->next, seq--)
++  for (; el && seq; el = el->next, seq--)
+     ;
+   return el? el->name:NULL;
+ }
+diff --git a/include/config.h b/include/config.h
+index 6fc6226..3c035f9 100644
+--- a/include/config.h
++++ b/include/config.h
+@@ -400,7 +400,7 @@
+ #define HAVE_STDLIB_H 1
+ 
+ /* Define to 1 if you have the `stpcpy' function. */
+-/* #undef HAVE_STPCPY */
++#define HAVE_STPCPY 1
+ 
+ /* Define to 1 if you have the `strcasecmp' function. */
+ #define HAVE_STRCASECMP 1

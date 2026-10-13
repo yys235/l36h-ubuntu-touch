@@ -1,0 +1,1612 @@
+{
+  "completed": true,
+  "projects": [
+    {
+      "path": "bionic",
+      "expected": "87f60e740e014c5fd783921fe228722a3d472bc6",
+      "actual": "87f60e740e014c5fd783921fe228722a3d472bc6",
+      "revision_matches": true,
+      "changes": []
+    },
+    {
+      "path": "build",
+      "expected": "732c00a67e2257b3e29865a3a1858084118dd932",
+      "actual": "732c00a67e2257b3e29865a3a1858084118dd932",
+      "revision_matches": true,
+      "changes": []
+    },
+    {
+      "path": "device/sony/fusion3-common",
+      "expected": "e5a1dcf2220cef0ac40964f115540b8a35111c46",
+      "actual": "e5a1dcf2220cef0ac40964f115540b8a35111c46",
+      "revision_matches": true,
+      "changes": []
+    },
+    {
+      "path": "device/sony/yuga",
+      "expected": "2e8bc5a8d4a22c90d3bf3170023e7acb627ca0d8",
+      "actual": "2e8bc5a8d4a22c90d3bf3170023e7acb627ca0d8",
+      "revision_matches": true,
+      "changes": [
+        " M BoardConfig.mk",
+        "?? initramfs.gz"
+      ]
+    },
+    {
+      "path": "external/busybox",
+      "expected": "3f4323752b58938a0c3f7c349cc488709502b9f5",
+      "actual": "3f4323752b58938a0c3f7c349cc488709502b9f5",
+      "revision_matches": true,
+      "changes": []
+    },
+    {
+      "path": "external/compiler-rt",
+      "expected": "c3562afa272d9cdbbb5d8d21a7b120109e9c3866",
+      "actual": "c3562afa272d9cdbbb5d8d21a7b120109e9c3866",
+      "revision_matches": true,
+      "changes": []
+    },
+    {
+      "path": "external/protobuf",
+      "expected": "bef01e8d4355956b11cf7f428666d6ed9c0cd0c3",
+      "actual": "bef01e8d4355956b11cf7f428666d6ed9c0cd0c3",
+      "revision_matches": true,
+      "changes": []
+    },
+    {
+      "path": "external/skia",
+      "expected": "9ef53d726a5d9d4fedea313ba5bc4a75ffbdc572",
+      "actual": "9ef53d726a5d9d4fedea313ba5bc4a75ffbdc572",
+      "revision_matches": true,
+      "changes": []
+    },
+    {
+      "path": "frameworks/av",
+      "expected": "9ed0bf70895155f97bb09172e0be4ccd1bfe2c60",
+      "actual": "9ed0bf70895155f97bb09172e0be4ccd1bfe2c60",
+      "revision_matches": true,
+      "changes": []
+    },
+    {
+      "path": "frameworks/base",
+      "expected": "bea4efcedd8d266f4fdf92da69d44645bb502644",
+      "actual": "bea4efcedd8d266f4fdf92da69d44645bb502644",
+      "revision_matches": true,
+      "changes": []
+    },
+    {
+      "path": "frameworks/native",
+      "expected": "a04e25a7ad1d4f6f2c04858043ff3f58d6606612",
+      "actual": "a04e25a7ad1d4f6f2c04858043ff3f58d6606612",
+      "revision_matches": true,
+      "changes": []
+    },
+    {
+      "path": "hardware/libhardware",
+      "expected": "98962f6e02e9b876d747ad00d243ffecba036993",
+      "actual": "98962f6e02e9b876d747ad00d243ffecba036993",
+      "revision_matches": true,
+      "changes": []
+    },
+    {
+      "path": "hardware/libhardware_legacy",
+      "expected": "000960ec72b6f6b944ec5aaaeb1161d8adc461dd",
+      "actual": "000960ec72b6f6b944ec5aaaeb1161d8adc461dd",
+      "revision_matches": true,
+      "changes": []
+    },
+    {
+      "path": "hardware/qcom/audio/default",
+      "expected": "fe6c5966d2a375534a0e203f8afc9b8d2e65369a",
+      "actual": "fe6c5966d2a375534a0e203f8afc9b8d2e65369a",
+      "revision_matches": true,
+      "changes": []
+    },
+    {
+      "path": "hardware/qcom/audio-caf/apq8084",
+      "expected": "a9bf1aa5507d94c89ea3e074d7198e8eb3d1f57b",
+      "actual": "a9bf1aa5507d94c89ea3e074d7198e8eb3d1f57b",
+      "revision_matches": true,
+      "changes": []
+    },
+    {
+      "path": "hardware/qcom/audio-caf/msm8916",
+      "expected": "1aa55eb3a97213be1c6e4a8645a3292cb9a1adc9",
+      "actual": "1aa55eb3a97213be1c6e4a8645a3292cb9a1adc9",
+      "revision_matches": true,
+      "changes": []
+    },
+    {
+      "path": "hardware/qcom/audio-caf/msm8937",
+      "expected": "9dbd0629b4a1f779351b59e6e27fbab068f01da2",
+      "actual": "9dbd0629b4a1f779351b59e6e27fbab068f01da2",
+      "revision_matches": true,
+      "changes": []
+    },
+    {
+      "path": "hardware/qcom/audio-caf/msm8952",
+      "expected": "e56c4e48207d5aa04899f0d5e48f20494624c0dd",
+      "actual": "e56c4e48207d5aa04899f0d5e48f20494624c0dd",
+      "revision_matches": true,
+      "changes": []
+    },
+    {
+      "path": "hardware/qcom/audio-caf/msm8960",
+      "expected": "79d25c3d8ca7542701669aad5c028d6417cdbb72",
+      "actual": "79d25c3d8ca7542701669aad5c028d6417cdbb72",
+      "revision_matches": true,
+      "changes": []
+    },
+    {
+      "path": "hardware/qcom/audio-caf/msm8974",
+      "expected": "ed564ae329c0a5bdb768aeb85f6785d8953a5f56",
+      "actual": "ed564ae329c0a5bdb768aeb85f6785d8953a5f56",
+      "revision_matches": true,
+      "changes": []
+    },
+    {
+      "path": "hardware/qcom/audio-caf/msm8994",
+      "expected": "b50fbfe91e3c0e9980227606f3d071d9d91c4b0a",
+      "actual": "b50fbfe91e3c0e9980227606f3d071d9d91c4b0a",
+      "revision_matches": true,
+      "changes": []
+    },
+    {
+      "path": "hardware/qcom/audio-caf/msm8996",
+      "expected": "d0f1eacd4f1b4dc73bdf1708691fd7c4f12fc9fd",
+      "actual": "d0f1eacd4f1b4dc73bdf1708691fd7c4f12fc9fd",
+      "revision_matches": true,
+      "changes": []
+    },
+    {
+      "path": "hardware/qcom/audio-caf/msm8998",
+      "expected": "0ae3ba70d7333793c9042fdbfa109d3e2eae9c1a",
+      "actual": "0ae3ba70d7333793c9042fdbfa109d3e2eae9c1a",
+      "revision_matches": true,
+      "changes": []
+    },
+    {
+      "path": "hardware/qcom/fm",
+      "expected": "31e3857ac875c76e834fbb08ea9c94855c9af8fd",
+      "actual": "31e3857ac875c76e834fbb08ea9c94855c9af8fd",
+      "revision_matches": true,
+      "changes": []
+    },
+    {
+      "path": "hardware/qcom/media-caf/msm8960",
+      "expected": "59415bbbcc69f9d239e01a9efdb2b935c99b6563",
+      "actual": "59415bbbcc69f9d239e01a9efdb2b935c99b6563",
+      "revision_matches": true,
+      "changes": []
+    },
+    {
+      "path": "libcore",
+      "expected": "85c439a64b732308ff5a768ab21f228b113c5aa2",
+      "actual": "85c439a64b732308ff5a768ab21f228b113c5aa2",
+      "revision_matches": true,
+      "changes": []
+    },
+    {
+      "path": "system/core",
+      "expected": "48a959c59d5df019cde7d22e582fc5062443b7bf",
+      "actual": "48a959c59d5df019cde7d22e582fc5062443b7bf",
+      "revision_matches": true,
+      "changes": []
+    },
+    {
+      "path": "system/netd",
+      "expected": "a0de82ab438826fee0f581fc9537b3e75eb2c063",
+      "actual": "a0de82ab438826fee0f581fc9537b3e75eb2c063",
+      "revision_matches": true,
+      "changes": []
+    },
+    {
+      "path": "system/security",
+      "expected": "a5bab4f61fc44389a0fce323e8d625293f2badef",
+      "actual": "a5bab4f61fc44389a0fce323e8d625293f2badef",
+      "revision_matches": true,
+      "changes": []
+    },
+    {
+      "path": "system/sepolicy",
+      "expected": "c3b37d0daba99837d3c00f2a03bdd36e57a3c22c",
+      "actual": "c3b37d0daba99837d3c00f2a03bdd36e57a3c22c",
+      "revision_matches": true,
+      "changes": []
+    },
+    {
+      "path": "system/tools/aidl",
+      "expected": "e99089cca6c2103b443a64aa6a6868e41e5922c6",
+      "actual": "e99089cca6c2103b443a64aa6a6868e41e5922c6",
+      "revision_matches": true,
+      "changes": []
+    },
+    {
+      "path": "system/vold",
+      "expected": "ecee6742179430a4d360781c6d5e248b8c95083c",
+      "actual": "ecee6742179430a4d360781c6d5e248b8c95083c",
+      "revision_matches": true,
+      "changes": []
+    },
+    {
+      "path": "vendor/cm",
+      "expected": "3191a87c6c7c4a481437e7e5013e4c1701c28e95",
+      "actual": "3191a87c6c7c4a481437e7e5013e4c1701c28e95",
+      "revision_matches": true,
+      "changes": []
+    },
+    {
+      "path": "halium/audioflingerglue",
+      "expected": "616390ba45c304c69abb4378379c72aaf5c08b34",
+      "actual": "616390ba45c304c69abb4378379c72aaf5c08b34",
+      "revision_matches": true,
+      "changes": []
+    },
+    {
+      "path": "halium/halium-boot",
+      "expected": "499ea587183ea9407a0ccce64013b6cfa80d0efe",
+      "actual": "499ea587183ea9407a0ccce64013b6cfa80d0efe",
+      "revision_matches": true,
+      "changes": []
+    },
+    {
+      "path": "halium/devices",
+      "expected": "67c174f01fcb7d5e5d2e2b7fbacf46359db88bf0",
+      "actual": "67c174f01fcb7d5e5d2e2b7fbacf46359db88bf0",
+      "revision_matches": true,
+      "changes": []
+    },
+    {
+      "path": "external/libarchive",
+      "expected": "17c59ebeab6efd772dd3e770022fc9628032d899",
+      "actual": "17c59ebeab6efd772dd3e770022fc9628032d899",
+      "revision_matches": true,
+      "changes": []
+    },
+    {
+      "path": "halium/hybris-boot",
+      "expected": "9b328155366e489cd6fca88862884f69adf7a16c",
+      "actual": "9b328155366e489cd6fca88862884f69adf7a16c",
+      "revision_matches": true,
+      "changes": []
+    },
+    {
+      "path": "halium/libhybris",
+      "expected": "a57c8273ee5b681dc482ecadb3cf01f9cd990f3d",
+      "actual": "a57c8273ee5b681dc482ecadb3cf01f9cd990f3d",
+      "revision_matches": true,
+      "changes": []
+    },
+    {
+      "path": "build/kati",
+      "expected": "bc43789a938c10cb00b81ddf08239c1b4cea48bb",
+      "actual": "bc43789a938c10cb00b81ddf08239c1b4cea48bb",
+      "revision_matches": true,
+      "changes": []
+    },
+    {
+      "path": "development",
+      "expected": "16d18b333312066adda31feb55aa47883f907797",
+      "actual": "16d18b333312066adda31feb55aa47883f907797",
+      "revision_matches": true,
+      "changes": []
+    },
+    {
+      "path": "device/qcom/common",
+      "expected": "d1dacc6c79481f2f1e720a2cb14401a3593c4e26",
+      "actual": "d1dacc6c79481f2f1e720a2cb14401a3593c4e26",
+      "revision_matches": true,
+      "changes": []
+    },
+    {
+      "path": "device/qcom/sepolicy",
+      "expected": "fb88e713de861bdc270f47dd1998c2ecdac0d0e4",
+      "actual": "fb88e713de861bdc270f47dd1998c2ecdac0d0e4",
+      "revision_matches": true,
+      "changes": []
+    },
+    {
+      "path": "device/sony/common",
+      "expected": "150770de40e7fe9ecc3cd54bb989560394058de2",
+      "actual": "150770de40e7fe9ecc3cd54bb989560394058de2",
+      "revision_matches": true,
+      "changes": []
+    },
+    {
+      "path": "external/aac",
+      "expected": "5283a71e6d7420256d49b1b18b6432e9a8d44a8e",
+      "actual": "5283a71e6d7420256d49b1b18b6432e9a8d44a8e",
+      "revision_matches": true,
+      "changes": []
+    },
+    {
+      "path": "external/ant-wireless/antradio-library",
+      "expected": "85290ef0527d2f4cf82fdc3ffc290c970ca57f6b",
+      "actual": "85290ef0527d2f4cf82fdc3ffc290c970ca57f6b",
+      "revision_matches": true,
+      "changes": []
+    },
+    {
+      "path": "external/boringssl",
+      "expected": "c9d9e0bd7fa17033cfb7cd6e5855b54b861746fa",
+      "actual": "c9d9e0bd7fa17033cfb7cd6e5855b54b861746fa",
+      "revision_matches": true,
+      "changes": []
+    },
+    {
+      "path": "external/bson",
+      "expected": "ad6fc5dbb5f4369e08f7543b1517c225281900c0",
+      "actual": "ad6fc5dbb5f4369e08f7543b1517c225281900c0",
+      "revision_matches": true,
+      "changes": []
+    },
+    {
+      "path": "external/bzip2",
+      "expected": "0820f67f09cbbbebb6b3991ce94842d4eb86a34f",
+      "actual": "0820f67f09cbbbebb6b3991ce94842d4eb86a34f",
+      "revision_matches": true,
+      "changes": []
+    },
+    {
+      "path": "external/connectivity",
+      "expected": "9a6a5e7b56f1e67c7e585d75f18eacc54398695d",
+      "actual": "9a6a5e7b56f1e67c7e585d75f18eacc54398695d",
+      "revision_matches": true,
+      "changes": []
+    },
+    {
+      "path": "external/e2fsprogs",
+      "expected": "2173635b09c10b6269dfb99f378c522c4d67761e",
+      "actual": "2173635b09c10b6269dfb99f378c522c4d67761e",
+      "revision_matches": true,
+      "changes": []
+    },
+    {
+      "path": "external/elfutils",
+      "expected": "78662f08979a031ca3de5a1a29e133bf671bc177",
+      "actual": "78662f08979a031ca3de5a1a29e133bf671bc177",
+      "revision_matches": true,
+      "changes": []
+    },
+    {
+      "path": "external/exfat",
+      "expected": "49c64dedccdfa3c071d57b37dc3ccb1a348450ee",
+      "actual": "49c64dedccdfa3c071d57b37dc3ccb1a348450ee",
+      "revision_matches": true,
+      "changes": []
+    },
+    {
+      "path": "external/f2fs-tools",
+      "expected": "d895e392df9d44c7e5ccabd90e5fa61eaa17da57",
+      "actual": "d895e392df9d44c7e5ccabd90e5fa61eaa17da57",
+      "revision_matches": true,
+      "changes": []
+    },
+    {
+      "path": "external/flac",
+      "expected": "e61e7f6ddef053657d27f4549d4ecd18c864a2e3",
+      "actual": "e61e7f6ddef053657d27f4549d4ecd18c864a2e3",
+      "revision_matches": true,
+      "changes": []
+    },
+    {
+      "path": "external/fsck_msdos",
+      "expected": "07346633a11772924a27e103bd1506582a4ad299",
+      "actual": "07346633a11772924a27e103bd1506582a4ad299",
+      "revision_matches": true,
+      "changes": []
+    },
+    {
+      "path": "external/fuse",
+      "expected": "3ecfa58e23f723914cb479262dbf393ee4821295",
+      "actual": "3ecfa58e23f723914cb479262dbf393ee4821295",
+      "revision_matches": true,
+      "changes": []
+    },
+    {
+      "path": "external/gptfdisk",
+      "expected": "425f03d0810008e0cc5239dc8fe78fa6a1ab0fec",
+      "actual": "425f03d0810008e0cc5239dc8fe78fa6a1ab0fec",
+      "revision_matches": true,
+      "changes": []
+    },
+    {
+      "path": "external/icu",
+      "expected": "68e53e3e1eee206b995ccd8813c0c5ada857c542",
+      "actual": "68e53e3e1eee206b995ccd8813c0c5ada857c542",
+      "revision_matches": true,
+      "changes": []
+    },
+    {
+      "path": "external/iproute2",
+      "expected": "3e14eafc10a540afa6981b0ed189109527cc80fd",
+      "actual": "3e14eafc10a540afa6981b0ed189109527cc80fd",
+      "revision_matches": true,
+      "changes": []
+    },
+    {
+      "path": "external/iptables",
+      "expected": "5ddb37e14493bf81aef44b28d6d69869c18829f6",
+      "actual": "5ddb37e14493bf81aef44b28d6d69869c18829f6",
+      "revision_matches": true,
+      "changes": []
+    },
+    {
+      "path": "external/jemalloc",
+      "expected": "836d53673c7e36381d249618ca238c52d084096a",
+      "actual": "836d53673c7e36381d249618ca238c52d084096a",
+      "revision_matches": true,
+      "changes": []
+    },
+    {
+      "path": "external/libnetfilter_conntrack",
+      "expected": "771a11bae461bccb23ee52f269c61c4bbdf4e152",
+      "actual": "771a11bae461bccb23ee52f269c61c4bbdf4e152",
+      "revision_matches": true,
+      "changes": []
+    },
+    {
+      "path": "external/libnfnetlink",
+      "expected": "80ba60f6a117f73fb4497615511dac44870eacdb",
+      "actual": "80ba60f6a117f73fb4497615511dac44870eacdb",
+      "revision_matches": true,
+      "changes": []
+    },
+    {
+      "path": "external/libselinux",
+      "expected": "dd6ce4aaa509a67ea77edc57137c71c2d9c85da0",
+      "actual": "dd6ce4aaa509a67ea77edc57137c71c2d9c85da0",
+      "revision_matches": true,
+      "changes": []
+    },
+    {
+      "path": "external/libtar",
+      "expected": "70ac35f4e6479e25a1b042a56998553d8ed0ee2c",
+      "actual": "70ac35f4e6479e25a1b042a56998553d8ed0ee2c",
+      "revision_matches": true,
+      "changes": []
+    },
+    {
+      "path": "external/lzma",
+      "expected": "f48cbddec33db2f2ca6380fc21806022481074f3",
+      "actual": "f48cbddec33db2f2ca6380fc21806022481074f3",
+      "revision_matches": true,
+      "changes": []
+    },
+    {
+      "path": "external/mksh",
+      "expected": "85bec4ffaa9d792ee0272c6253196175412c9249",
+      "actual": "85bec4ffaa9d792ee0272c6253196175412c9249",
+      "revision_matches": true,
+      "changes": []
+    },
+    {
+      "path": "external/ntfs-3g",
+      "expected": "5effca10f077fcd50d3fd9e3719a8465c579f229",
+      "actual": "5effca10f077fcd50d3fd9e3719a8465c579f229",
+      "revision_matches": true,
+      "changes": []
+    },
+    {
+      "path": "external/pigz",
+      "expected": "c2ad382df640cadd200bed831a60c18014051d1b",
+      "actual": "c2ad382df640cadd200bed831a60c18014051d1b",
+      "revision_matches": true,
+      "changes": []
+    },
+    {
+      "path": "external/stagefright-plugins",
+      "expected": "931ae6b373e024d6ae5c4935a09cf4a2741104a2",
+      "actual": "931ae6b373e024d6ae5c4935a09cf4a2741104a2",
+      "revision_matches": true,
+      "changes": []
+    },
+    {
+      "path": "external/stlport",
+      "expected": "984b843229e8993571b5d10dad05ec9eae27e129",
+      "actual": "984b843229e8993571b5d10dad05ec9eae27e129",
+      "revision_matches": true,
+      "changes": []
+    },
+    {
+      "path": "external/tinyalsa",
+      "expected": "976d8f1ee8e3c0f66ec8e85a8ff27bd894f12900",
+      "actual": "976d8f1ee8e3c0f66ec8e85a8ff27bd894f12900",
+      "revision_matches": true,
+      "changes": []
+    },
+    {
+      "path": "external/tinycompress",
+      "expected": "439a4ecddc7b01bc9b94a34e783e2026e4ed4c78",
+      "actual": "439a4ecddc7b01bc9b94a34e783e2026e4ed4c78",
+      "revision_matches": true,
+      "changes": []
+    },
+    {
+      "path": "external/toybox",
+      "expected": "3125af0e06f45e03d6411c182fb1b1318733e259",
+      "actual": "3125af0e06f45e03d6411c182fb1b1318733e259",
+      "revision_matches": true,
+      "changes": []
+    },
+    {
+      "path": "external/wpa_supplicant_8",
+      "expected": "9bc0bf87afd4663c3c2eec97dc43642fd2abed51",
+      "actual": "9bc0bf87afd4663c3c2eec97dc43642fd2abed51",
+      "revision_matches": true,
+      "changes": []
+    },
+    {
+      "path": "external/zlib",
+      "expected": "a58f28c2ee8ae9f39757694f898d5e65140f9f1a",
+      "actual": "a58f28c2ee8ae9f39757694f898d5e65140f9f1a",
+      "revision_matches": true,
+      "changes": []
+    },
+    {
+      "path": "hardware/broadcom/libbt",
+      "expected": "47e84fecfa44eca54a603c908a45f56ebcab1d3c",
+      "actual": "47e84fecfa44eca54a603c908a45f56ebcab1d3c",
+      "revision_matches": true,
+      "changes": []
+    },
+    {
+      "path": "hardware/broadcom/wlan",
+      "expected": "7d31a8906845c665a9e59a1131766bc647c91a24",
+      "actual": "7d31a8906845c665a9e59a1131766bc647c91a24",
+      "revision_matches": true,
+      "changes": []
+    },
+    {
+      "path": "hardware/intel/common/libmix",
+      "expected": "97e15b8898fcc3406bb08ca0746cdd7f49e81de9",
+      "actual": "97e15b8898fcc3406bb08ca0746cdd7f49e81de9",
+      "revision_matches": true,
+      "changes": []
+    },
+    {
+      "path": "hardware/intel/common/libva",
+      "expected": "497db87851a0ea0c2d1522cae66896dbab6f463b",
+      "actual": "497db87851a0ea0c2d1522cae66896dbab6f463b",
+      "revision_matches": true,
+      "changes": []
+    },
+    {
+      "path": "hardware/intel/common/libwsbm",
+      "expected": "0dc67b0d9afd3b43cfb680508e8ad2b84eff79e0",
+      "actual": "0dc67b0d9afd3b43cfb680508e8ad2b84eff79e0",
+      "revision_matches": true,
+      "changes": []
+    },
+    {
+      "path": "hardware/intel/common/omx-components",
+      "expected": "e9ffbbc532c238bdff9fa7375999d115cee2f20d",
+      "actual": "e9ffbbc532c238bdff9fa7375999d115cee2f20d",
+      "revision_matches": true,
+      "changes": []
+    },
+    {
+      "path": "hardware/intel/common/utils",
+      "expected": "56174842eb08355cc9e5c648aaa74faf0188f6e4",
+      "actual": "56174842eb08355cc9e5c648aaa74faf0188f6e4",
+      "revision_matches": true,
+      "changes": []
+    },
+    {
+      "path": "hardware/intel/img/hwcomposer",
+      "expected": "667d537fafd5f092252c503b671ac6def698ebdf",
+      "actual": "667d537fafd5f092252c503b671ac6def698ebdf",
+      "revision_matches": true,
+      "changes": []
+    },
+    {
+      "path": "hardware/intel/img/psb_headers",
+      "expected": "7bb0667b1f08f8d331dbd673398ebd87061f006c",
+      "actual": "7bb0667b1f08f8d331dbd673398ebd87061f006c",
+      "revision_matches": true,
+      "changes": []
+    },
+    {
+      "path": "hardware/intel/img/psb_video",
+      "expected": "0ab4bdd598b5d2269ddd8399a0df43f361e256e9",
+      "actual": "0ab4bdd598b5d2269ddd8399a0df43f361e256e9",
+      "revision_matches": true,
+      "changes": []
+    },
+    {
+      "path": "hardware/invensense",
+      "expected": "1693470c8877f7daf77ade928882fc8642a6b805",
+      "actual": "1693470c8877f7daf77ade928882fc8642a6b805",
+      "revision_matches": true,
+      "changes": []
+    },
+    {
+      "path": "hardware/qcom/bootctrl",
+      "expected": "cab262e88000445cdcb8ae6da1fa2f747232b93c",
+      "actual": "cab262e88000445cdcb8ae6da1fa2f747232b93c",
+      "revision_matches": true,
+      "changes": []
+    },
+    {
+      "path": "hardware/qcom/bt",
+      "expected": "7a172cecda4338ec2377c28213b9d574936750e0",
+      "actual": "7a172cecda4338ec2377c28213b9d574936750e0",
+      "revision_matches": true,
+      "changes": []
+    },
+    {
+      "path": "hardware/qcom/bt-caf",
+      "expected": "328d8af173bfeb4947ebefd707e8c88bb8a05019",
+      "actual": "328d8af173bfeb4947ebefd707e8c88bb8a05019",
+      "revision_matches": true,
+      "changes": []
+    },
+    {
+      "path": "hardware/qcom/camera",
+      "expected": "d228805ff1cb383c1cfbe2b149767ef0f6566e04",
+      "actual": "d228805ff1cb383c1cfbe2b149767ef0f6566e04",
+      "revision_matches": true,
+      "changes": []
+    },
+    {
+      "path": "hardware/qcom/display",
+      "expected": "f3072db9f23da81ed0b2e54008db885dc9fef1fc",
+      "actual": "f3072db9f23da81ed0b2e54008db885dc9fef1fc",
+      "revision_matches": true,
+      "changes": []
+    },
+    {
+      "path": "hardware/qcom/display-caf/apq8084",
+      "expected": "901b7974c03e70e62d9d82646fccd959ab6e8e78",
+      "actual": "901b7974c03e70e62d9d82646fccd959ab6e8e78",
+      "revision_matches": true,
+      "changes": []
+    },
+    {
+      "path": "hardware/qcom/display-caf/msm8916",
+      "expected": "b9fc743774eed9c1f7232492f11c01a165a933b7",
+      "actual": "b9fc743774eed9c1f7232492f11c01a165a933b7",
+      "revision_matches": true,
+      "changes": []
+    },
+    {
+      "path": "hardware/qcom/display-caf/msm8937",
+      "expected": "b7a30106765923e77393a511a3b5bd847c9dfa79",
+      "actual": "b7a30106765923e77393a511a3b5bd847c9dfa79",
+      "revision_matches": true,
+      "changes": []
+    },
+    {
+      "path": "hardware/qcom/display-caf/msm8952",
+      "expected": "7b73a212e4050d7cb1ea38aceff0e650f9d0f9ec",
+      "actual": "7b73a212e4050d7cb1ea38aceff0e650f9d0f9ec",
+      "revision_matches": true,
+      "changes": []
+    },
+    {
+      "path": "hardware/qcom/display-caf/msm8960",
+      "expected": "afe13f3f880b49da3901d03c3620423c18cf2abb",
+      "actual": "afe13f3f880b49da3901d03c3620423c18cf2abb",
+      "revision_matches": true,
+      "changes": []
+    },
+    {
+      "path": "hardware/qcom/display-caf/msm8974",
+      "expected": "966a222f0a09e69bbdd730ad847bfe1f78fce68a",
+      "actual": "966a222f0a09e69bbdd730ad847bfe1f78fce68a",
+      "revision_matches": true,
+      "changes": []
+    },
+    {
+      "path": "hardware/qcom/display-caf/msm8994",
+      "expected": "39bc982df9f0908f4f6276b11f939cdd16beb156",
+      "actual": "39bc982df9f0908f4f6276b11f939cdd16beb156",
+      "revision_matches": true,
+      "changes": []
+    },
+    {
+      "path": "hardware/qcom/display-caf/msm8996",
+      "expected": "3a068b86de44258f6cc7ac48a214e01d3fb4c266",
+      "actual": "3a068b86de44258f6cc7ac48a214e01d3fb4c266",
+      "revision_matches": true,
+      "changes": []
+    },
+    {
+      "path": "hardware/qcom/display-caf/msm8998",
+      "expected": "3f485baa35dcc36a6a8ff8e6cf7312ee1f0515cf",
+      "actual": "3f485baa35dcc36a6a8ff8e6cf7312ee1f0515cf",
+      "revision_matches": true,
+      "changes": []
+    },
+    {
+      "path": "hardware/qcom/gps",
+      "expected": "05f4309dcfdba6154311f4afb6905d879fb315cf",
+      "actual": "05f4309dcfdba6154311f4afb6905d879fb315cf",
+      "revision_matches": true,
+      "changes": []
+    },
+    {
+      "path": "hardware/qcom/keymaster",
+      "expected": "9c33b1d7f1f4a8e30f4d3a56c3a0b52fed7e4f26",
+      "actual": "9c33b1d7f1f4a8e30f4d3a56c3a0b52fed7e4f26",
+      "revision_matches": true,
+      "changes": []
+    },
+    {
+      "path": "hardware/qcom/media",
+      "expected": "f302987700716051955cb450c1c6adb00d6da4a6",
+      "actual": "f302987700716051955cb450c1c6adb00d6da4a6",
+      "revision_matches": true,
+      "changes": []
+    },
+    {
+      "path": "hardware/qcom/media-caf/apq8084",
+      "expected": "566e8db8b4cadeca335a6cfea1f255fbb216d236",
+      "actual": "566e8db8b4cadeca335a6cfea1f255fbb216d236",
+      "revision_matches": true,
+      "changes": []
+    },
+    {
+      "path": "hardware/qcom/media-caf/msm8916",
+      "expected": "cbb359b1bb5a3783382f87597bec28dbcf0402af",
+      "actual": "cbb359b1bb5a3783382f87597bec28dbcf0402af",
+      "revision_matches": true,
+      "changes": []
+    },
+    {
+      "path": "hardware/qcom/media-caf/msm8937",
+      "expected": "de0c52ed54b1efad26a9ffcc8074891984c0d682",
+      "actual": "de0c52ed54b1efad26a9ffcc8074891984c0d682",
+      "revision_matches": true,
+      "changes": []
+    },
+    {
+      "path": "hardware/qcom/media-caf/msm8952",
+      "expected": "726d5c5370704d79ba1b54f361fe7deebd6dba6d",
+      "actual": "726d5c5370704d79ba1b54f361fe7deebd6dba6d",
+      "revision_matches": true,
+      "changes": []
+    },
+    {
+      "path": "hardware/qcom/media-caf/msm8974",
+      "expected": "30ca21aa842ab082a25678869f223837e78cc789",
+      "actual": "30ca21aa842ab082a25678869f223837e78cc789",
+      "revision_matches": true,
+      "changes": []
+    },
+    {
+      "path": "hardware/qcom/media-caf/msm8994",
+      "expected": "1633dd56a30027f64e9920d39fb05517e38cc467",
+      "actual": "1633dd56a30027f64e9920d39fb05517e38cc467",
+      "revision_matches": true,
+      "changes": []
+    },
+    {
+      "path": "hardware/qcom/media-caf/msm8996",
+      "expected": "15b3a0c6ee6fa74c9b3b318f9792f8772499851e",
+      "actual": "15b3a0c6ee6fa74c9b3b318f9792f8772499851e",
+      "revision_matches": true,
+      "changes": []
+    },
+    {
+      "path": "hardware/qcom/media-caf/msm8998",
+      "expected": "2784e0e1d96e50a3bb7fbf455e2fd714caafc6f4",
+      "actual": "2784e0e1d96e50a3bb7fbf455e2fd714caafc6f4",
+      "revision_matches": true,
+      "changes": []
+    },
+    {
+      "path": "hardware/qcom/wlan",
+      "expected": "ed62a2fce1cd8f891862ec342c4500de6d49da3c",
+      "actual": "ed62a2fce1cd8f891862ec342c4500de6d49da3c",
+      "revision_matches": true,
+      "changes": []
+    },
+    {
+      "path": "hardware/qcom/wlan-caf",
+      "expected": "93c86319f93c3c0f2f9bcb15fb115d2c180d120a",
+      "actual": "93c86319f93c3c0f2f9bcb15fb115d2c180d120a",
+      "revision_matches": true,
+      "changes": []
+    },
+    {
+      "path": "hardware/ril",
+      "expected": "d8fb8ff10d860f683eb0794a4e75983dba37d03f",
+      "actual": "d8fb8ff10d860f683eb0794a4e75983dba37d03f",
+      "revision_matches": true,
+      "changes": []
+    },
+    {
+      "path": "hardware/ril-caf",
+      "expected": "ef31609cc12354e8c310a066f7bb28f10a9c35c5",
+      "actual": "ef31609cc12354e8c310a066f7bb28f10a9c35c5",
+      "revision_matches": true,
+      "changes": []
+    },
+    {
+      "path": "hardware/sony/thermanager",
+      "expected": "d951bd04fb4350c896c8c101f1300da01f74efbc",
+      "actual": "d951bd04fb4350c896c8c101f1300da01f74efbc",
+      "revision_matches": true,
+      "changes": []
+    },
+    {
+      "path": "hardware/ti/omap4xxx",
+      "expected": "b94c6fe6065530b9b10ac3be53a35906e81a155a",
+      "actual": "b94c6fe6065530b9b10ac3be53a35906e81a155a",
+      "revision_matches": true,
+      "changes": []
+    },
+    {
+      "path": "prebuilts/gcc/linux-x86/aarch64/aarch64-linux-android-4.9",
+      "expected": "7280ce2399316a5dbd8872e0bfe69435d8719230",
+      "actual": "7280ce2399316a5dbd8872e0bfe69435d8719230",
+      "revision_matches": true,
+      "changes": []
+    },
+    {
+      "path": "prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.9",
+      "expected": "48ef1e67aa261116d2c244a52a30b8ba044399ff",
+      "actual": "48ef1e67aa261116d2c244a52a30b8ba044399ff",
+      "revision_matches": true,
+      "changes": []
+    },
+    {
+      "path": "prebuilts/gcc/linux-x86/x86/x86_64-linux-android-4.9",
+      "expected": "b3acfc1f26aae5cf8da7301e89a2594ae945c060",
+      "actual": "b3acfc1f26aae5cf8da7301e89a2594ae945c060",
+      "revision_matches": true,
+      "changes": []
+    },
+    {
+      "path": "system/extras",
+      "expected": "f30ae7fd7508bed7974045d37b70030e24c7d4e6",
+      "actual": "f30ae7fd7508bed7974045d37b70030e24c7d4e6",
+      "revision_matches": true,
+      "changes": []
+    },
+    {
+      "path": "system/keymaster",
+      "expected": "a1bbfc0d483b5ca1389c1b81c183f525f59e552d",
+      "actual": "a1bbfc0d483b5ca1389c1b81c183f525f59e552d",
+      "revision_matches": true,
+      "changes": []
+    },
+    {
+      "path": "system/media",
+      "expected": "2c59244f7187b17fe2722c033d5159bde023e1c8",
+      "actual": "2c59244f7187b17fe2722c033d5159bde023e1c8",
+      "revision_matches": true,
+      "changes": []
+    },
+    {
+      "path": "system/qcom",
+      "expected": "7bebb68631204f95f736e5bfbe257d7295262ce5",
+      "actual": "7bebb68631204f95f736e5bfbe257d7295262ce5",
+      "revision_matches": true,
+      "changes": []
+    },
+    {
+      "path": "vendor/qcom/opensource/cryptfs_hw",
+      "expected": "5e14a550158f101e7c7ecdd55c06326e257a9603",
+      "actual": "5e14a550158f101e7c7ecdd55c06326e257a9603",
+      "revision_matches": true,
+      "changes": []
+    },
+    {
+      "path": "vendor/qcom/opensource/dataservices",
+      "expected": "ca40d290f95967963c1698b378e4927508f5bd01",
+      "actual": "ca40d290f95967963c1698b378e4927508f5bd01",
+      "revision_matches": true,
+      "changes": []
+    },
+    {
+      "path": "device/common",
+      "expected": "d49a18a17d624b41bcf79ad972ebfdb93f4c2045",
+      "actual": "d49a18a17d624b41bcf79ad972ebfdb93f4c2045",
+      "revision_matches": true,
+      "changes": []
+    },
+    {
+      "path": "device/google/contexthub",
+      "expected": "c77d0b6294d47fb26e942b4f0281f148191da6c9",
+      "actual": "c77d0b6294d47fb26e942b4f0281f148191da6c9",
+      "revision_matches": true,
+      "changes": []
+    },
+    {
+      "path": "halium/droidmedia",
+      "expected": "80de4445c86df576d6458be256d7907652016df2",
+      "actual": "80de4445c86df576d6458be256d7907652016df2",
+      "revision_matches": true,
+      "changes": []
+    },
+    {
+      "path": "abi/cpp",
+      "expected": "36b381298a4efb7c293d394d8b1acbda68230989",
+      "actual": "36b381298a4efb7c293d394d8b1acbda68230989",
+      "revision_matches": true,
+      "changes": []
+    },
+    {
+      "path": "build/blueprint",
+      "expected": "3a89d1ce9fe7a5160ee87ee11f99edbf540020fc",
+      "actual": "3a89d1ce9fe7a5160ee87ee11f99edbf540020fc",
+      "revision_matches": true,
+      "changes": []
+    },
+    {
+      "path": "build/soong",
+      "expected": "ff019aa4cff6f8636102003ac14de5442ea6758f",
+      "actual": "ff019aa4cff6f8636102003ac14de5442ea6758f",
+      "revision_matches": true,
+      "changes": []
+    },
+    {
+      "path": "external/bison",
+      "expected": "7467d52af437dd3dfea237a6865ab84bf258dee0",
+      "actual": "7467d52af437dd3dfea237a6865ab84bf258dee0",
+      "revision_matches": true,
+      "changes": [
+        " M lib/fseterr.c",
+        "?? .version",
+        "?? config.h.in",
+        "?? doc/cross-options.texi~"
+      ]
+    },
+    {
+      "path": "external/bsdiff",
+      "expected": "fb97da5a9336bfef42d29f0934f58ea769f2343b",
+      "actual": "fb97da5a9336bfef42d29f0934f58ea769f2343b",
+      "revision_matches": true,
+      "changes": []
+    },
+    {
+      "path": "external/clang",
+      "expected": "af1dacacb12f2732169a7276e0f4f90822ddd21f",
+      "actual": "af1dacacb12f2732169a7276e0f4f90822ddd21f",
+      "revision_matches": true,
+      "changes": []
+    },
+    {
+      "path": "external/dlmalloc",
+      "expected": "6661f3ca66b55d8f5a57b96fec97efaf8f3897a5",
+      "actual": "6661f3ca66b55d8f5a57b96fec97efaf8f3897a5",
+      "revision_matches": true,
+      "changes": []
+    },
+    {
+      "path": "external/dng_sdk",
+      "expected": "25de6390906b0746cabfd1be2085f6e2b4ab9dee",
+      "actual": "25de6390906b0746cabfd1be2085f6e2b4ab9dee",
+      "revision_matches": true,
+      "changes": []
+    },
+    {
+      "path": "external/expat",
+      "expected": "7f23da12fcc8eb92a20ed4c2b758447c4fa77efb",
+      "actual": "7f23da12fcc8eb92a20ed4c2b758447c4fa77efb",
+      "revision_matches": true,
+      "changes": []
+    },
+    {
+      "path": "external/fec",
+      "expected": "791afbe58ff9f55145c4adf632ab8cc9ca6e5686",
+      "actual": "791afbe58ff9f55145c4adf632ab8cc9ca6e5686",
+      "revision_matches": true,
+      "changes": []
+    },
+    {
+      "path": "external/freetype",
+      "expected": "ed337850ede0a03e09e802317b5f65912d7405fc",
+      "actual": "ed337850ede0a03e09e802317b5f65912d7405fc",
+      "revision_matches": true,
+      "changes": []
+    },
+    {
+      "path": "external/giflib",
+      "expected": "4fc9a928f7abebfcc589d4648488246434285888",
+      "actual": "4fc9a928f7abebfcc589d4648488246434285888",
+      "revision_matches": true,
+      "changes": []
+    },
+    {
+      "path": "external/gmock",
+      "expected": "a78d46728dda2809b1951be54a7efdd31e09dc17",
+      "actual": "a78d46728dda2809b1951be54a7efdd31e09dc17",
+      "revision_matches": true,
+      "changes": []
+    },
+    {
+      "path": "external/gtest",
+      "expected": "81cb746e0ba7ce98a77b175139c7425fd41021c6",
+      "actual": "81cb746e0ba7ce98a77b175139c7425fd41021c6",
+      "revision_matches": true,
+      "changes": []
+    },
+    {
+      "path": "external/harfbuzz_ng",
+      "expected": "9a9975d24066e395a1de360a8afacfa4e8a8969e",
+      "actual": "9a9975d24066e395a1de360a8afacfa4e8a8969e",
+      "revision_matches": true,
+      "changes": []
+    },
+    {
+      "path": "external/jhead",
+      "expected": "e4d63ee20e8f89cedb4c59bbb14decf485960201",
+      "actual": "e4d63ee20e8f89cedb4c59bbb14decf485960201",
+      "revision_matches": true,
+      "changes": []
+    },
+    {
+      "path": "external/jsmn",
+      "expected": "cbfa1a02b28b588e16ec221519c6ec17b1c14568",
+      "actual": "cbfa1a02b28b588e16ec221519c6ec17b1c14568",
+      "revision_matches": true,
+      "changes": []
+    },
+    {
+      "path": "external/jsoncpp",
+      "expected": "90c81b9c9aef09ef4ffb8de1779301734336d897",
+      "actual": "90c81b9c9aef09ef4ffb8de1779301734336d897",
+      "revision_matches": true,
+      "changes": []
+    },
+    {
+      "path": "external/kernel-headers",
+      "expected": "a4960127a8b1fdc23559c059bd82813529196e5c",
+      "actual": "a4960127a8b1fdc23559c059bd82813529196e5c",
+      "revision_matches": true,
+      "changes": []
+    },
+    {
+      "path": "external/libavc",
+      "expected": "7dd54e1e6705f592813b911e49db874984e3a24a",
+      "actual": "7dd54e1e6705f592813b911e49db874984e3a24a",
+      "revision_matches": true,
+      "changes": []
+    },
+    {
+      "path": "external/libcap",
+      "expected": "5fc5a50a942e6f863189b52d2a831730b36c3331",
+      "actual": "5fc5a50a942e6f863189b52d2a831730b36c3331",
+      "revision_matches": true,
+      "changes": []
+    },
+    {
+      "path": "external/libcap-ng",
+      "expected": "fd9ec1ca0febeb1e6947c2fb374d8de00fd81e6e",
+      "actual": "fd9ec1ca0febeb1e6947c2fb374d8de00fd81e6e",
+      "revision_matches": true,
+      "changes": []
+    },
+    {
+      "path": "external/libcxx",
+      "expected": "d8170174bf66c98fca967b7133783c0c95292993",
+      "actual": "d8170174bf66c98fca967b7133783c0c95292993",
+      "revision_matches": true,
+      "changes": []
+    },
+    {
+      "path": "external/libcxxabi",
+      "expected": "fb11cb31ea214386a681d2f28b126b310ac53657",
+      "actual": "fb11cb31ea214386a681d2f28b126b310ac53657",
+      "revision_matches": true,
+      "changes": []
+    },
+    {
+      "path": "external/libdivsufsort",
+      "expected": "ae4cb1345c1db6584e7492930f1dac565ad9cfad",
+      "actual": "ae4cb1345c1db6584e7492930f1dac565ad9cfad",
+      "revision_matches": true,
+      "changes": []
+    },
+    {
+      "path": "external/libdrm",
+      "expected": "d6513d7e0f454db11eb469ef9629ff06582a3003",
+      "actual": "d6513d7e0f454db11eb469ef9629ff06582a3003",
+      "revision_matches": true,
+      "changes": []
+    },
+    {
+      "path": "external/libgsm",
+      "expected": "2f66c771f18317147e446fab5a95082d18a6db20",
+      "actual": "2f66c771f18317147e446fab5a95082d18a6db20",
+      "revision_matches": true,
+      "changes": []
+    },
+    {
+      "path": "external/libjpeg-turbo",
+      "expected": "0141f11c240da93c012a9ed4bb35308d86d77454",
+      "actual": "0141f11c240da93c012a9ed4bb35308d86d77454",
+      "revision_matches": true,
+      "changes": []
+    },
+    {
+      "path": "external/liblzf",
+      "expected": "a88b9629447deabe8697d2f8fd4cc70aa6e1b563",
+      "actual": "a88b9629447deabe8697d2f8fd4cc70aa6e1b563",
+      "revision_matches": true,
+      "changes": []
+    },
+    {
+      "path": "external/libnl",
+      "expected": "a96b31573c9e18cdd5feb9a448479c38e4b7ab80",
+      "actual": "a96b31573c9e18cdd5feb9a448479c38e4b7ab80",
+      "revision_matches": true,
+      "changes": []
+    },
+    {
+      "path": "external/libogg",
+      "expected": "6dba790f3372d03eee07c693789166ca9fa07b0a",
+      "actual": "6dba790f3372d03eee07c693789166ca9fa07b0a",
+      "revision_matches": true,
+      "changes": []
+    },
+    {
+      "path": "external/libopus",
+      "expected": "0b99ea7a4849105ed48b8e97f3e41606d19947f5",
+      "actual": "0b99ea7a4849105ed48b8e97f3e41606d19947f5",
+      "revision_matches": true,
+      "changes": []
+    },
+    {
+      "path": "external/libpcap",
+      "expected": "ae8393dd9704bf3f666affebf731042c0b62a37b",
+      "actual": "ae8393dd9704bf3f666affebf731042c0b62a37b",
+      "revision_matches": true,
+      "changes": []
+    },
+    {
+      "path": "external/libpng",
+      "expected": "106a9f5260a146e74dc1cd755e33b12177df2bb8",
+      "actual": "106a9f5260a146e74dc1cd755e33b12177df2bb8",
+      "revision_matches": true,
+      "changes": []
+    },
+    {
+      "path": "external/libunwind",
+      "expected": "f7eef920b5a22f5e1635ed61c703b6400758436a",
+      "actual": "f7eef920b5a22f5e1635ed61c703b6400758436a",
+      "revision_matches": true,
+      "changes": []
+    },
+    {
+      "path": "external/libunwind_llvm",
+      "expected": "f171e7279d7fa8977bbe25e19019380ee493e885",
+      "actual": "f171e7279d7fa8977bbe25e19019380ee493e885",
+      "revision_matches": true,
+      "changes": []
+    },
+    {
+      "path": "external/libvpx",
+      "expected": "7c5b8ae1f917b1c0292fc8680974207cddb91865",
+      "actual": "7c5b8ae1f917b1c0292fc8680974207cddb91865",
+      "revision_matches": true,
+      "changes": []
+    },
+    {
+      "path": "external/libxml2",
+      "expected": "2029791e30b24fd7e8ebf2963207433ca55f5288",
+      "actual": "2029791e30b24fd7e8ebf2963207433ca55f5288",
+      "revision_matches": true,
+      "changes": []
+    },
+    {
+      "path": "external/libyuv",
+      "expected": "f047e7ca6983218eed7703c7afd51fed7bd3b5c9",
+      "actual": "f047e7ca6983218eed7703c7afd51fed7bd3b5c9",
+      "revision_matches": true,
+      "changes": []
+    },
+    {
+      "path": "external/llvm",
+      "expected": "f9d1195a27113f6dafba785611690175ad3914eb",
+      "actual": "f9d1195a27113f6dafba785611690175ad3914eb",
+      "revision_matches": true,
+      "changes": []
+    },
+    {
+      "path": "external/lz4",
+      "expected": "74ba70e09305e588c3841e0f73f6b3a16703d8a5",
+      "actual": "74ba70e09305e588c3841e0f73f6b3a16703d8a5",
+      "revision_matches": true,
+      "changes": []
+    },
+    {
+      "path": "external/mdnsresponder",
+      "expected": "18237bfa08172c62b6c8a6fd378d3fbb7d368b47",
+      "actual": "18237bfa08172c62b6c8a6fd378d3fbb7d368b47",
+      "revision_matches": true,
+      "changes": []
+    },
+    {
+      "path": "external/minijail",
+      "expected": "3213d0fcc6103e444a5ac051314eddacfab2490b",
+      "actual": "3213d0fcc6103e444a5ac051314eddacfab2490b",
+      "revision_matches": true,
+      "changes": []
+    },
+    {
+      "path": "external/nanopb-c",
+      "expected": "b225eb267957f24ca2aa2469bc78d418b2e9b795",
+      "actual": "b225eb267957f24ca2aa2469bc78d418b2e9b795",
+      "revision_matches": true,
+      "changes": []
+    },
+    {
+      "path": "external/pcre",
+      "expected": "222bbf4b3fb8e13c21686803e47e31aa3e4ad130",
+      "actual": "222bbf4b3fb8e13c21686803e47e31aa3e4ad130",
+      "revision_matches": true,
+      "changes": []
+    },
+    {
+      "path": "external/piex",
+      "expected": "0edcd9aecceaffe22368d91df82a0e4f6ff47d97",
+      "actual": "0edcd9aecceaffe22368d91df82a0e4f6ff47d97",
+      "revision_matches": true,
+      "changes": []
+    },
+    {
+      "path": "external/safe-iop",
+      "expected": "cd76f998688d145235de78ecd5b340d0eac9239d",
+      "actual": "cd76f998688d145235de78ecd5b340d0eac9239d",
+      "revision_matches": true,
+      "changes": []
+    },
+    {
+      "path": "external/scrypt",
+      "expected": "72691396f9fa84fd39cb72d031750e580e648aa3",
+      "actual": "72691396f9fa84fd39cb72d031750e580e648aa3",
+      "revision_matches": true,
+      "changes": []
+    },
+    {
+      "path": "external/selinux",
+      "expected": "89ade431ecff217e0ce7752fda81b5e4e404a293",
+      "actual": "89ade431ecff217e0ce7752fda81b5e4e404a293",
+      "revision_matches": true,
+      "changes": []
+    },
+    {
+      "path": "external/sfntly",
+      "expected": "8b698fd328de0790b33c307ac918401e099df0c0",
+      "actual": "8b698fd328de0790b33c307ac918401e099df0c0",
+      "revision_matches": true,
+      "changes": []
+    },
+    {
+      "path": "external/sonic",
+      "expected": "0227d834966b304525869d88fd20b2ac835df878",
+      "actual": "0227d834966b304525869d88fd20b2ac835df878",
+      "revision_matches": true,
+      "changes": []
+    },
+    {
+      "path": "external/sonivox",
+      "expected": "1ff0e3ad95797714c74164ffd3529c163a487f56",
+      "actual": "1ff0e3ad95797714c74164ffd3529c163a487f56",
+      "revision_matches": true,
+      "changes": []
+    },
+    {
+      "path": "external/speex",
+      "expected": "468d5f08801712615c39321b1f22f04c63b1277d",
+      "actual": "468d5f08801712615c39321b1f22f04c63b1277d",
+      "revision_matches": true,
+      "changes": []
+    },
+    {
+      "path": "external/sqlite",
+      "expected": "a531a912489f98ea250ffe4bf8212b014ea3c387",
+      "actual": "a531a912489f98ea250ffe4bf8212b014ea3c387",
+      "revision_matches": true,
+      "changes": []
+    },
+    {
+      "path": "external/squashfs-tools",
+      "expected": "6697c183c48387fb577c5ded9c52fcfa071af2a7",
+      "actual": "6697c183c48387fb577c5ded9c52fcfa071af2a7",
+      "revision_matches": true,
+      "changes": []
+    },
+    {
+      "path": "external/strace",
+      "expected": "372fd474dea063e08f8faf9abdf0a2bad06a7955",
+      "actual": "372fd474dea063e08f8faf9abdf0a2bad06a7955",
+      "revision_matches": true,
+      "changes": []
+    },
+    {
+      "path": "external/tinyxml",
+      "expected": "b162e864bd02bb79423b4ef01d0e5e5840aa416b",
+      "actual": "b162e864bd02bb79423b4ef01d0e5e5840aa416b",
+      "revision_matches": true,
+      "changes": []
+    },
+    {
+      "path": "external/tremolo",
+      "expected": "6cfe5933370bc5ec48a1855b7ee2a9e36b7d88cb",
+      "actual": "6cfe5933370bc5ec48a1855b7ee2a9e36b7d88cb",
+      "revision_matches": true,
+      "changes": []
+    },
+    {
+      "path": "external/unicode",
+      "expected": "a29d9d6d3e60655038fd448de16f2ca4ce95b067",
+      "actual": "a29d9d6d3e60655038fd448de16f2ca4ce95b067",
+      "revision_matches": true,
+      "changes": []
+    },
+    {
+      "path": "external/vulkan-validation-layers",
+      "expected": "a87ef7614124aa7918940ae3e8bca2f491d4e298",
+      "actual": "a87ef7614124aa7918940ae3e8bca2f491d4e298",
+      "revision_matches": true,
+      "changes": []
+    },
+    {
+      "path": "external/webp",
+      "expected": "45ca9a6b9c394f2edf37526f562eeaf655299fc8",
+      "actual": "45ca9a6b9c394f2edf37526f562eeaf655299fc8",
+      "revision_matches": true,
+      "changes": []
+    },
+    {
+      "path": "external/webrtc",
+      "expected": "b3cb8ab4ede8bb77f0bdef2715efc2c1e6267072",
+      "actual": "b3cb8ab4ede8bb77f0bdef2715efc2c1e6267072",
+      "revision_matches": true,
+      "changes": []
+    },
+    {
+      "path": "external/zopfli",
+      "expected": "d467682cabdaff41673db87ccabc9dcd06977241",
+      "actual": "d467682cabdaff41673db87ccabc9dcd06977241",
+      "revision_matches": true,
+      "changes": []
+    },
+    {
+      "path": "frameworks/compile/libbcc",
+      "expected": "d2e35f95915d480fe203d6614df8b0f5d14de0e5",
+      "actual": "d2e35f95915d480fe203d6614df8b0f5d14de0e5",
+      "revision_matches": true,
+      "changes": []
+    },
+    {
+      "path": "frameworks/compile/slang",
+      "expected": "4eb5fac8a0466c674e565ff2c96986c499b439d4",
+      "actual": "4eb5fac8a0466c674e565ff2c96986c499b439d4",
+      "revision_matches": true,
+      "changes": []
+    },
+    {
+      "path": "frameworks/minikin",
+      "expected": "fbdff5828dd1c118e1a871a8f273845dd1d988d6",
+      "actual": "fbdff5828dd1c118e1a871a8f273845dd1d988d6",
+      "revision_matches": true,
+      "changes": []
+    },
+    {
+      "path": "frameworks/rs",
+      "expected": "4e4ddd39cf8ec405dcc48ff1b23067e00a057055",
+      "actual": "4e4ddd39cf8ec405dcc48ff1b23067e00a057055",
+      "revision_matches": true,
+      "changes": []
+    },
+    {
+      "path": "hardware/akm",
+      "expected": "85837c2e77e032a834121ec3b9b6128f691d68a8",
+      "actual": "85837c2e77e032a834121ec3b9b6128f691d68a8",
+      "revision_matches": true,
+      "changes": []
+    },
+    {
+      "path": "hardware/google/apf",
+      "expected": "f80b9d17d393b75fbb41971a9ecc30b098a00d55",
+      "actual": "f80b9d17d393b75fbb41971a9ecc30b098a00d55",
+      "revision_matches": true,
+      "changes": []
+    },
+    {
+      "path": "hardware/intel/audio_media",
+      "expected": "218f0d6bc9532d0b707ea325fd96998249fe47bf",
+      "actual": "218f0d6bc9532d0b707ea325fd96998249fe47bf",
+      "revision_matches": true,
+      "changes": []
+    },
+    {
+      "path": "hardware/intel/bootstub",
+      "expected": "c759e5127aa582ac515ee1446da15f601b15a99a",
+      "actual": "c759e5127aa582ac515ee1446da15f601b15a99a",
+      "revision_matches": true,
+      "changes": []
+    },
+    {
+      "path": "hardware/intel/common/bd_prov",
+      "expected": "8af329f2d2b54dfcfa84051d3ce1fae95f79011a",
+      "actual": "8af329f2d2b54dfcfa84051d3ce1fae95f79011a",
+      "revision_matches": true,
+      "changes": []
+    },
+    {
+      "path": "hardware/intel/common/libstagefrighthw",
+      "expected": "690809fcb1c7fc7042bd99a7521ad0608b20ba03",
+      "actual": "690809fcb1c7fc7042bd99a7521ad0608b20ba03",
+      "revision_matches": true,
+      "changes": []
+    },
+    {
+      "path": "hardware/intel/common/wrs_omxil_core",
+      "expected": "1e4406b6b79aab5720806558606e079c032257d2",
+      "actual": "1e4406b6b79aab5720806558606e079c032257d2",
+      "revision_matches": true,
+      "changes": []
+    },
+    {
+      "path": "hardware/intel/sensors",
+      "expected": "68dc9e70b79dacddc4e0bf00af0de7f764b04eed",
+      "actual": "68dc9e70b79dacddc4e0bf00af0de7f764b04eed",
+      "revision_matches": true,
+      "changes": []
+    },
+    {
+      "path": "hardware/marvell/bt",
+      "expected": "3f33d194e8300816b94d1d7b68b1d48c8f903251",
+      "actual": "3f33d194e8300816b94d1d7b68b1d48c8f903251",
+      "revision_matches": true,
+      "changes": []
+    },
+    {
+      "path": "hardware/ti/omap3",
+      "expected": "40292fb9eeb2cf0bb95dc818da12ddcae40b931c",
+      "actual": "40292fb9eeb2cf0bb95dc818da12ddcae40b931c",
+      "revision_matches": true,
+      "changes": []
+    },
+    {
+      "path": "hardware/ti/omap4-aah",
+      "expected": "a62514d376a94e27bec5e932aadb67401ca550b0",
+      "actual": "a62514d376a94e27bec5e932aadb67401ca550b0",
+      "revision_matches": true,
+      "changes": []
+    },
+    {
+      "path": "libnativehelper",
+      "expected": "8ebb2fb2e4b92592368c1360d49d5dfa16ef56cc",
+      "actual": "8ebb2fb2e4b92592368c1360d49d5dfa16ef56cc",
+      "revision_matches": true,
+      "changes": []
+    },
+    {
+      "path": "prebuilts/clang/host/linux-x86",
+      "expected": "45562a53b2a5eb7c6e8f400413d19a12c660d7b1",
+      "actual": "45562a53b2a5eb7c6e8f400413d19a12c660d7b1",
+      "revision_matches": true,
+      "changes": []
+    },
+    {
+      "path": "prebuilts/clang/linux-x86/host/3.6",
+      "expected": "b660e8f76f1543abf50ebfbdb8d10112d93fec3d",
+      "actual": "b660e8f76f1543abf50ebfbdb8d10112d93fec3d",
+      "revision_matches": true,
+      "changes": []
+    },
+    {
+      "path": "prebuilts/gcc/linux-x86/arm/arm-eabi-4.8",
+      "expected": "26e93f6af47f7bd3a9beb5c102a5f45e19bfa38a",
+      "actual": "26e93f6af47f7bd3a9beb5c102a5f45e19bfa38a",
+      "revision_matches": true,
+      "changes": []
+    },
+    {
+      "path": "prebuilts/gcc/linux-x86/host/x86_64-linux-glibc2.11-4.8",
+      "expected": "1273431a189717842f033573eb8c777e13dd88b7",
+      "actual": "1273431a189717842f033573eb8c777e13dd88b7",
+      "revision_matches": true,
+      "changes": []
+    },
+    {
+      "path": "prebuilts/gcc/linux-x86/host/x86_64-linux-glibc2.15-4.8",
+      "expected": "73ca99196723f810dad42390d154654354f57c16",
+      "actual": "73ca99196723f810dad42390d154654354f57c16",
+      "revision_matches": true,
+      "changes": []
+    },
+    {
+      "path": "prebuilts/gcc/linux-x86/host/x86_64-w64-mingw32-4.8",
+      "expected": "c795eed743bc6cee4ead5407cc237c43abf6fa26",
+      "actual": "c795eed743bc6cee4ead5407cc237c43abf6fa26",
+      "revision_matches": true,
+      "changes": []
+    },
+    {
+      "path": "prebuilts/misc",
+      "expected": "6287eb468c5772f5da2c468396bdf0068a4fa2d5",
+      "actual": "6287eb468c5772f5da2c468396bdf0068a4fa2d5",
+      "revision_matches": true,
+      "changes": []
+    },
+    {
+      "path": "prebuilts/ndk",
+      "expected": "f7e665a1af37619e136cb2b998c076e5316fe937",
+      "actual": "f7e665a1af37619e136cb2b998c076e5316fe937",
+      "revision_matches": true,
+      "changes": []
+    },
+    {
+      "path": "prebuilts/ninja/linux-x86",
+      "expected": "08c87a043c925cf88a98d73a8f01a9e06fab7cb9",
+      "actual": "08c87a043c925cf88a98d73a8f01a9e06fab7cb9",
+      "revision_matches": true,
+      "changes": []
+    },
+    {
+      "path": "prebuilts/python/linux-x86/2.7.5",
+      "expected": "74e4f93e81205ac85f74eaf5fd4c86515779aee1",
+      "actual": "74e4f93e81205ac85f74eaf5fd4c86515779aee1",
+      "revision_matches": true,
+      "changes": []
+    },
+    {
+      "path": "prebuilts/sdk",
+      "expected": "23f7de5ba433fc82269ba63c203fe0a3eaf4a680",
+      "actual": "23f7de5ba433fc82269ba63c203fe0a3eaf4a680",
+      "revision_matches": true,
+      "changes": []
+    },
+    {
+      "path": "prebuilts/tools",
+      "expected": "b5022f03051bf5ad63112659132e3ec0fa6af4ce",
+      "actual": "b5022f03051bf5ad63112659132e3ec0fa6af4ce",
+      "revision_matches": true,
+      "changes": []
+    },
+    {
+      "path": "sdk",
+      "expected": "317031cb0035803f54c21cc78ea7cf830a247865",
+      "actual": "317031cb0035803f54c21cc78ea7cf830a247865",
+      "revision_matches": true,
+      "changes": []
+    },
+    {
+      "path": "system/gatekeeper",
+      "expected": "9c0be39df01af78170c29882fcbf9b82344c1d6b",
+      "actual": "9c0be39df01af78170c29882fcbf9b82344c1d6b",
+      "revision_matches": true,
+      "changes": []
+    },
+    {
+      "path": "tools/external/fat32lib",
+      "expected": "3880776e41ff7def06e351720f2d162f88b58a03",
+      "actual": "3880776e41ff7def06e351720f2d162f88b58a03",
+      "revision_matches": true,
+      "changes": []
+    },
+    {
+      "path": "bootable/recovery",
+      "expected": "97aad3da6f72399d7273a496ed4e490d2ba2bfe1",
+      "actual": "97aad3da6f72399d7273a496ed4e490d2ba2bfe1",
+      "revision_matches": true,
+      "changes": []
+    },
+    {
+      "path": "external/gpg",
+      "expected": "0ff5187b51ef778746ce818cf06abae8cb1bb826",
+      "actual": "0ff5187b51ef778746ce818cf06abae8cb1bb826",
+      "revision_matches": true,
+      "changes": [
+        " M cipher/dynload.c",
+        " M include/config.h"
+      ]
+    },
+    {
+      "path": "halium/platform-api",
+      "expected": "2af9d75c093c1c5728d630531f8c0b77b993aefb",
+      "actual": "2af9d75c093c1c5728d630531f8c0b77b993aefb",
+      "revision_matches": true,
+      "changes": []
+    }
+  ]
+}

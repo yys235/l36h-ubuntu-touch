@@ -1,0 +1,7 @@
+**/__pycache__/
+*.pyc
+assets/
+sources/*.tar.gz
+sources/*.tar.xz
+sources/hermes-native/*.tar.gz
+# Large immutable archives are GitHub Release assets, not Git objects.

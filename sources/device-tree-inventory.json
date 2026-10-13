@@ -1,0 +1,31 @@
+{
+  "components": [
+    {
+      "project": "Halium/android_device_sony_yuga",
+      "component": "yuga",
+      "archive": "device-sony-yuga.tar.gz",
+      "commit": "2e8bc5a8d4a22c90d3bf3170023e7acb627ca0d8",
+      "bytes": 12030,
+      "sha256": "e9060b7ba96c52fc3dfadaab7de7a63ab8a46073aec8ce1768f3388ffbf13156"
+    },
+    {
+      "project": "Halium/android_device_sony_fusion3-common",
+      "component": "fusion3-common",
+      "archive": "device-sony-fusion3-common.tar.gz",
+      "commit": "e5a1dcf2220cef0ac40964f115540b8a35111c46",
+      "bytes": 230623,
+      "sha256": "391508e6b448b68a8fd8c02bd4acbc493f74fbc065c8801a84906274a69f8a6a"
+    },
+    {
+      "project": "android_device_sony_common",
+      "component": "common",
+      "archive": "device-sony-common.tar.gz",
+      "commit": "150770de40e7fe9ecc3cd54bb989560394058de2",
+      "bytes": 16421,
+      "sha256": "1ffb1886952e0b36e0b079743a042005757907343621dac0325e9fee8cc501ff"
+    }
+  ],
+  "untracked_initramfs_resolution": "generated with public initramfs patcher, not copied as unexplained file",
+  "yuga_patch": "../patches/device-yuga-working-tree.patch",
+  "untracked_initramfs_sha256": "91b3e166edaeeae323ba2f34af2342533072b20a68cc7607599c50ebde499ce4"
+}

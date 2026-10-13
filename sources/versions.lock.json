@@ -1,0 +1,98 @@
+{
+  "schema_version": 1,
+  "status": "incomplete-release-inventory",
+  "kernel": {
+    "patched_tree": "07328d79afdcf92919072de97c35c738eba4c544",
+    "url": "https://github.com/Halium/android_kernel_sony_apq8064.git",
+    "commit": "3e373fec12898bacbcb93713732dbc26f5b3b3f5",
+    "clean_build": "not-yet-verified",
+    "patch_sha256": "1347413d36ea67807fcdc7a382bdd1cf0f41ec6f4d11cede69f2b79f3915526b",
+    "patch_application": "verified-index-tree-equality",
+    "config_sha256": "291f69b0ef18c53c8018b35fbbaeaf89627216b7ab7c3c71368c1c5f51fa06f6",
+    "base_archive": "kernel-base-3e373fec.tar.gz",
+    "base_archive_sha256": "0880b3bfc246e0c3ae782f9221ebde28e48275e6af03845c2326f3e1a622f2b2"
+  },
+  "android": {
+    "source_archive": "pending",
+    "projects": 228,
+    "all_project_revisions_are_commit_ids": true,
+    "manifest": "halium-resolved.xml",
+    "manifest_sha256": "9d2847117baf8ede8b89057c35417f311cce10fa59b1971deb5be5174533f5d9"
+  },
+  "hermes": {
+    "commit": "71d34bad1045610252eda02ee79549436896e784",
+    "url": "https://github.com/NousResearch/hermes-agent.git",
+    "dependency_lock": "../hermes/installed-package-versions.json (runtime version snapshot; not full artifact lock)",
+    "source_archive": "hermes-71d34bad.tar.gz",
+    "source_archive_sha256": "a88ae3f634a3fd45050d3418d80b30ee5af51c89b9de40ec1ea3039d3024d77a",
+    "native_source_inventory": "hermes-native/archive-checksums.json"
+  },
+  "python": {
+    "version": "3.14.8",
+    "sha256": "a27174ffdae585f1b7497f192986477fdb95e43b73cda63d20efd99b5e6f24fb",
+    "release": "20261009",
+    "target": "armv7-unknown-linux-gnueabihf"
+  },
+  "missing": [
+    "exact toolchain archives and hashes",
+    "full corresponding source archives",
+    "matched rootfs/system/boot release set",
+    "generic installation workflow",
+    "licenses and private-material audit",
+    "fresh environment build verification"
+  ],
+  "kernel_build_tools": {
+    "python2": {
+      "archive": "Python-2.7.18.tar.xz",
+      "version": "2.7.18",
+      "upstream": "https://www.python.org/ftp/python/2.7.18/Python-2.7.18.tar.xz",
+      "sha256": "b62c0e7937551d0cc02b8fd5cb0f544f9405bafc9a54d3808ed4594812edef43"
+    },
+    "gcc": {
+      "commit": "48ef1e67aa261116d2c244a52a30b8ba044399ff",
+      "reported_version": "GCC 4.9 20150123 prerelease",
+      "source_revision_manifest": "gcc49-source-revisions.prop",
+      "corresponding_toolchain_sources": "pending-license-and-source-archive-audit",
+      "archive": "gcc49-48ef1e67.tar.gz",
+      "sha256": "4b38896af5820b1d0f5407b6b49ea9d79c506c5111cb432e7198e5e80440dc70",
+      "repository": "https://github.com/LineageOS/android_prebuilts_gcc_linux-x86_arm_arm-linux-androideabi-4.9.git"
+    }
+  },
+  "boot_candidate": {
+    "status": "diagnostic-slub-global-candidate-not-production-release",
+    "sha256": "8ff079c06cc8b951345a576916343725cfc3ed4bc980e8e22d22e56406920020",
+    "bytes": 14262272,
+    "publication_eligibility": "full-content-and-security-audit-pending",
+    "ramdisk_bytes": 4270247,
+    "kernel_sha256": "cd989fd0a37f5809207c044ff4658b5d0e5b9ce0041ae890ef1223a2832e93d2",
+    "repack": "byte-identical-verified"
+  },
+  "libpinyin": {
+    "archive": "libpinyin-2.3.0.tar.gz",
+    "patch": "../keyboard/libpinyin-alignment.patch",
+    "sha256": "00cb09f267031fb528bebc4621268037fca64677040123ebb184a50afcb43430",
+    "complete_build_recipe": "pending",
+    "patch_check": "passed-against-original-file-in-source-archive",
+    "version": "2.3.0"
+  },
+  "initramfs": {
+    "patched_sha256": "91b3e166edaeeae323ba2f34af2342533072b20a68cc7607599c50ebde499ce4",
+    "public_cli_cpio_comparison": "byte-identical",
+    "helper_build_recipe": "pending",
+    "input_sha256": "e68a6cd6ecb9c919fdb70048770b7fd66590a9453a68a2e50dcbe490c3206cb1",
+    "rescue_telnet": "192.168.2.15:23 USB; passwordless shell; failure-path review incomplete",
+    "input_archive": "../assets/halium-initrd-armhf-input.gz",
+    "upstream_corresponding_sources": "pending-fixed-revision-and-license-audit",
+    "helper_compiler_observed": "gcc-15-arm-linux-gnueabihf 15.2.0-16ubuntu1cross1",
+    "helper_static_libc_observed": "libc6-dev-armhf-cross 2.43-2ubuntu2cross1"
+  },
+  "additional_halium_boot": {
+    "commit": "499ea587183ea9407a0ccce64013b6cfa80d0efe",
+    "sha256": "f1dd00d9507b9805cbb2e033d5ed801da520e980911d72395a6cee76893a865a",
+    "dirty_untracked_review": "pending",
+    "manifest_coverage": "separate checkout, not included in 228 project resolved manifest",
+    "local_patch": "../patches/halium-boot-working-tree.patch",
+    "repository": "https://github.com/Halium/halium-boot.git",
+    "archive": "halium-boot-499ea587.tar.gz"
+  }
+}

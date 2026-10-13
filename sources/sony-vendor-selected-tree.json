@@ -1,0 +1,1664 @@
+{
+  "tree": [
+    {
+      "path": "fusion3-common/Android.mk",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c164740c2f471d9ab456feb36951ace313c8fa00",
+      "size": 1078,
+      "url": "https://api.github.com/repos/TheMuppets/proprietary_vendor_sony/git/blobs/c164740c2f471d9ab456feb36951ace313c8fa00"
+    },
+    {
+      "path": "fusion3-common/BoardConfigVendor.mk",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "010e9f0b716f8643b2e4b0c2ae6c37a561ce6c23",
+      "size": 711,
+      "url": "https://api.github.com/repos/TheMuppets/proprietary_vendor_sony/git/blobs/010e9f0b716f8643b2e4b0c2ae6c37a561ce6c23"
+    },
+    {
+      "path": "fusion3-common/fusion3-common-vendor.mk",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bb6bb58860529a43b65d133c7279816b8547ac6e",
+      "size": 18147,
+      "url": "https://api.github.com/repos/TheMuppets/proprietary_vendor_sony/git/blobs/bb6bb58860529a43b65d133c7279816b8547ac6e"
+    },
+    {
+      "path": "fusion3-common/proprietary/bin/btnvtool",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "86fb6e525f00b02ad9edc6334118d9669d8653c3",
+      "size": 9544,
+      "url": "https://api.github.com/repos/TheMuppets/proprietary_vendor_sony/git/blobs/86fb6e525f00b02ad9edc6334118d9669d8653c3"
+    },
+    {
+      "path": "fusion3-common/proprietary/bin/fm_qsoc_patches",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "e5f114653486dab1b5ecdde526cdcccbe22b4a73",
+      "size": 34724,
+      "url": "https://api.github.com/repos/TheMuppets/proprietary_vendor_sony/git/blobs/e5f114653486dab1b5ecdde526cdcccbe22b4a73"
+    },
+    {
+      "path": "fusion3-common/proprietary/bin/fmconfig",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "8fe681fc0efa60aa1d433b5fec5aa6829fafb4d8",
+      "size": 13640,
+      "url": "https://api.github.com/repos/TheMuppets/proprietary_vendor_sony/git/blobs/8fe681fc0efa60aa1d433b5fec5aa6829fafb4d8"
+    },
+    {
+      "path": "fusion3-common/proprietary/bin/hci_qcomm_init",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "902ed535ea4b5f5ae0a8b79b13445bb769a11445",
+      "size": 104500,
+      "url": "https://api.github.com/repos/TheMuppets/proprietary_vendor_sony/git/blobs/902ed535ea4b5f5ae0a8b79b13445bb769a11445"
+    },
+    {
+      "path": "fusion3-common/proprietary/bin/ks",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "9dffe1a997544ca7df41905ad40f83db446ce256",
+      "size": 30328,
+      "url": "https://api.github.com/repos/TheMuppets/proprietary_vendor_sony/git/blobs/9dffe1a997544ca7df41905ad40f83db446ce256"
+    },
+    {
+      "path": "fusion3-common/proprietary/bin/mpdecision",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "4f5d9ee3c49a9b32e401467c5961362e9e9c21bc",
+      "size": 55772,
+      "url": "https://api.github.com/repos/TheMuppets/proprietary_vendor_sony/git/blobs/4f5d9ee3c49a9b32e401467c5961362e9e9c21bc"
+    },
+    {
+      "path": "fusion3-common/proprietary/bin/netmgrd",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "23cb5d9db5229cb3d7e568f40d1bb2276283b70f",
+      "size": 205300,
+      "url": "https://api.github.com/repos/TheMuppets/proprietary_vendor_sony/git/blobs/23cb5d9db5229cb3d7e568f40d1bb2276283b70f"
+    },
+    {
+      "path": "fusion3-common/proprietary/bin/qmuxd",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "aedba8105d76050e7bf324b5016ac15beec5e905",
+      "size": 71508,
+      "url": "https://api.github.com/repos/TheMuppets/proprietary_vendor_sony/git/blobs/aedba8105d76050e7bf324b5016ac15beec5e905"
+    },
+    {
+      "path": "fusion3-common/proprietary/bin/ta2bin",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "023d0d5d9d10c6b2d6ed540343bc3cf9f1d3ce10",
+      "size": 9384,
+      "url": "https://api.github.com/repos/TheMuppets/proprietary_vendor_sony/git/blobs/023d0d5d9d10c6b2d6ed540343bc3cf9f1d3ce10"
+    },
+    {
+      "path": "fusion3-common/proprietary/bin/ta_qmi_client",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "f2d95d2a4a5472c82a61dcd8a788015b84f602c2",
+      "size": 17840,
+      "url": "https://api.github.com/repos/TheMuppets/proprietary_vendor_sony/git/blobs/f2d95d2a4a5472c82a61dcd8a788015b84f602c2"
+    },
+    {
+      "path": "fusion3-common/proprietary/bin/taimport",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "2976bd47908c9554d5e577058f84100c84bffeb7",
+      "size": 9384,
+      "url": "https://api.github.com/repos/TheMuppets/proprietary_vendor_sony/git/blobs/2976bd47908c9554d5e577058f84100c84bffeb7"
+    },
+    {
+      "path": "fusion3-common/proprietary/bin/usbhub",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "3dbfc807cb7454d489b209996d8d952f480efe60",
+      "size": 5288,
+      "url": "https://api.github.com/repos/TheMuppets/proprietary_vendor_sony/git/blobs/3dbfc807cb7454d489b209996d8d952f480efe60"
+    },
+    {
+      "path": "fusion3-common/proprietary/bin/usbhub_init",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "f12758d28cfc4542d24c3057d260648ea98d280b",
+      "size": 5288,
+      "url": "https://api.github.com/repos/TheMuppets/proprietary_vendor_sony/git/blobs/f12758d28cfc4542d24c3057d260648ea98d280b"
+    },
+    {
+      "path": "fusion3-common/proprietary/etc/firmware/acdb.mbn",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0b48b69aa9393f50219400da8e789efa2029b3d8",
+      "size": 40,
+      "url": "https://api.github.com/repos/TheMuppets/proprietary_vendor_sony/git/blobs/0b48b69aa9393f50219400da8e789efa2029b3d8"
+    },
+    {
+      "path": "fusion3-common/proprietary/etc/firmware/dxhdcp2.b00",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "04bed148292501c9f5a1c8ee8b5efef5bc78fb5a",
+      "size": 180,
+      "url": "https://api.github.com/repos/TheMuppets/proprietary_vendor_sony/git/blobs/04bed148292501c9f5a1c8ee8b5efef5bc78fb5a"
+    },
+    {
+      "path": "fusion3-common/proprietary/etc/firmware/dxhdcp2.b01",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "295737c20d4fdd6c9d562203de920fb14d2956ca",
+      "size": 2780,
+      "url": "https://api.github.com/repos/TheMuppets/proprietary_vendor_sony/git/blobs/295737c20d4fdd6c9d562203de920fb14d2956ca"
+    },
+    {
+      "path": "fusion3-common/proprietary/etc/firmware/dxhdcp2.b02",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b8f57b362a1eb05d24852259cf5ac40a079a5bc3",
+      "size": 139264,
+      "url": "https://api.github.com/repos/TheMuppets/proprietary_vendor_sony/git/blobs/b8f57b362a1eb05d24852259cf5ac40a079a5bc3"
+    },
+    {
+      "path": "fusion3-common/proprietary/etc/firmware/dxhdcp2.b03",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7d8f994b29c52aa09884b038f8115564985190a0",
+      "size": 372,
+      "url": "https://api.github.com/repos/TheMuppets/proprietary_vendor_sony/git/blobs/7d8f994b29c52aa09884b038f8115564985190a0"
+    },
+    {
+      "path": "fusion3-common/proprietary/etc/firmware/dxhdcp2.mdt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d95cbe157782e84d6e019ac316b8355bbafd208d",
+      "size": 2960,
+      "url": "https://api.github.com/repos/TheMuppets/proprietary_vendor_sony/git/blobs/d95cbe157782e84d6e019ac316b8355bbafd208d"
+    },
+    {
+      "path": "fusion3-common/proprietary/etc/firmware/efs1.mbn",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "65b48c5502c6126edb840b4b97ed66833521bb4c",
+      "size": 40,
+      "url": "https://api.github.com/repos/TheMuppets/proprietary_vendor_sony/git/blobs/65b48c5502c6126edb840b4b97ed66833521bb4c"
+    },
+    {
+      "path": "fusion3-common/proprietary/etc/firmware/efs2.mbn",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0fb0f969b1cc0a77ea0a59f5d8f55ed0c584782d",
+      "size": 40,
+      "url": "https://api.github.com/repos/TheMuppets/proprietary_vendor_sony/git/blobs/0fb0f969b1cc0a77ea0a59f5d8f55ed0c584782d"
+    },
+    {
+      "path": "fusion3-common/proprietary/etc/firmware/efs3.mbn",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2dc88c6cf1f8fba3ed8ba80338a4fe2a7a3cd05b",
+      "size": 40,
+      "url": "https://api.github.com/repos/TheMuppets/proprietary_vendor_sony/git/blobs/2dc88c6cf1f8fba3ed8ba80338a4fe2a7a3cd05b"
+    },
+    {
+      "path": "fusion3-common/proprietary/etc/firmware/mdm_acdb.img",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "12241871c87aaab6eb16c112603facb92eafa8c3",
+      "size": 2097152,
+      "url": "https://api.github.com/repos/TheMuppets/proprietary_vendor_sony/git/blobs/12241871c87aaab6eb16c112603facb92eafa8c3"
+    },
+    {
+      "path": "fusion3-common/proprietary/etc/firmware/q6.b00",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7ec2e9f2b69eb328a43d24eeac184e05c6c0b80a",
+      "size": 276,
+      "url": "https://api.github.com/repos/TheMuppets/proprietary_vendor_sony/git/blobs/7ec2e9f2b69eb328a43d24eeac184e05c6c0b80a"
+    },
+    {
+      "path": "fusion3-common/proprietary/etc/firmware/q6.b01",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b9681e9fc52d06ca5c74de298685683f0ba36177",
+      "size": 6580,
+      "url": "https://api.github.com/repos/TheMuppets/proprietary_vendor_sony/git/blobs/b9681e9fc52d06ca5c74de298685683f0ba36177"
+    },
+    {
+      "path": "fusion3-common/proprietary/etc/firmware/q6.b03",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "343c02b989c6977e409f1b4bcdf6ec39838910cd",
+      "size": 5109712,
+      "url": "https://api.github.com/repos/TheMuppets/proprietary_vendor_sony/git/blobs/343c02b989c6977e409f1b4bcdf6ec39838910cd"
+    },
+    {
+      "path": "fusion3-common/proprietary/etc/firmware/q6.b04",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d1f2b2fa1a2c0827cf9bd70168e40107b2b54d28",
+      "size": 1514870,
+      "url": "https://api.github.com/repos/TheMuppets/proprietary_vendor_sony/git/blobs/d1f2b2fa1a2c0827cf9bd70168e40107b2b54d28"
+    },
+    {
+      "path": "fusion3-common/proprietary/etc/firmware/q6.b05",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "32858b98b0ee5a90f42891e4a008b326e999048f",
+      "size": 237264,
+      "url": "https://api.github.com/repos/TheMuppets/proprietary_vendor_sony/git/blobs/32858b98b0ee5a90f42891e4a008b326e999048f"
+    },
+    {
+      "path": "fusion3-common/proprietary/etc/firmware/q6.b06",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c25a3d3c757ad3fa7c4d0dc40cbac5607914f18a",
+      "size": 16960,
+      "url": "https://api.github.com/repos/TheMuppets/proprietary_vendor_sony/git/blobs/c25a3d3c757ad3fa7c4d0dc40cbac5607914f18a"
+    },
+    {
+      "path": "fusion3-common/proprietary/etc/firmware/q6.mdt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bd7b9d153e544f36d5ca13cbd90bf0255bb95ef3",
+      "size": 6856,
+      "url": "https://api.github.com/repos/TheMuppets/proprietary_vendor_sony/git/blobs/bd7b9d153e544f36d5ca13cbd90bf0255bb95ef3"
+    },
+    {
+      "path": "fusion3-common/proprietary/etc/firmware/rpm.mbn",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "40440a00287e1ee4352481d6769ea3a44b3c53be",
+      "size": 112128,
+      "url": "https://api.github.com/repos/TheMuppets/proprietary_vendor_sony/git/blobs/40440a00287e1ee4352481d6769ea3a44b3c53be"
+    },
+    {
+      "path": "fusion3-common/proprietary/etc/firmware/sbl1.mbn",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "49a16dcec5337f8a3d2ef8a9e91005138108283b",
+      "size": 124516,
+      "url": "https://api.github.com/repos/TheMuppets/proprietary_vendor_sony/git/blobs/49a16dcec5337f8a3d2ef8a9e91005138108283b"
+    },
+    {
+      "path": "fusion3-common/proprietary/etc/firmware/sbl2.mbn",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "412f11f18d6bedd90f244c8ef7cd4f9f4ef81c5a",
+      "size": 248800,
+      "url": "https://api.github.com/repos/TheMuppets/proprietary_vendor_sony/git/blobs/412f11f18d6bedd90f244c8ef7cd4f9f4ef81c5a"
+    },
+    {
+      "path": "fusion3-common/proprietary/etc/firmware/ta.mbn",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "53a7807dc9b6e4ecd26039e76e6f307860e5f8d7",
+      "size": 40,
+      "url": "https://api.github.com/repos/TheMuppets/proprietary_vendor_sony/git/blobs/53a7807dc9b6e4ecd26039e76e6f307860e5f8d7"
+    },
+    {
+      "path": "fusion3-common/proprietary/etc/firmware/tzlibasb.b00",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1c79683732ba11e4d2169346bfc109fdee2a9ea7",
+      "size": 180,
+      "url": "https://api.github.com/repos/TheMuppets/proprietary_vendor_sony/git/blobs/1c79683732ba11e4d2169346bfc109fdee2a9ea7"
+    },
+    {
+      "path": "fusion3-common/proprietary/etc/firmware/tzlibasb.b01",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1194c407757f463025a6fe20668c1d96e0d6dffa",
+      "size": 2780,
+      "url": "https://api.github.com/repos/TheMuppets/proprietary_vendor_sony/git/blobs/1194c407757f463025a6fe20668c1d96e0d6dffa"
+    },
+    {
+      "path": "fusion3-common/proprietary/etc/firmware/tzlibasb.b02",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "271d437f6c481a2b5dc6408137402b6a9e895cea",
+      "size": 184320,
+      "url": "https://api.github.com/repos/TheMuppets/proprietary_vendor_sony/git/blobs/271d437f6c481a2b5dc6408137402b6a9e895cea"
+    },
+    {
+      "path": "fusion3-common/proprietary/etc/firmware/tzlibasb.b03",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0fa919c46099495bec1208a68e9e56d829d4762d",
+      "size": 888,
+      "url": "https://api.github.com/repos/TheMuppets/proprietary_vendor_sony/git/blobs/0fa919c46099495bec1208a68e9e56d829d4762d"
+    },
+    {
+      "path": "fusion3-common/proprietary/etc/firmware/tzlibasb.mdt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a2443df8379b6efb72dc1a1e2a2d08fc16770474",
+      "size": 2960,
+      "url": "https://api.github.com/repos/TheMuppets/proprietary_vendor_sony/git/blobs/a2443df8379b6efb72dc1a1e2a2d08fc16770474"
+    },
+    {
+      "path": "fusion3-common/proprietary/etc/firmware/tzsuntory.b00",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e4d57b4ef0ff8a62e034f6745e4b169fe545a1fb",
+      "size": 180,
+      "url": "https://api.github.com/repos/TheMuppets/proprietary_vendor_sony/git/blobs/e4d57b4ef0ff8a62e034f6745e4b169fe545a1fb"
+    },
+    {
+      "path": "fusion3-common/proprietary/etc/firmware/tzsuntory.b01",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ba38e1ee3439ee0e492dc078e1bcafaa5fadd7d7",
+      "size": 2780,
+      "url": "https://api.github.com/repos/TheMuppets/proprietary_vendor_sony/git/blobs/ba38e1ee3439ee0e492dc078e1bcafaa5fadd7d7"
+    },
+    {
+      "path": "fusion3-common/proprietary/etc/firmware/tzsuntory.b02",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "be4535bf84516b223d1180e469fe613b4e0ffc81",
+      "size": 244064,
+      "url": "https://api.github.com/repos/TheMuppets/proprietary_vendor_sony/git/blobs/be4535bf84516b223d1180e469fe613b4e0ffc81"
+    },
+    {
+      "path": "fusion3-common/proprietary/etc/firmware/tzsuntory.b03",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "aa38b4b4908ed5d63313ce62faa137fe15a9ea05",
+      "size": 876,
+      "url": "https://api.github.com/repos/TheMuppets/proprietary_vendor_sony/git/blobs/aa38b4b4908ed5d63313ce62faa137fe15a9ea05"
+    },
+    {
+      "path": "fusion3-common/proprietary/etc/firmware/tzsuntory.mdt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "06bffc6af48ad2befe6fe86fff518aed4464f47d",
+      "size": 2960,
+      "url": "https://api.github.com/repos/TheMuppets/proprietary_vendor_sony/git/blobs/06bffc6af48ad2befe6fe86fff518aed4464f47d"
+    },
+    {
+      "path": "fusion3-common/proprietary/etc/firmware/vidc.b00",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "dc619f93987bd88bdad561825982ec6e1d5d71dc",
+      "size": 212,
+      "url": "https://api.github.com/repos/TheMuppets/proprietary_vendor_sony/git/blobs/dc619f93987bd88bdad561825982ec6e1d5d71dc"
+    },
+    {
+      "path": "fusion3-common/proprietary/etc/firmware/vidc.b01",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bce2a7104d7772ba6760b1338f39884057a21316",
+      "size": 6540,
+      "url": "https://api.github.com/repos/TheMuppets/proprietary_vendor_sony/git/blobs/bce2a7104d7772ba6760b1338f39884057a21316"
+    },
+    {
+      "path": "fusion3-common/proprietary/etc/firmware/vidc.b02",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "39abb2b7299d076a54a8a20b4cdfad2c2fca56cb",
+      "size": 573440,
+      "url": "https://api.github.com/repos/TheMuppets/proprietary_vendor_sony/git/blobs/39abb2b7299d076a54a8a20b4cdfad2c2fca56cb"
+    },
+    {
+      "path": "fusion3-common/proprietary/etc/firmware/vidc.b03",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f3d343bbfb16b49269c05d7931d9ab220ea41ce5",
+      "size": 36864,
+      "url": "https://api.github.com/repos/TheMuppets/proprietary_vendor_sony/git/blobs/f3d343bbfb16b49269c05d7931d9ab220ea41ce5"
+    },
+    {
+      "path": "fusion3-common/proprietary/etc/firmware/vidc.mdt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8bfafce42f05d1bc260cc1c23d3ec31fbcb00a70",
+      "size": 6752,
+      "url": "https://api.github.com/repos/TheMuppets/proprietary_vendor_sony/git/blobs/8bfafce42f05d1bc260cc1c23d3ec31fbcb00a70"
+    },
+    {
+      "path": "fusion3-common/proprietary/etc/firmware/vidc_1080p.fw",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1735344ea9f31b75ddf51271b383fcec8fd1fdd9",
+      "size": 605396,
+      "url": "https://api.github.com/repos/TheMuppets/proprietary_vendor_sony/git/blobs/1735344ea9f31b75ddf51271b383fcec8fd1fdd9"
+    },
+    {
+      "path": "fusion3-common/proprietary/etc/firmware/vidcfw.elf",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4532dbb8add32127779265bd49e9ba763cc8a6a7",
+      "size": 610686,
+      "url": "https://api.github.com/repos/TheMuppets/proprietary_vendor_sony/git/blobs/4532dbb8add32127779265bd49e9ba763cc8a6a7"
+    },
+    {
+      "path": "fusion3-common/proprietary/etc/firmware/wcnss.b00",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2d64acd7067afbba8b368dccde3165e15f65e21b",
+      "size": 244,
+      "url": "https://api.github.com/repos/TheMuppets/proprietary_vendor_sony/git/blobs/2d64acd7067afbba8b368dccde3165e15f65e21b"
+    },
+    {
+      "path": "fusion3-common/proprietary/etc/firmware/wcnss.b01",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d33c5e4563aa191da980ad5c26217ec8ae7d1e50",
+      "size": 6560,
+      "url": "https://api.github.com/repos/TheMuppets/proprietary_vendor_sony/git/blobs/d33c5e4563aa191da980ad5c26217ec8ae7d1e50"
+    },
+    {
+      "path": "fusion3-common/proprietary/etc/firmware/wcnss.b02",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c7a46df454358f616c35d977a87f1adb7e8a1dab",
+      "size": 9720,
+      "url": "https://api.github.com/repos/TheMuppets/proprietary_vendor_sony/git/blobs/c7a46df454358f616c35d977a87f1adb7e8a1dab"
+    },
+    {
+      "path": "fusion3-common/proprietary/etc/firmware/wcnss.b04",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "547047f9a738ff67a92c65a459f0c83ae48c0bd7",
+      "size": 4096,
+      "url": "https://api.github.com/repos/TheMuppets/proprietary_vendor_sony/git/blobs/547047f9a738ff67a92c65a459f0c83ae48c0bd7"
+    },
+    {
+      "path": "fusion3-common/proprietary/etc/firmware/wcnss.b05",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bfe5a727bbbfe620582ded64ee439ebad6420f20",
+      "size": 2253492,
+      "url": "https://api.github.com/repos/TheMuppets/proprietary_vendor_sony/git/blobs/bfe5a727bbbfe620582ded64ee439ebad6420f20"
+    },
+    {
+      "path": "fusion3-common/proprietary/etc/firmware/wcnss.mdt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bb22c23ad1a6ce12fed3fc3c818de3a559c36b23",
+      "size": 6804,
+      "url": "https://api.github.com/repos/TheMuppets/proprietary_vendor_sony/git/blobs/bb22c23ad1a6ce12fed3fc3c818de3a559c36b23"
+    },
+    {
+      "path": "fusion3-common/proprietary/lib/hw/camera.vendor.qcom.so",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3c46bb43d875210a0c0252999a4a53b6e5a842dc",
+      "size": 87660,
+      "url": "https://api.github.com/repos/TheMuppets/proprietary_vendor_sony/git/blobs/3c46bb43d875210a0c0252999a4a53b6e5a842dc"
+    },
+    {
+      "path": "fusion3-common/proprietary/lib/hw/lights.vendor.default.so",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c72f82424f314b104b58bf835ba887424d5d2a80",
+      "size": 5368,
+      "url": "https://api.github.com/repos/TheMuppets/proprietary_vendor_sony/git/blobs/c72f82424f314b104b58bf835ba887424d5d2a80"
+    },
+    {
+      "path": "fusion3-common/proprietary/lib/hw/sensors.default.so",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0c1c3273b3e312e34b8d09e63f235a5f8ad1e85a",
+      "size": 9412,
+      "url": "https://api.github.com/repos/TheMuppets/proprietary_vendor_sony/git/blobs/0c1c3273b3e312e34b8d09e63f235a5f8ad1e85a"
+    },
+    {
+      "path": "fusion3-common/proprietary/lib/libacdbloader.so",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "65d24148d4c2e17d3b0219694fd5e9091cde3bcb",
+      "size": 34300,
+      "url": "https://api.github.com/repos/TheMuppets/proprietary_vendor_sony/git/blobs/65d24148d4c2e17d3b0219694fd5e9091cde3bcb"
+    },
+    {
+      "path": "fusion3-common/proprietary/lib/libadsprpc.so",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ce1f1b5384ea76e902da5d2602b5becfea0a1eff",
+      "size": 5412,
+      "url": "https://api.github.com/repos/TheMuppets/proprietary_vendor_sony/git/blobs/ce1f1b5384ea76e902da5d2602b5becfea0a1eff"
+    },
+    {
+      "path": "fusion3-common/proprietary/lib/libals.so",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "12fe3db2e76ec91e08e5caafc7a01afb2dc929f7",
+      "size": 9384,
+      "url": "https://api.github.com/repos/TheMuppets/proprietary_vendor_sony/git/blobs/12fe3db2e76ec91e08e5caafc7a01afb2dc929f7"
+    },
+    {
+      "path": "fusion3-common/proprietary/lib/libcald_client.so",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0adcd0a74ede4b1144ace9f45f7b5fff6547693f",
+      "size": 17476,
+      "url": "https://api.github.com/repos/TheMuppets/proprietary_vendor_sony/git/blobs/0adcd0a74ede4b1144ace9f45f7b5fff6547693f"
+    },
+    {
+      "path": "fusion3-common/proprietary/lib/libcald_hal.so",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "05caedbcb820fe87cfd0e0520a910eea2b27af2d",
+      "size": 309140,
+      "url": "https://api.github.com/repos/TheMuppets/proprietary_vendor_sony/git/blobs/05caedbcb820fe87cfd0e0520a910eea2b27af2d"
+    },
+    {
+      "path": "fusion3-common/proprietary/lib/libcald_imageutil.so",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "437457fd93941d9876363c88cdc727f789ea6528",
+      "size": 70828,
+      "url": "https://api.github.com/repos/TheMuppets/proprietary_vendor_sony/git/blobs/437457fd93941d9876363c88cdc727f789ea6528"
+    },
+    {
+      "path": "fusion3-common/proprietary/lib/libcald_pal.so",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "34048afee4a586e1f933f4097e4e88d35d4e9953",
+      "size": 54496,
+      "url": "https://api.github.com/repos/TheMuppets/proprietary_vendor_sony/git/blobs/34048afee4a586e1f933f4097e4e88d35d4e9953"
+    },
+    {
+      "path": "fusion3-common/proprietary/lib/libcald_util.so",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b15dbd494c5349ebfe2c1b682946130add6b2f2d",
+      "size": 5180,
+      "url": "https://api.github.com/repos/TheMuppets/proprietary_vendor_sony/git/blobs/b15dbd494c5349ebfe2c1b682946130add6b2f2d"
+    },
+    {
+      "path": "fusion3-common/proprietary/lib/libcamera_clientsemc.so",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "28a7d83fb0839d2dd978ab0334dc20f8aa41f9f8",
+      "size": 13268,
+      "url": "https://api.github.com/repos/TheMuppets/proprietary_vendor_sony/git/blobs/28a7d83fb0839d2dd978ab0334dc20f8aa41f9f8"
+    },
+    {
+      "path": "fusion3-common/proprietary/lib/libcameralight.so",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "88f853ea677a03f8eb0ff4f5d7d0d355af63f3fc",
+      "size": 33948,
+      "url": "https://api.github.com/repos/TheMuppets/proprietary_vendor_sony/git/blobs/88f853ea677a03f8eb0ff4f5d7d0d355af63f3fc"
+    },
+    {
+      "path": "fusion3-common/proprietary/lib/libcsd-client.so",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fcb13cb1d6666d7ff36850654ee6380c8b3fc269",
+      "size": 46600,
+      "url": "https://api.github.com/repos/TheMuppets/proprietary_vendor_sony/git/blobs/fcb13cb1d6666d7ff36850654ee6380c8b3fc269"
+    },
+    {
+      "path": "fusion3-common/proprietary/lib/libdsi_netctrl.so",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "67d1c20fa02267732dc38b8cc2756f0159b89be1",
+      "size": 153100,
+      "url": "https://api.github.com/repos/TheMuppets/proprietary_vendor_sony/git/blobs/67d1c20fa02267732dc38b8cc2756f0159b89be1"
+    },
+    {
+      "path": "fusion3-common/proprietary/lib/libdsutils.so",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "16380e5dd171a5a06b529e38ac9e099a7d765a9d",
+      "size": 38056,
+      "url": "https://api.github.com/repos/TheMuppets/proprietary_vendor_sony/git/blobs/16380e5dd171a5a06b529e38ac9e099a7d765a9d"
+    },
+    {
+      "path": "fusion3-common/proprietary/lib/libface.so",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "815c1ee651c65fb3b70f1cba4406465eb08cd7d5",
+      "size": 1137648,
+      "url": "https://api.github.com/repos/TheMuppets/proprietary_vendor_sony/git/blobs/815c1ee651c65fb3b70f1cba4406465eb08cd7d5"
+    },
+    {
+      "path": "fusion3-common/proprietary/lib/libgemini.so",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "550bbc27d753f3911b92f1d929a7f593bb2915e9",
+      "size": 22628,
+      "url": "https://api.github.com/repos/TheMuppets/proprietary_vendor_sony/git/blobs/550bbc27d753f3911b92f1d929a7f593bb2915e9"
+    },
+    {
+      "path": "fusion3-common/proprietary/lib/libidd.so",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fd5b2d6f77f92af1bb18456f8fc52ede75c2ae65",
+      "size": 13380,
+      "url": "https://api.github.com/repos/TheMuppets/proprietary_vendor_sony/git/blobs/fd5b2d6f77f92af1bb18456f8fc52ede75c2ae65"
+    },
+    {
+      "path": "fusion3-common/proprietary/lib/libidl.so",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "158b83f7b2847268baed250699be5fa1c968ef83",
+      "size": 9228,
+      "url": "https://api.github.com/repos/TheMuppets/proprietary_vendor_sony/git/blobs/158b83f7b2847268baed250699be5fa1c968ef83"
+    },
+    {
+      "path": "fusion3-common/proprietary/lib/libimage-jpeg-dec-omx-comp.so",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "451a17c94ce42fd863b7511e52f651342fa8ddde",
+      "size": 21560,
+      "url": "https://api.github.com/repos/TheMuppets/proprietary_vendor_sony/git/blobs/451a17c94ce42fd863b7511e52f651342fa8ddde"
+    },
+    {
+      "path": "fusion3-common/proprietary/lib/libimage-jpeg-enc-omx-comp.so",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a499632f700bdea27cc29c921fd9c4e499898f66",
+      "size": 21608,
+      "url": "https://api.github.com/repos/TheMuppets/proprietary_vendor_sony/git/blobs/a499632f700bdea27cc29c921fd9c4e499898f66"
+    },
+    {
+      "path": "fusion3-common/proprietary/lib/libimage-omx-common.so",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f62577e052a8b8b8848133a9b86dd1a7cd2f21a0",
+      "size": 5188,
+      "url": "https://api.github.com/repos/TheMuppets/proprietary_vendor_sony/git/blobs/f62577e052a8b8b8848133a9b86dd1a7cd2f21a0"
+    },
+    {
+      "path": "fusion3-common/proprietary/lib/libinvensense_hal.so",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "07a752ebeb90e43a6ae9413603ea0a3abfc0e632",
+      "size": 59272,
+      "url": "https://api.github.com/repos/TheMuppets/proprietary_vendor_sony/git/blobs/07a752ebeb90e43a6ae9413603ea0a3abfc0e632"
+    },
+    {
+      "path": "fusion3-common/proprietary/lib/libkeyctrl.so",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ee0821832d997c13d02b70b5a97b08f7e4c7cae3",
+      "size": 33960,
+      "url": "https://api.github.com/repos/TheMuppets/proprietary_vendor_sony/git/blobs/ee0821832d997c13d02b70b5a97b08f7e4c7cae3"
+    },
+    {
+      "path": "fusion3-common/proprietary/lib/liblights-core.so",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "42e3167a1ed461325954dbb751f1377027bc5d7f",
+      "size": 9224,
+      "url": "https://api.github.com/repos/TheMuppets/proprietary_vendor_sony/git/blobs/42e3167a1ed461325954dbb751f1377027bc5d7f"
+    },
+    {
+      "path": "fusion3-common/proprietary/lib/libloc_api_v02.so",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cf2a09e600dc172c756d5a6b65d40227715e310f",
+      "size": 89552,
+      "url": "https://api.github.com/repos/TheMuppets/proprietary_vendor_sony/git/blobs/cf2a09e600dc172c756d5a6b65d40227715e310f"
+    },
+    {
+      "path": "fusion3-common/proprietary/lib/libloc_ds_api.so",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2a530107ead2e8383d7cd55a3864b8b04a71646a",
+      "size": 17524,
+      "url": "https://api.github.com/repos/TheMuppets/proprietary_vendor_sony/git/blobs/2a530107ead2e8383d7cd55a3864b8b04a71646a"
+    },
+    {
+      "path": "fusion3-common/proprietary/lib/libmercury.so",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d5bd0b2aa33aa14623751d793782f92323282359",
+      "size": 21608,
+      "url": "https://api.github.com/repos/TheMuppets/proprietary_vendor_sony/git/blobs/d5bd0b2aa33aa14623751d793782f92323282359"
+    },
+    {
+      "path": "fusion3-common/proprietary/lib/libmiscta.so",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9fd767defcf1efaa59e947ef46349a80e9d20bdd",
+      "size": 9280,
+      "url": "https://api.github.com/repos/TheMuppets/proprietary_vendor_sony/git/blobs/9fd767defcf1efaa59e947ef46349a80e9d20bdd"
+    },
+    {
+      "path": "fusion3-common/proprietary/lib/libmllite.so",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9f4c42ed0df2e75ee9e390612ed97d26ada5faa7",
+      "size": 102996,
+      "url": "https://api.github.com/repos/TheMuppets/proprietary_vendor_sony/git/blobs/9f4c42ed0df2e75ee9e390612ed97d26ada5faa7"
+    },
+    {
+      "path": "fusion3-common/proprietary/lib/libmmcamera_3a_legacy.so",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2cca9e9a30d04329e790c604a29a266699bc111d",
+      "size": 79272,
+      "url": "https://api.github.com/repos/TheMuppets/proprietary_vendor_sony/git/blobs/2cca9e9a30d04329e790c604a29a266699bc111d"
+    },
+    {
+      "path": "fusion3-common/proprietary/lib/libmmcamera_faceproc.so",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2d8ef6fa843773fd6483668dd5ae921c164368b5",
+      "size": 1107940,
+      "url": "https://api.github.com/repos/TheMuppets/proprietary_vendor_sony/git/blobs/2d8ef6fa843773fd6483668dd5ae921c164368b5"
+    },
+    {
+      "path": "fusion3-common/proprietary/lib/libmmcamera_frameproc.so",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "df311f894d718dec3f5b76de0338e15d518256a2",
+      "size": 33896,
+      "url": "https://api.github.com/repos/TheMuppets/proprietary_vendor_sony/git/blobs/df311f894d718dec3f5b76de0338e15d518256a2"
+    },
+    {
+      "path": "fusion3-common/proprietary/lib/libmmcamera_hdr_lib.so",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "13198cd12720a4712a779ddc906143816b96ecea",
+      "size": 50556,
+      "url": "https://api.github.com/repos/TheMuppets/proprietary_vendor_sony/git/blobs/13198cd12720a4712a779ddc906143816b96ecea"
+    },
+    {
+      "path": "fusion3-common/proprietary/lib/libmmcamera_image_stab.so",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bd944e5a1d48c227ea063a48f6007eec67325805",
+      "size": 13504,
+      "url": "https://api.github.com/repos/TheMuppets/proprietary_vendor_sony/git/blobs/bd944e5a1d48c227ea063a48f6007eec67325805"
+    },
+    {
+      "path": "fusion3-common/proprietary/lib/libmmcamera_imx091.so",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "aa58ed6fd65a0cbcc90d03be8fb8d65135fed8ce",
+      "size": 6212,
+      "url": "https://api.github.com/repos/TheMuppets/proprietary_vendor_sony/git/blobs/aa58ed6fd65a0cbcc90d03be8fb8d65135fed8ce"
+    },
+    {
+      "path": "fusion3-common/proprietary/lib/libmmcamera_plugin.so",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0ec0f0d99bdccbb6a974bfe6072f34c3af094161",
+      "size": 9268,
+      "url": "https://api.github.com/repos/TheMuppets/proprietary_vendor_sony/git/blobs/0ec0f0d99bdccbb6a974bfe6072f34c3af094161"
+    },
+    {
+      "path": "fusion3-common/proprietary/lib/libmmcamera_statsproc31.so",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ec9dbc1aecbcb22f56f3bfc7d07b4d3223e07e91",
+      "size": 17512,
+      "url": "https://api.github.com/repos/TheMuppets/proprietary_vendor_sony/git/blobs/ec9dbc1aecbcb22f56f3bfc7d07b4d3223e07e91"
+    },
+    {
+      "path": "fusion3-common/proprietary/lib/libmmcamera_tintless_algo.so",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0f06161d30ff4fd90bc1c62da182add99e752d61",
+      "size": 13508,
+      "url": "https://api.github.com/repos/TheMuppets/proprietary_vendor_sony/git/blobs/0f06161d30ff4fd90bc1c62da182add99e752d61"
+    },
+    {
+      "path": "fusion3-common/proprietary/lib/libmmcamera_tintless_wrapper.so",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c92d4b35b0c75c59b314136079824e0620bedf13",
+      "size": 5264,
+      "url": "https://api.github.com/repos/TheMuppets/proprietary_vendor_sony/git/blobs/c92d4b35b0c75c59b314136079824e0620bedf13"
+    },
+    {
+      "path": "fusion3-common/proprietary/lib/libmmcamera_wavelet_lib.so",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6d72e88a8d562d82f7a4bc40a464bfa9c628bb6d",
+      "size": 29948,
+      "url": "https://api.github.com/repos/TheMuppets/proprietary_vendor_sony/git/blobs/6d72e88a8d562d82f7a4bc40a464bfa9c628bb6d"
+    },
+    {
+      "path": "fusion3-common/proprietary/lib/libmmjpeg.so",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9396471cc936386c436b15d2e090c7755a6b56af",
+      "size": 193732,
+      "url": "https://api.github.com/repos/TheMuppets/proprietary_vendor_sony/git/blobs/9396471cc936386c436b15d2e090c7755a6b56af"
+    },
+    {
+      "path": "fusion3-common/proprietary/lib/libmmjpeg_interface.so",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b11a7cc6e0b67adcd426150da649290669c56668",
+      "size": 21608,
+      "url": "https://api.github.com/repos/TheMuppets/proprietary_vendor_sony/git/blobs/b11a7cc6e0b67adcd426150da649290669c56668"
+    },
+    {
+      "path": "fusion3-common/proprietary/lib/libmmmpod.so",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2f5f2d25fc8f15b99f114db3e2b81a323fb0144b",
+      "size": 13320,
+      "url": "https://api.github.com/repos/TheMuppets/proprietary_vendor_sony/git/blobs/2f5f2d25fc8f15b99f114db3e2b81a323fb0144b"
+    },
+    {
+      "path": "fusion3-common/proprietary/lib/libmmstillomx.so",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "679bd4fe3e7ef061b4771d44f1246f4e5cea9055",
+      "size": 5240,
+      "url": "https://api.github.com/repos/TheMuppets/proprietary_vendor_sony/git/blobs/679bd4fe3e7ef061b4771d44f1246f4e5cea9055"
+    },
+    {
+      "path": "fusion3-common/proprietary/lib/libmplmpu.so",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2ad2a742cb9c5783d4d4c2439bc0afc2a15a80e8",
+      "size": 176380,
+      "url": "https://api.github.com/repos/TheMuppets/proprietary_vendor_sony/git/blobs/2ad2a742cb9c5783d4d4c2439bc0afc2a15a80e8"
+    },
+    {
+      "path": "fusion3-common/proprietary/lib/libnetmgr.so",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "dbd2853cbbee453088e7dd3689944820b3364b9d",
+      "size": 38000,
+      "url": "https://api.github.com/repos/TheMuppets/proprietary_vendor_sony/git/blobs/dbd2853cbbee453088e7dd3689944820b3364b9d"
+    },
+    {
+      "path": "fusion3-common/proprietary/lib/libpin-cache.so",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6c425e5c9883c6ab2fe16599b12c120168f4b1da",
+      "size": 9320,
+      "url": "https://api.github.com/repos/TheMuppets/proprietary_vendor_sony/git/blobs/6c425e5c9883c6ab2fe16599b12c120168f4b1da"
+    },
+    {
+      "path": "fusion3-common/proprietary/lib/libprotobuf-c.so",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "962f510677c372bfdb1ca70543098f242706bcd7",
+      "size": 17512,
+      "url": "https://api.github.com/repos/TheMuppets/proprietary_vendor_sony/git/blobs/962f510677c372bfdb1ca70543098f242706bcd7"
+    },
+    {
+      "path": "fusion3-common/proprietary/lib/libqcci_legacy.so",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "89417a9c9f0447d69194c344f7925faacd1fd039",
+      "size": 9380,
+      "url": "https://api.github.com/repos/TheMuppets/proprietary_vendor_sony/git/blobs/89417a9c9f0447d69194c344f7925faacd1fd039"
+    },
+    {
+      "path": "fusion3-common/proprietary/lib/libqdi.so",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "be8a77ea2ef001d035efdec20f0cb68a7b14650a",
+      "size": 42148,
+      "url": "https://api.github.com/repos/TheMuppets/proprietary_vendor_sony/git/blobs/be8a77ea2ef001d035efdec20f0cb68a7b14650a"
+    },
+    {
+      "path": "fusion3-common/proprietary/lib/libqdp.so",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1b6d8bfd3647a1a68ef66a4038bab27f26a46b6e",
+      "size": 42400,
+      "url": "https://api.github.com/repos/TheMuppets/proprietary_vendor_sony/git/blobs/1b6d8bfd3647a1a68ef66a4038bab27f26a46b6e"
+    },
+    {
+      "path": "fusion3-common/proprietary/lib/libqmi.so",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a421bbc96c74006a667ecbefdc07d58e0673ad62",
+      "size": 185564,
+      "url": "https://api.github.com/repos/TheMuppets/proprietary_vendor_sony/git/blobs/a421bbc96c74006a667ecbefdc07d58e0673ad62"
+    },
+    {
+      "path": "fusion3-common/proprietary/lib/libqmi_client_qmux.so",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3efefd35d047bbdb637dc7e23b00e0a19874b70e",
+      "size": 43884,
+      "url": "https://api.github.com/repos/TheMuppets/proprietary_vendor_sony/git/blobs/3efefd35d047bbdb637dc7e23b00e0a19874b70e"
+    },
+    {
+      "path": "fusion3-common/proprietary/lib/libqmiservices.so",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "017904eacbaf3389f4b81697dc2ac2daa8f895d2",
+      "size": 79960,
+      "url": "https://api.github.com/repos/TheMuppets/proprietary_vendor_sony/git/blobs/017904eacbaf3389f4b81697dc2ac2daa8f895d2"
+    },
+    {
+      "path": "fusion3-common/proprietary/lib/libril-qc-qmi-1.so",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "520c0d4c3d8e541aa691927257fb482adf15b15f",
+      "size": 4167320,
+      "url": "https://api.github.com/repos/TheMuppets/proprietary_vendor_sony/git/blobs/520c0d4c3d8e541aa691927257fb482adf15b15f"
+    },
+    {
+      "path": "fusion3-common/proprietary/lib/libsys-utils.so",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "723fb21f3e9633fd2bd280e7f139384973982824",
+      "size": 9224,
+      "url": "https://api.github.com/repos/TheMuppets/proprietary_vendor_sony/git/blobs/723fb21f3e9633fd2bd280e7f139384973982824"
+    },
+    {
+      "path": "fusion3-common/proprietary/lib/libta.so",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4f54e1f382558b8e6457e4ab6f51de81ef0a166a",
+      "size": 9272,
+      "url": "https://api.github.com/repos/TheMuppets/proprietary_vendor_sony/git/blobs/4f54e1f382558b8e6457e4ab6f51de81ef0a166a"
+    },
+    {
+      "path": "fusion3-common/proprietary/vendor/camera/KMO08BN0_IMX111.dat",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "acf5c2942d99406e582c4c45b2ef2a57b5c8b0db",
+      "size": 5624,
+      "url": "https://api.github.com/repos/TheMuppets/proprietary_vendor_sony/git/blobs/acf5c2942d99406e582c4c45b2ef2a57b5c8b0db"
+    },
+    {
+      "path": "fusion3-common/proprietary/vendor/camera/LGI02BN0.dat",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fe59d9d83418994c14ed6cf9325d60ae3035f1ea",
+      "size": 243552,
+      "url": "https://api.github.com/repos/TheMuppets/proprietary_vendor_sony/git/blobs/fe59d9d83418994c14ed6cf9325d60ae3035f1ea"
+    },
+    {
+      "path": "fusion3-common/proprietary/vendor/camera/LGI08BN2_DW9714.dat",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "318e688df105718dc241c6662358907dfa9632e3",
+      "size": 168,
+      "url": "https://api.github.com/repos/TheMuppets/proprietary_vendor_sony/git/blobs/318e688df105718dc241c6662358907dfa9632e3"
+    },
+    {
+      "path": "fusion3-common/proprietary/vendor/camera/LGI08BN2_IMX111.dat",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e70b308c7ba447cce427319378450145cdbc4ba1",
+      "size": 5648,
+      "url": "https://api.github.com/repos/TheMuppets/proprietary_vendor_sony/git/blobs/e70b308c7ba447cce427319378450145cdbc4ba1"
+    },
+    {
+      "path": "fusion3-common/proprietary/vendor/camera/SEM02BN0.dat",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7c2fbe049a39b88030de586ed7f0a684d85b1470",
+      "size": 243552,
+      "url": "https://api.github.com/repos/TheMuppets/proprietary_vendor_sony/git/blobs/7c2fbe049a39b88030de586ed7f0a684d85b1470"
+    },
+    {
+      "path": "fusion3-common/proprietary/vendor/camera/SEM13BS0.dat",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e38d019c2ac3390001841b80872964ef7f2d61d3",
+      "size": 243552,
+      "url": "https://api.github.com/repos/TheMuppets/proprietary_vendor_sony/git/blobs/e38d019c2ac3390001841b80872964ef7f2d61d3"
+    },
+    {
+      "path": "fusion3-common/proprietary/vendor/camera/SEM13BS0_IMX135.dat",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "070954a358638f9327d68f23e8def73c9631b538",
+      "size": 7916,
+      "url": "https://api.github.com/repos/TheMuppets/proprietary_vendor_sony/git/blobs/070954a358638f9327d68f23e8def73c9631b538"
+    },
+    {
+      "path": "fusion3-common/proprietary/vendor/camera/SEM13BS0_WV570.dat",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1aa3b038f01b59f54a95e7bf6233b2bd818692b7",
+      "size": 148,
+      "url": "https://api.github.com/repos/TheMuppets/proprietary_vendor_sony/git/blobs/1aa3b038f01b59f54a95e7bf6233b2bd818692b7"
+    },
+    {
+      "path": "fusion3-common/proprietary/vendor/camera/SEM13BS1.dat",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0085f6083fcd9f4fa96080eb09ef24d11c74555c",
+      "size": 243552,
+      "url": "https://api.github.com/repos/TheMuppets/proprietary_vendor_sony/git/blobs/0085f6083fcd9f4fa96080eb09ef24d11c74555c"
+    },
+    {
+      "path": "fusion3-common/proprietary/vendor/camera/SEM13BS1_IMX135.dat",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "849c842dec54c1a2800b7c99db6f4211ead61ef7",
+      "size": 7736,
+      "url": "https://api.github.com/repos/TheMuppets/proprietary_vendor_sony/git/blobs/849c842dec54c1a2800b7c99db6f4211ead61ef7"
+    },
+    {
+      "path": "fusion3-common/proprietary/vendor/camera/SEM13BS1_WV570.dat",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1aa3b038f01b59f54a95e7bf6233b2bd818692b7",
+      "size": 148,
+      "url": "https://api.github.com/repos/TheMuppets/proprietary_vendor_sony/git/blobs/1aa3b038f01b59f54a95e7bf6233b2bd818692b7"
+    },
+    {
+      "path": "fusion3-common/proprietary/vendor/camera/SOI08BN1_IMX111.dat",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "acf5c2942d99406e582c4c45b2ef2a57b5c8b0db",
+      "size": 5624,
+      "url": "https://api.github.com/repos/TheMuppets/proprietary_vendor_sony/git/blobs/acf5c2942d99406e582c4c45b2ef2a57b5c8b0db"
+    },
+    {
+      "path": "fusion3-common/proprietary/vendor/camera/SOI13BS1.dat",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "159e5c7b11a91d190607c858dea3624b5cc86ac1",
+      "size": 243552,
+      "url": "https://api.github.com/repos/TheMuppets/proprietary_vendor_sony/git/blobs/159e5c7b11a91d190607c858dea3624b5cc86ac1"
+    },
+    {
+      "path": "fusion3-common/proprietary/vendor/camera/SOI13BS1_DW9735.dat",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d7f45f67c7cfa7bdc28ee40886be408f87d90df2",
+      "size": 124,
+      "url": "https://api.github.com/repos/TheMuppets/proprietary_vendor_sony/git/blobs/d7f45f67c7cfa7bdc28ee40886be408f87d90df2"
+    },
+    {
+      "path": "fusion3-common/proprietary/vendor/camera/SOI13BS1_IMX135.dat",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "070954a358638f9327d68f23e8def73c9631b538",
+      "size": 7916,
+      "url": "https://api.github.com/repos/TheMuppets/proprietary_vendor_sony/git/blobs/070954a358638f9327d68f23e8def73c9631b538"
+    },
+    {
+      "path": "fusion3-common/proprietary/vendor/camera/SOI13BS2.dat",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b370bb0e74473c2fd8a66cce403fbf2880738a08",
+      "size": 243552,
+      "url": "https://api.github.com/repos/TheMuppets/proprietary_vendor_sony/git/blobs/b370bb0e74473c2fd8a66cce403fbf2880738a08"
+    },
+    {
+      "path": "fusion3-common/proprietary/vendor/camera/SOI13BS2_DW9735.dat",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "36f4f62169ce6194621a5a5eac43d5515c818bed",
+      "size": 124,
+      "url": "https://api.github.com/repos/TheMuppets/proprietary_vendor_sony/git/blobs/36f4f62169ce6194621a5a5eac43d5515c818bed"
+    },
+    {
+      "path": "fusion3-common/proprietary/vendor/camera/SOI13BS2_IMX135.dat",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "849c842dec54c1a2800b7c99db6f4211ead61ef7",
+      "size": 7736,
+      "url": "https://api.github.com/repos/TheMuppets/proprietary_vendor_sony/git/blobs/849c842dec54c1a2800b7c99db6f4211ead61ef7"
+    },
+    {
+      "path": "fusion3-common/proprietary/vendor/camera/SOI13BS9.dat",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2a46d17738e57b1ba70c02abca864304d6aaf21d",
+      "size": 243552,
+      "url": "https://api.github.com/repos/TheMuppets/proprietary_vendor_sony/git/blobs/2a46d17738e57b1ba70c02abca864304d6aaf21d"
+    },
+    {
+      "path": "fusion3-common/proprietary/vendor/firmware/a300_pfp.fw",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5522677973ce524887ec2a381ed603429d301df0",
+      "size": 1156,
+      "url": "https://api.github.com/repos/TheMuppets/proprietary_vendor_sony/git/blobs/5522677973ce524887ec2a381ed603429d301df0"
+    },
+    {
+      "path": "fusion3-common/proprietary/vendor/firmware/a300_pm4.fw",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "840e5a9688303c93b6ecd83988123e7fe1a174e6",
+      "size": 9220,
+      "url": "https://api.github.com/repos/TheMuppets/proprietary_vendor_sony/git/blobs/840e5a9688303c93b6ecd83988123e7fe1a174e6"
+    },
+    {
+      "path": "fusion3-common/proprietary/vendor/firmware/keymaster/keymaster.b00",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f070c94e0bef56cb31f7c3db8f80049b282078ae",
+      "size": 180,
+      "url": "https://api.github.com/repos/TheMuppets/proprietary_vendor_sony/git/blobs/f070c94e0bef56cb31f7c3db8f80049b282078ae"
+    },
+    {
+      "path": "fusion3-common/proprietary/vendor/firmware/keymaster/keymaster.b01",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8d6f7fff721ecc0e1ded650f320a45a7de17893e",
+      "size": 2780,
+      "url": "https://api.github.com/repos/TheMuppets/proprietary_vendor_sony/git/blobs/8d6f7fff721ecc0e1ded650f320a45a7de17893e"
+    },
+    {
+      "path": "fusion3-common/proprietary/vendor/firmware/keymaster/keymaster.b02",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "49a5ed330c499cafcc506d8ddfc881cdb7a04637",
+      "size": 45056,
+      "url": "https://api.github.com/repos/TheMuppets/proprietary_vendor_sony/git/blobs/49a5ed330c499cafcc506d8ddfc881cdb7a04637"
+    },
+    {
+      "path": "fusion3-common/proprietary/vendor/firmware/keymaster/keymaster.b03",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f2d986e274d6eb575a21fcfa6645521ac6ea2a32",
+      "size": 4268,
+      "url": "https://api.github.com/repos/TheMuppets/proprietary_vendor_sony/git/blobs/f2d986e274d6eb575a21fcfa6645521ac6ea2a32"
+    },
+    {
+      "path": "fusion3-common/proprietary/vendor/firmware/keymaster/keymaster.mdt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "534eeff84549c98d3f3079cc5fb5dea2c57219fd",
+      "size": 2960,
+      "url": "https://api.github.com/repos/TheMuppets/proprietary_vendor_sony/git/blobs/534eeff84549c98d3f3079cc5fb5dea2c57219fd"
+    },
+    {
+      "path": "fusion3-common/proprietary/vendor/lib/egl/eglsubAndroid.so",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "854c1daeecdd5a8befca32458c53540bdd95cc8c",
+      "size": 42576,
+      "url": "https://api.github.com/repos/TheMuppets/proprietary_vendor_sony/git/blobs/854c1daeecdd5a8befca32458c53540bdd95cc8c"
+    },
+    {
+      "path": "fusion3-common/proprietary/vendor/lib/egl/libEGL_adreno.so",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a244587f8d6811f986b45d4124a5db56b916d38c",
+      "size": 178588,
+      "url": "https://api.github.com/repos/TheMuppets/proprietary_vendor_sony/git/blobs/a244587f8d6811f986b45d4124a5db56b916d38c"
+    },
+    {
+      "path": "fusion3-common/proprietary/vendor/lib/egl/libGLESv1_CM_adreno.so",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e4be8e3fde645a25767d7cb918279351246baa30",
+      "size": 210676,
+      "url": "https://api.github.com/repos/TheMuppets/proprietary_vendor_sony/git/blobs/e4be8e3fde645a25767d7cb918279351246baa30"
+    },
+    {
+      "path": "fusion3-common/proprietary/vendor/lib/egl/libGLESv2_adreno.so",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "537eb073d7d51cd728e43bb609afa6ce4b7e4b7c",
+      "size": 1293288,
+      "url": "https://api.github.com/repos/TheMuppets/proprietary_vendor_sony/git/blobs/537eb073d7d51cd728e43bb609afa6ce4b7e4b7c"
+    },
+    {
+      "path": "fusion3-common/proprietary/vendor/lib/egl/libplayback_adreno.so",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a06733f356950882eb95f60770a7386f824ee4b7",
+      "size": 83260,
+      "url": "https://api.github.com/repos/TheMuppets/proprietary_vendor_sony/git/blobs/a06733f356950882eb95f60770a7386f824ee4b7"
+    },
+    {
+      "path": "fusion3-common/proprietary/vendor/lib/egl/libq3dtools_adreno.so",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "01ed1d0e5696dce9d02723a3f6b7113de67ac24f",
+      "size": 403468,
+      "url": "https://api.github.com/repos/TheMuppets/proprietary_vendor_sony/git/blobs/01ed1d0e5696dce9d02723a3f6b7113de67ac24f"
+    },
+    {
+      "path": "fusion3-common/proprietary/vendor/lib/libC2D2.so",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8af301a16e640ccc89bdcba0d47a393b1983e6a4",
+      "size": 120652,
+      "url": "https://api.github.com/repos/TheMuppets/proprietary_vendor_sony/git/blobs/8af301a16e640ccc89bdcba0d47a393b1983e6a4"
+    },
+    {
+      "path": "fusion3-common/proprietary/vendor/lib/libCB.so",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "817cdae3fb946df1ccd91fe3309b54cde2ad6e75",
+      "size": 665492,
+      "url": "https://api.github.com/repos/TheMuppets/proprietary_vendor_sony/git/blobs/817cdae3fb946df1ccd91fe3309b54cde2ad6e75"
+    },
+    {
+      "path": "fusion3-common/proprietary/vendor/lib/libRSDriver_adreno.so",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "35e85e1def21f925401ea21bf58f30ace660fdaa",
+      "size": 194184,
+      "url": "https://api.github.com/repos/TheMuppets/proprietary_vendor_sony/git/blobs/35e85e1def21f925401ea21bf58f30ace660fdaa"
+    },
+    {
+      "path": "fusion3-common/proprietary/vendor/lib/libadreno_utils.so",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "38bc29ed10cf9fb2593f7596224e9428738df24e",
+      "size": 22100,
+      "url": "https://api.github.com/repos/TheMuppets/proprietary_vendor_sony/git/blobs/38bc29ed10cf9fb2593f7596224e9428738df24e"
+    },
+    {
+      "path": "fusion3-common/proprietary/vendor/lib/libbccQTI.so",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "10e4bdfdd28d5ea9dd051105354c44e531cdb668",
+      "size": 5160,
+      "url": "https://api.github.com/repos/TheMuppets/proprietary_vendor_sony/git/blobs/10e4bdfdd28d5ea9dd051105354c44e531cdb668"
+    },
+    {
+      "path": "fusion3-common/proprietary/vendor/lib/libbtnv.so",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "16338e931e23087340417542c399c663ed421179",
+      "size": 5164,
+      "url": "https://api.github.com/repos/TheMuppets/proprietary_vendor_sony/git/blobs/16338e931e23087340417542c399c663ed421179"
+    },
+    {
+      "path": "fusion3-common/proprietary/vendor/lib/libc2d30-a3xx.so",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9b6461d89cd7cecf38cfd4f34cf334d5790cc158",
+      "size": 707884,
+      "url": "https://api.github.com/repos/TheMuppets/proprietary_vendor_sony/git/blobs/9b6461d89cd7cecf38cfd4f34cf334d5790cc158"
+    },
+    {
+      "path": "fusion3-common/proprietary/vendor/lib/libc2d30.so",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4c0b1af3b24d44580d9fd03107af9d0d3cf6df31",
+      "size": 91540,
+      "url": "https://api.github.com/repos/TheMuppets/proprietary_vendor_sony/git/blobs/4c0b1af3b24d44580d9fd03107af9d0d3cf6df31"
+    },
+    {
+      "path": "fusion3-common/proprietary/vendor/lib/libdiag.so",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a23f16d3c46a43918fb48e12ad983a8292670832",
+      "size": 52164,
+      "url": "https://api.github.com/repos/TheMuppets/proprietary_vendor_sony/git/blobs/a23f16d3c46a43918fb48e12ad983a8292670832"
+    },
+    {
+      "path": "fusion3-common/proprietary/vendor/lib/libgeofence.so",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c27d35b1c3a36bf8afa3b5d280b4bc09bf644d4a",
+      "size": 34080,
+      "url": "https://api.github.com/repos/TheMuppets/proprietary_vendor_sony/git/blobs/c27d35b1c3a36bf8afa3b5d280b4bc09bf644d4a"
+    },
+    {
+      "path": "fusion3-common/proprietary/vendor/lib/libgsl.so",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ee757d8163543957e084d77f2b742a9ba6c925c6",
+      "size": 244124,
+      "url": "https://api.github.com/repos/TheMuppets/proprietary_vendor_sony/git/blobs/ee757d8163543957e084d77f2b742a9ba6c925c6"
+    },
+    {
+      "path": "fusion3-common/proprietary/vendor/lib/libizat_core.so",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "807edbfc72c5cbcccb9e768a36abf353c2131bb7",
+      "size": 38136,
+      "url": "https://api.github.com/repos/TheMuppets/proprietary_vendor_sony/git/blobs/807edbfc72c5cbcccb9e768a36abf353c2131bb7"
+    },
+    {
+      "path": "fusion3-common/proprietary/vendor/lib/liblbs_core.so",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "06061e1e36ca699dc5303f56d11568c4e063e8d0",
+      "size": 50392,
+      "url": "https://api.github.com/repos/TheMuppets/proprietary_vendor_sony/git/blobs/06061e1e36ca699dc5303f56d11568c4e063e8d0"
+    },
+    {
+      "path": "fusion3-common/proprietary/vendor/lib/libllvm-qcom.so",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "774573bc652f8ebc99a1cee1207db8cb797eff92",
+      "size": 18989972,
+      "url": "https://api.github.com/repos/TheMuppets/proprietary_vendor_sony/git/blobs/774573bc652f8ebc99a1cee1207db8cb797eff92"
+    },
+    {
+      "path": "fusion3-common/proprietary/vendor/lib/libqmi_cci.so",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "72f8ad3abfc92b09fa9d3eee321e77b2a6afe59e",
+      "size": 25808,
+      "url": "https://api.github.com/repos/TheMuppets/proprietary_vendor_sony/git/blobs/72f8ad3abfc92b09fa9d3eee321e77b2a6afe59e"
+    },
+    {
+      "path": "fusion3-common/proprietary/vendor/lib/libqmi_common_so.so",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b6454a1e69bdbc1abd17fcf2f8000ae33ed8f6ab",
+      "size": 5140,
+      "url": "https://api.github.com/repos/TheMuppets/proprietary_vendor_sony/git/blobs/b6454a1e69bdbc1abd17fcf2f8000ae33ed8f6ab"
+    },
+    {
+      "path": "fusion3-common/proprietary/vendor/lib/libqmi_csi.so",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4c86bc5c12ebb9f9f1a895181e4a099676b47480",
+      "size": 17604,
+      "url": "https://api.github.com/repos/TheMuppets/proprietary_vendor_sony/git/blobs/4c86bc5c12ebb9f9f1a895181e4a099676b47480"
+    },
+    {
+      "path": "fusion3-common/proprietary/vendor/lib/libqmi_encdec.so",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "387cc7f1796a26f2c13077c34eb7e809eb165c7c",
+      "size": 13272,
+      "url": "https://api.github.com/repos/TheMuppets/proprietary_vendor_sony/git/blobs/387cc7f1796a26f2c13077c34eb7e809eb165c7c"
+    },
+    {
+      "path": "fusion3-common/proprietary/vendor/lib/libqti-perfd-client.so",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3e3a1229f1b2d72dbd28a0a866f48a541e2bb27b",
+      "size": 5224,
+      "url": "https://api.github.com/repos/TheMuppets/proprietary_vendor_sony/git/blobs/3e3a1229f1b2d72dbd28a0a866f48a541e2bb27b"
+    },
+    {
+      "path": "fusion3-common/proprietary/vendor/lib/librs_adreno.so",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a995940127565c2eabd39f48e81808dc9607d281",
+      "size": 243412,
+      "url": "https://api.github.com/repos/TheMuppets/proprietary_vendor_sony/git/blobs/a995940127565c2eabd39f48e81808dc9607d281"
+    },
+    {
+      "path": "fusion3-common/proprietary/vendor/lib/librs_adreno_sha1.so",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6042697045f8768d8e8630588e48713ab9627811",
+      "size": 5484,
+      "url": "https://api.github.com/repos/TheMuppets/proprietary_vendor_sony/git/blobs/6042697045f8768d8e8630588e48713ab9627811"
+    },
+    {
+      "path": "fusion3-common/proprietary/vendor/lib/libsc-a3xx.so",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "628d28c07fe9afa1e82b8878dcf71a5a1eacc652",
+      "size": 4501680,
+      "url": "https://api.github.com/repos/TheMuppets/proprietary_vendor_sony/git/blobs/628d28c07fe9afa1e82b8878dcf71a5a1eacc652"
+    },
+    {
+      "path": "fusion3-common/proprietary/vendor/lib/libtime_genoff.so",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5231e222757dcd3a934684b1df2a2077f1ce5d58",
+      "size": 5128,
+      "url": "https://api.github.com/repos/TheMuppets/proprietary_vendor_sony/git/blobs/5231e222757dcd3a934684b1df2a2077f1ce5d58"
+    },
+    {
+      "path": "fusion3-common/proprietary/vendor/lib/libuiblur.so",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8fc9cdd12c12726c8fe750a9bb9a6a496552573d",
+      "size": 29980,
+      "url": "https://api.github.com/repos/TheMuppets/proprietary_vendor_sony/git/blobs/8fc9cdd12c12726c8fe750a9bb9a6a496552573d"
+    },
+    {
+      "path": "fusion3-common/proprietary/vendor/lib/mediadrm/libwvdrmengine.so",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "18d620a7fb4e1e602130b66d60a7dd1c347c838d",
+      "size": 1635456,
+      "url": "https://api.github.com/repos/TheMuppets/proprietary_vendor_sony/git/blobs/18d620a7fb4e1e602130b66d60a7dd1c347c838d"
+    },
+    {
+      "path": "yuga/Android.mk",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "40d6f15f642409637d73d317a7bfa449aa6bf525",
+      "size": 767,
+      "url": "https://api.github.com/repos/TheMuppets/proprietary_vendor_sony/git/blobs/40d6f15f642409637d73d317a7bfa449aa6bf525"
+    },
+    {
+      "path": "yuga/BoardConfigVendor.mk",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "35dad20314d97b9a21b729e8fad25656e217aef0",
+      "size": 726,
+      "url": "https://api.github.com/repos/TheMuppets/proprietary_vendor_sony/git/blobs/35dad20314d97b9a21b729e8fad25656e217aef0"
+    },
+    {
+      "path": "yuga/proprietary/bin/efsks",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "a4eda84daf1bf092cf8c7e267f4a44acc5be40c7",
+      "size": 12112,
+      "url": "https://api.github.com/repos/TheMuppets/proprietary_vendor_sony/git/blobs/a4eda84daf1bf092cf8c7e267f4a44acc5be40c7"
+    },
+    {
+      "path": "yuga/proprietary/bin/illumination_service",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "fbd255c91943d016835913b83b241ecff5b1064c",
+      "size": 34716,
+      "url": "https://api.github.com/repos/TheMuppets/proprietary_vendor_sony/git/blobs/fbd255c91943d016835913b83b241ecff5b1064c"
+    },
+    {
+      "path": "yuga/proprietary/bin/qcks",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "3ffb8537d6331081193c826faad4f07654bd9907",
+      "size": 33204,
+      "url": "https://api.github.com/repos/TheMuppets/proprietary_vendor_sony/git/blobs/3ffb8537d6331081193c826faad4f07654bd9907"
+    },
+    {
+      "path": "yuga/proprietary/bin/updatemiscta",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "46f25a6c8ce5af020ed1d1459f81e27c08e8c1aa",
+      "size": 17628,
+      "url": "https://api.github.com/repos/TheMuppets/proprietary_vendor_sony/git/blobs/46f25a6c8ce5af020ed1d1459f81e27c08e8c1aa"
+    },
+    {
+      "path": "yuga/proprietary/etc/firmware/apps.mbn",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7bd68068ecd1c65acfc38d6a3665f649a4ab08f9",
+      "size": 2786144,
+      "url": "https://api.github.com/repos/TheMuppets/proprietary_vendor_sony/git/blobs/7bd68068ecd1c65acfc38d6a3665f649a4ab08f9"
+    },
+    {
+      "path": "yuga/proprietary/etc/firmware/dsp1.mbn",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c42b089e6e378c60520473d9ac06a3a9b534b120",
+      "size": 2631864,
+      "url": "https://api.github.com/repos/TheMuppets/proprietary_vendor_sony/git/blobs/c42b089e6e378c60520473d9ac06a3a9b534b120"
+    },
+    {
+      "path": "yuga/proprietary/etc/firmware/dsp2.mbn",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "172c5d6440895edeb8f730c785171554f456082e",
+      "size": 31212676,
+      "url": "https://api.github.com/repos/TheMuppets/proprietary_vendor_sony/git/blobs/172c5d6440895edeb8f730c785171554f456082e"
+    },
+    {
+      "path": "yuga/proprietary/etc/firmware/dsp3.mbn",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "64b394f43b8ab55c656dd35d6948713a2e1f1d74",
+      "size": 6767552,
+      "url": "https://api.github.com/repos/TheMuppets/proprietary_vendor_sony/git/blobs/64b394f43b8ab55c656dd35d6948713a2e1f1d74"
+    },
+    {
+      "path": "yuga/proprietary/etc/firmware/dsps.b00",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "438b20761b529a55e8bf9304823529b963f6b649",
+      "size": 244,
+      "url": "https://api.github.com/repos/TheMuppets/proprietary_vendor_sony/git/blobs/438b20761b529a55e8bf9304823529b963f6b649"
+    },
+    {
+      "path": "yuga/proprietary/etc/firmware/dsps.b01",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "937da974b46e646cd8038b07b25fed2cba5703e0",
+      "size": 6560,
+      "url": "https://api.github.com/repos/TheMuppets/proprietary_vendor_sony/git/blobs/937da974b46e646cd8038b07b25fed2cba5703e0"
+    },
+    {
+      "path": "yuga/proprietary/etc/firmware/dsps.b02",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c1e30e808322fd46a54a538a1b3cd568fabd6051",
+      "size": 147456,
+      "url": "https://api.github.com/repos/TheMuppets/proprietary_vendor_sony/git/blobs/c1e30e808322fd46a54a538a1b3cd568fabd6051"
+    },
+    {
+      "path": "yuga/proprietary/etc/firmware/dsps.b03",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a8c8a53dda6820645064b7e7c01975d80dddb948",
+      "size": 44368,
+      "url": "https://api.github.com/repos/TheMuppets/proprietary_vendor_sony/git/blobs/a8c8a53dda6820645064b7e7c01975d80dddb948"
+    },
+    {
+      "path": "yuga/proprietary/etc/firmware/dsps.b04",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "18791f7fa0c99517cd21656e5a993b490b30146a",
+      "size": 6404,
+      "url": "https://api.github.com/repos/TheMuppets/proprietary_vendor_sony/git/blobs/18791f7fa0c99517cd21656e5a993b490b30146a"
+    },
+    {
+      "path": "yuga/proprietary/etc/firmware/dsps.b05",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3d691798de34a512b2f969e8b210aaae6e01612d",
+      "size": 12392,
+      "url": "https://api.github.com/repos/TheMuppets/proprietary_vendor_sony/git/blobs/3d691798de34a512b2f969e8b210aaae6e01612d"
+    },
+    {
+      "path": "yuga/proprietary/etc/firmware/dsps.mdt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7935b313528765306b7c13c3f5afdae397cda037",
+      "size": 6804,
+      "url": "https://api.github.com/repos/TheMuppets/proprietary_vendor_sony/git/blobs/7935b313528765306b7c13c3f5afdae397cda037"
+    },
+    {
+      "path": "yuga/proprietary/etc/firmware/touch_module_id_0x36.img",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2bb199e0458f548792b88bc3dc3e12e55fd2834c",
+      "size": 47104,
+      "url": "https://api.github.com/repos/TheMuppets/proprietary_vendor_sony/git/blobs/2bb199e0458f548792b88bc3dc3e12e55fd2834c"
+    },
+    {
+      "path": "yuga/proprietary/etc/firmware/touch_module_id_0x37.img",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "df5519f79b5f40c6f171bdc60c9d63f578d939c6",
+      "size": 47104,
+      "url": "https://api.github.com/repos/TheMuppets/proprietary_vendor_sony/git/blobs/df5519f79b5f40c6f171bdc60c9d63f578d939c6"
+    },
+    {
+      "path": "yuga/proprietary/etc/firmware/touch_module_id_0x41.img",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "559a2ffdb101e3fc71090b1af1cddd81acef0175",
+      "size": 47104,
+      "url": "https://api.github.com/repos/TheMuppets/proprietary_vendor_sony/git/blobs/559a2ffdb101e3fc71090b1af1cddd81acef0175"
+    },
+    {
+      "path": "yuga/proprietary/etc/firmware/touch_module_id_0x42.img",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f086ab522aaad013624df83084418963f24bfe8f",
+      "size": 47104,
+      "url": "https://api.github.com/repos/TheMuppets/proprietary_vendor_sony/git/blobs/f086ab522aaad013624df83084418963f24bfe8f"
+    },
+    {
+      "path": "yuga/proprietary/etc/flashled_calc_parameters.cfg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3b67ce3fb992e93577726827210ca58dceb33888",
+      "size": 2494,
+      "url": "https://api.github.com/repos/TheMuppets/proprietary_vendor_sony/git/blobs/3b67ce3fb992e93577726827210ca58dceb33888"
+    },
+    {
+      "path": "yuga/proprietary/lib/hw/nfc.msm8960.so",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b85b9bab5c28e6be1cfc8217bb64828c3d0d56cc",
+      "size": 5612,
+      "url": "https://api.github.com/repos/TheMuppets/proprietary_vendor_sony/git/blobs/b85b9bab5c28e6be1cfc8217bb64828c3d0d56cc"
+    },
+    {
+      "path": "yuga/proprietary/lib/libaudcal.so",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e0577e2d8077631ef277cf0e5aa20ece41f4ab2d",
+      "size": 752012,
+      "url": "https://api.github.com/repos/TheMuppets/proprietary_vendor_sony/git/blobs/e0577e2d8077631ef277cf0e5aa20ece41f4ab2d"
+    },
+    {
+      "path": "yuga/proprietary/lib/libcald_server.so",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c9143c0bee2dc30b17647e540744743053746b96",
+      "size": 1547320,
+      "url": "https://api.github.com/repos/TheMuppets/proprietary_vendor_sony/git/blobs/c9143c0bee2dc30b17647e540744743053746b96"
+    },
+    {
+      "path": "yuga/proprietary/lib/liboemcamera.so",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c7302244c9ce8dfd79092a906fdf5dfe94153cab",
+      "size": 937736,
+      "url": "https://api.github.com/repos/TheMuppets/proprietary_vendor_sony/git/blobs/c7302244c9ce8dfd79092a906fdf5dfe94153cab"
+    },
+    {
+      "path": "yuga/proprietary/vendor/camera/LGI02BN0_IMX132.dat",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b76bd3e0c916ff5b2554fbbeecbdc24217fc7bc7",
+      "size": 2432,
+      "url": "https://api.github.com/repos/TheMuppets/proprietary_vendor_sony/git/blobs/b76bd3e0c916ff5b2554fbbeecbdc24217fc7bc7"
+    },
+    {
+      "path": "yuga/proprietary/vendor/camera/SEM02BN0_IMX132.dat",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b76bd3e0c916ff5b2554fbbeecbdc24217fc7bc7",
+      "size": 2432,
+      "url": "https://api.github.com/repos/TheMuppets/proprietary_vendor_sony/git/blobs/b76bd3e0c916ff5b2554fbbeecbdc24217fc7bc7"
+    },
+    {
+      "path": "yuga/proprietary/vendor/camera/flash.dat",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8df168d4c512815de3367165c06a3add75b0cdf8",
+      "size": 3160,
+      "url": "https://api.github.com/repos/TheMuppets/proprietary_vendor_sony/git/blobs/8df168d4c512815de3367165c06a3add75b0cdf8"
+    },
+    {
+      "path": "yuga/proprietary/vendor/camera/product.dat",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1b6fb1998d6f554233319949543532d9b75c64e3",
+      "size": 326740,
+      "url": "https://api.github.com/repos/TheMuppets/proprietary_vendor_sony/git/blobs/1b6fb1998d6f554233319949543532d9b75c64e3"
+    },
+    {
+      "path": "yuga/yuga-vendor.mk",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2176e9df9392928917407fcf6eb218ab3f9c787d",
+      "size": 3296,
+      "url": "https://api.github.com/repos/TheMuppets/proprietary_vendor_sony/git/blobs/2176e9df9392928917407fcf6eb218ab3f9c787d"
+    }
+  ],
+  "repository": "https://github.com/TheMuppets/proprietary_vendor_sony.git",
+  "redistribution_license_audit": "pending per-file review; metadata only, no blobs included here",
+  "truncated": false,
+  "commit": "fd7901fc26c1aee86a776a78f745f161f1d9db93"
+}

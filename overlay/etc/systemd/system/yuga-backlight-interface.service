@@ -1,0 +1,13 @@
+[Unit]
+Description=Route Yuga display brightness to the physical LM3533 backlight
+After=systemd-udev-trigger.service
+Before=repowerd.service
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/mount --bind /sys/class/leds/lm3533-lcd-bl /sys/class/leds/lcd-backlight
+ExecStop=/usr/bin/umount /sys/class/leds/lcd-backlight
+RemainAfterExit=yes
+
+[Install]
+WantedBy=multi-user.target

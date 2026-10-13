@@ -1,0 +1,11 @@
+diff --git a/BoardConfig.mk b/BoardConfig.mk
+index 15bf7bf..5a55807 100644
+--- a/BoardConfig.mk
++++ b/BoardConfig.mk
+@@ -32,3 +32,6 @@ include $(DEVICE_PATH)/board/*.mk
+ 
+ # Boot kernel in debug mode
+ TARGET_KERNEL_CMDLINE := bootmode=debug
++
++# Ubuntu Touch userdata image location; keep the common board boot parameters.
++BOARD_KERNEL_CMDLINE += console=tty0 datapart=/dev/mmcblk0p26

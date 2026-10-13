@@ -1,0 +1,11 @@
+--- a/var/lib/lxc/android/config
++++ b/var/lib/lxc/android/config
+@@ -12,7 +12,8 @@
+ lxc.namespace.keep = net user
+ 
+ lxc.tty.dir = lxc
+-lxc.tty.max = 4
++lxc.tty.max = 0
++lxc.console.path = none
+ lxc.pty.max = 1024
+ lxc.cap.drop = mac_admin mac_override
