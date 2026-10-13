@@ -1,0 +1,1005 @@
+{
+  "scope": "cached build packages; not a proof every package was used",
+  "packages": [
+    {
+      "Package": "adduser",
+      "Version": "3.118ubuntu2",
+      "Architecture": "all",
+      "Source": null,
+      "filename": "adduser_3.118ubuntu2_all.deb",
+      "relative_path": "adduser_3.118ubuntu2_all.deb",
+      "bytes": 162792,
+      "sha256": "5f7ea9d1d52a2a9c349468f89d160230e21c8542faed1b1a97c23bce873e17b4"
+    },
+    {
+      "Package": "apt-utils",
+      "Version": "2.0.2",
+      "Architecture": "armhf",
+      "Source": "apt",
+      "filename": "apt-utils_2.0.2_armhf.deb",
+      "relative_path": "apt-utils_2.0.2_armhf.deb",
+      "bytes": 196444,
+      "sha256": "ac4ece21567c00c4782c389a9a43d54e383e19787a7b3aa2dc8a5760fee1b736"
+    },
+    {
+      "Package": "apt",
+      "Version": "2.0.2",
+      "Architecture": "armhf",
+      "Source": null,
+      "filename": "apt_2.0.2_armhf.deb",
+      "relative_path": "apt_2.0.2_armhf.deb",
+      "bytes": 1244296,
+      "sha256": "6c98805e44ca75174fa9771576f8db770f63022517954b0f210eb4cdc9496e22"
+    },
+    {
+      "Package": "ca-certificates",
+      "Version": "20190110ubuntu1",
+      "Architecture": "all",
+      "Source": null,
+      "filename": "ca-certificates_20190110ubuntu1_all.deb",
+      "relative_path": "ca-certificates_20190110ubuntu1_all.deb",
+      "bytes": 146336,
+      "sha256": "978b01e027388615cac0e42a16271328c03dccc18c9b27b985fbabbd5ccf9078"
+    },
+    {
+      "Package": "debconf-i18n",
+      "Version": "1.5.73",
+      "Architecture": "all",
+      "Source": "debconf",
+      "filename": "debconf-i18n_1.5.73_all.deb",
+      "relative_path": "debconf-i18n_1.5.73_all.deb",
+      "bytes": 206284,
+      "sha256": "7637583a6a3793c8addcbb8c093ca3c3ba2b86c82d28e72bbc116c022f66c568"
+    },
+    {
+      "Package": "debconf",
+      "Version": "1.5.73",
+      "Architecture": "all",
+      "Source": null,
+      "filename": "debconf_1.5.73_all.deb",
+      "relative_path": "debconf_1.5.73_all.deb",
+      "bytes": 121524,
+      "sha256": "7d639ffea1be8e8f5859ca94a0a09b1e4664d10af421c748b4163b08db515990"
+    },
+    {
+      "Package": "dpkg",
+      "Version": "1.19.7ubuntu3",
+      "Architecture": "armhf",
+      "Source": null,
+      "filename": "dpkg_1.19.7ubuntu3_armhf.deb",
+      "relative_path": "dpkg_1.19.7ubuntu3_armhf.deb",
+      "bytes": 1083920,
+      "sha256": "ceaa15f99f2c20a080cfdd89b09ce52c48a11235ce42742d5a807ba6f8f9c303"
+    },
+    {
+      "Package": "gcc-10-base",
+      "Version": "10-20200411-0ubuntu1",
+      "Architecture": "armhf",
+      "Source": "gcc-10",
+      "filename": "gcc-10-base_10-20200411-0ubuntu1_armhf.deb",
+      "relative_path": "gcc-10-base_10-20200411-0ubuntu1_armhf.deb",
+      "bytes": 19028,
+      "sha256": "7615e1e9ac1b5e69f1c2a2eb6b2bd06cac19b3b6dc8ce6363f6ce8a85ed1a121"
+    },
+    {
+      "Package": "gcc-9-base",
+      "Version": "9.3.0-10ubuntu2",
+      "Architecture": "armhf",
+      "Source": "gcc-9",
+      "filename": "gcc-9-base_9.3.0-10ubuntu2_armhf.deb",
+      "relative_path": "gcc-9-base_9.3.0-10ubuntu2_armhf.deb",
+      "bytes": 19324,
+      "sha256": "4790ba21b147b79c03b7eae52cababc6645b6c0af54cbc03fcc5509040e09044"
+    },
+    {
+      "Package": "gpgv",
+      "Version": "2.2.19-3ubuntu2",
+      "Architecture": "armhf",
+      "Source": "gnupg2",
+      "filename": "gpgv_2.2.19-3ubuntu2_armhf.deb",
+      "relative_path": "gpgv_2.2.19-3ubuntu2_armhf.deb",
+      "bytes": 170176,
+      "sha256": "67143f970921c0f1ec08148389d82c58e63f7c8cd34b28761a972a4b7e05bbf4"
+    },
+    {
+      "Package": "libacl1",
+      "Version": "2.2.53-6",
+      "Architecture": "armhf",
+      "Source": "acl",
+      "filename": "libacl1_2.2.53-6_armhf.deb",
+      "relative_path": "libacl1_2.2.53-6_armhf.deb",
+      "bytes": 15916,
+      "sha256": "17ee169a5cc36899c884aded99329cd6794267e06a23c33cae7e5187a1f3a558"
+    },
+    {
+      "Package": "libaom-dev",
+      "Version": "1.0.0.errata1-3build1",
+      "Architecture": "armhf",
+      "Source": "aom",
+      "filename": "libaom-dev_1.0.0.errata1-3build1_armhf.deb",
+      "relative_path": "libaom-dev_1.0.0.errata1-3build1_armhf.deb",
+      "bytes": 33992,
+      "sha256": "93b715475bf6cf90b1d3bf42d7f6071a93b8d562a488568723b4ecb241483824"
+    },
+    {
+      "Package": "libaom0",
+      "Version": "1.0.0.errata1-3build1",
+      "Architecture": "armhf",
+      "Source": "aom",
+      "filename": "libaom0_1.0.0.errata1-3build1_armhf.deb",
+      "relative_path": "libaom0_1.0.0.errata1-3build1_armhf.deb",
+      "bytes": 821048,
+      "sha256": "6b6eff5bc55e7accacc4dc9a9be0a216d0cc9fd6144b6602626480c679377cfb"
+    },
+    {
+      "Package": "libapt-pkg6.0",
+      "Version": "2.0.2",
+      "Architecture": "armhf",
+      "Source": "apt",
+      "filename": "libapt-pkg6.0_2.0.2_armhf.deb",
+      "relative_path": "libapt-pkg6.0_2.0.2_armhf.deb",
+      "bytes": 752432,
+      "sha256": "c6c87b6baa1962c5b16812bc3ae1d87281f9f4509c2689a3cff210bb0626b4db"
+    },
+    {
+      "Package": "libasan5",
+      "Version": "9.3.0-10ubuntu2",
+      "Architecture": "armhf",
+      "Source": "gcc-9",
+      "filename": "libasan5_9.3.0-10ubuntu2_armhf.deb",
+      "relative_path": "libasan5_9.3.0-10ubuntu2_armhf.deb",
+      "bytes": 386824,
+      "sha256": "c741782ecc3387e2bc13129b4749874918f2b0810503e6c15e650631fcaedd0b"
+    },
+    {
+      "Package": "libatomic1",
+      "Version": "10-20200411-0ubuntu1",
+      "Architecture": "armhf",
+      "Source": "gcc-10",
+      "filename": "libatomic1_10-20200411-0ubuntu1_armhf.deb",
+      "relative_path": "libatomic1_10-20200411-0ubuntu1_armhf.deb",
+      "bytes": 7216,
+      "sha256": "61e9dcaf2e161d9c01ba5b50d1544841d35aa861a95e60634ab3a9ee052d7e56"
+    },
+    {
+      "Package": "libaudit-common",
+      "Version": "1:2.8.5-2ubuntu6",
+      "Architecture": "all",
+      "Source": "audit",
+      "filename": "libaudit-common_1%3a2.8.5-2ubuntu6_all.deb",
+      "relative_path": "libaudit-common_1%3a2.8.5-2ubuntu6_all.deb",
+      "bytes": 3936,
+      "sha256": "9fa4a291df5682f5fee12aacdddd9ed09445c352c80d8a1af36056866e4b4906"
+    },
+    {
+      "Package": "libaudit1",
+      "Version": "1:2.8.5-2ubuntu6",
+      "Architecture": "armhf",
+      "Source": "audit",
+      "filename": "libaudit1_1%3a2.8.5-2ubuntu6_armhf.deb",
+      "relative_path": "libaudit1_1%3a2.8.5-2ubuntu6_armhf.deb",
+      "bytes": 35780,
+      "sha256": "2aa10fd1f288d9370b320e9de0687941c978375f1eeec3308f38a06c76073572"
+    },
+    {
+      "Package": "libbz2-1.0",
+      "Version": "1.0.8-2",
+      "Architecture": "armhf",
+      "Source": "bzip2",
+      "filename": "libbz2-1.0_1.0.8-2_armhf.deb",
+      "relative_path": "libbz2-1.0_1.0.8-2_armhf.deb",
+      "bytes": 31028,
+      "sha256": "92b7dcaa31964fca399cbc6458f1ece30a6cbbac83a868f4c4b3bba57c03f5f6"
+    },
+    {
+      "Package": "libc-dev-bin",
+      "Version": "2.31-0ubuntu9",
+      "Architecture": "armhf",
+      "Source": "glibc",
+      "filename": "libc-dev-bin_2.31-0ubuntu9_armhf.deb",
+      "relative_path": "libc-dev-bin_2.31-0ubuntu9_armhf.deb",
+      "bytes": 63616,
+      "sha256": "75dad23e0e5167b91b5a7ed69fe7ee549075ad17465d43fbcf3ebf12d2b7d61a"
+    },
+    {
+      "Package": "libc6-dev",
+      "Version": "2.31-0ubuntu9",
+      "Architecture": "armhf",
+      "Source": "glibc",
+      "filename": "libc6-dev_2.31-0ubuntu9_armhf.deb",
+      "relative_path": "libc6-dev_2.31-0ubuntu9_armhf.deb",
+      "bytes": 1913136,
+      "sha256": "5df85329bd962bd3cf9dd651ecf2467e05665237c355b8aef8751e4ecc4214b1"
+    },
+    {
+      "Package": "libc6",
+      "Version": "2.31-0ubuntu9",
+      "Architecture": "armhf",
+      "Source": "glibc",
+      "filename": "libc6_2.31-0ubuntu9_armhf.deb",
+      "relative_path": "libc6_2.31-0ubuntu9_armhf.deb",
+      "bytes": 2135456,
+      "sha256": "a1e1950eb3dd55403b2da91a7dc428dff0d3dc1b3ad87be9dbc1dde97711c21f"
+    },
+    {
+      "Package": "libcap-ng0",
+      "Version": "0.7.9-2.1build1",
+      "Architecture": "armhf",
+      "Source": "libcap-ng",
+      "filename": "libcap-ng0_0.7.9-2.1build1_armhf.deb",
+      "relative_path": "libcap-ng0_0.7.9-2.1build1_armhf.deb",
+      "bytes": 9688,
+      "sha256": "66d7a2473bb0aae9df9eecdce4fabaa7bc5ee4c1d1be139f113b17148d86dfad"
+    },
+    {
+      "Package": "libcrypt-dev",
+      "Version": "1:4.4.10-10ubuntu4",
+      "Architecture": "armhf",
+      "Source": "libxcrypt",
+      "filename": "libcrypt-dev_1%3a4.4.10-10ubuntu4_armhf.deb",
+      "relative_path": "libcrypt-dev_1%3a4.4.10-10ubuntu4_armhf.deb",
+      "bytes": 119984,
+      "sha256": "406d581efdcae681b981367b7209323be41b65bb7abeb86dbf3a663813735644"
+    },
+    {
+      "Package": "libcrypt1",
+      "Version": "1:4.4.10-10ubuntu4",
+      "Architecture": "armhf",
+      "Source": "libxcrypt",
+      "filename": "libcrypt1_1%3a4.4.10-10ubuntu4_armhf.deb",
+      "relative_path": "libcrypt1_1%3a4.4.10-10ubuntu4_armhf.deb",
+      "bytes": 93460,
+      "sha256": "dd2d0569b055e2aa04618d0770a378e6061ac6860a3eb4a73c2a0c856fd815ff"
+    },
+    {
+      "Package": "libdb5.3",
+      "Version": "5.3.28+dfsg1-0.6ubuntu2",
+      "Architecture": "armhf",
+      "Source": "db5.3",
+      "filename": "libdb5.3_5.3.28+dfsg1-0.6ubuntu2_armhf.deb",
+      "relative_path": "libdb5.3_5.3.28+dfsg1-0.6ubuntu2_armhf.deb",
+      "bytes": 596848,
+      "sha256": "6be7a73b47fb250dabeac5a98250eeea24b0370ba7724d85431b267b2122f295"
+    },
+    {
+      "Package": "libde265-0",
+      "Version": "1.0.4-1build1",
+      "Architecture": "armhf",
+      "Source": "libde265",
+      "filename": "libde265-0_1.0.4-1build1_armhf.deb",
+      "relative_path": "libde265-0_1.0.4-1build1_armhf.deb",
+      "bytes": 190868,
+      "sha256": "1d96ccf107c97c949967c912668f8ba23456541b6fd156714c3c51e072acddb4"
+    },
+    {
+      "Package": "libde265-dev",
+      "Version": "1.0.4-1build1",
+      "Architecture": "armhf",
+      "Source": "libde265",
+      "filename": "libde265-dev_1.0.4-1build1_armhf.deb",
+      "relative_path": "libde265-dev_1.0.4-1build1_armhf.deb",
+      "bytes": 11784,
+      "sha256": "1cf52d288bdcd1a4cdbd284bc52ff1bc6558d5e4d188be8a17ab47381bdca14d"
+    },
+    {
+      "Package": "libffi-dev",
+      "Version": "3.3-4",
+      "Architecture": "armhf",
+      "Source": "libffi",
+      "filename": "libffi-dev_3.3-4_armhf.deb",
+      "relative_path": "libffi-dev_3.3-4_armhf.deb",
+      "bytes": 52988,
+      "sha256": "67be3302c923360daa938755d913cf2ea1aaa1c821e0e39cd01da8345a816815"
+    },
+    {
+      "Package": "libffi7",
+      "Version": "3.3-4",
+      "Architecture": "armhf",
+      "Source": "libffi",
+      "filename": "libffi7_3.3-4_armhf.deb",
+      "relative_path": "libffi7_3.3-4_armhf.deb",
+      "bytes": 16512,
+      "sha256": "e6020a396f35b98e343d72f4f473c75d20e0a065c85fbee45748748ea1b09e29"
+    },
+    {
+      "Package": "libgcc-9-dev",
+      "Version": "9.3.0-10ubuntu2",
+      "Architecture": "armhf",
+      "Source": "gcc-9",
+      "filename": "libgcc-9-dev_9.3.0-10ubuntu2_armhf.deb",
+      "relative_path": "libgcc-9-dev_9.3.0-10ubuntu2_armhf.deb",
+      "bytes": 689764,
+      "sha256": "3a42852081cee434dec81a805361d063e3d6f0b2f2846040af76e923be19ccf4"
+    },
+    {
+      "Package": "libgcc-s1",
+      "Version": "10-20200411-0ubuntu1",
+      "Architecture": "armhf",
+      "Source": "gcc-10",
+      "filename": "libgcc-s1_10-20200411-0ubuntu1_armhf.deb",
+      "relative_path": "libgcc-s1_10-20200411-0ubuntu1_armhf.deb",
+      "bytes": 36188,
+      "sha256": "4bc4caf635e57ecde7dde7a565c0187b566195184e14c83e3934791bab0c5185"
+    },
+    {
+      "Package": "libgcrypt20",
+      "Version": "1.8.5-5ubuntu1",
+      "Architecture": "armhf",
+      "Source": null,
+      "filename": "libgcrypt20_1.8.5-5ubuntu1_armhf.deb",
+      "relative_path": "libgcrypt20_1.8.5-5ubuntu1_armhf.deb",
+      "bytes": 364884,
+      "sha256": "ba8fbed2a6fbe4fc1ece254a1b76752775386ec423724de94b8e1ef653e9b7f4"
+    },
+    {
+      "Package": "libgmp10",
+      "Version": "2:6.2.0+dfsg-4",
+      "Architecture": "armhf",
+      "Source": "gmp",
+      "filename": "libgmp10_2%3a6.2.0+dfsg-4_armhf.deb",
+      "relative_path": "libgmp10_2%3a6.2.0+dfsg-4_armhf.deb",
+      "bytes": 192752,
+      "sha256": "55b3adde67ca647778be0eee3fa4c9e8a4030e086fb6590a73a57ebb441e3463"
+    },
+    {
+      "Package": "libgnutls30",
+      "Version": "3.6.13-2ubuntu1",
+      "Architecture": "armhf",
+      "Source": "gnutls28",
+      "filename": "libgnutls30_3.6.13-2ubuntu1_armhf.deb",
+      "relative_path": "libgnutls30_3.6.13-2ubuntu1_armhf.deb",
+      "bytes": 767100,
+      "sha256": "e3aa092cf58b08e38129779b2bef582ed14f3ea7566621dad5405a6510392f57"
+    },
+    {
+      "Package": "libgomp1",
+      "Version": "10-20200411-0ubuntu1",
+      "Architecture": "armhf",
+      "Source": "gcc-10",
+      "filename": "libgomp1_10-20200411-0ubuntu1_armhf.deb",
+      "relative_path": "libgomp1_10-20200411-0ubuntu1_armhf.deb",
+      "bytes": 86780,
+      "sha256": "1ee2332d7bc2214852a1fe99409d101ec7ed228c75a6c52e886948165a7ec596"
+    },
+    {
+      "Package": "libgpg-error-l10n",
+      "Version": "1.37-1",
+      "Architecture": "all",
+      "Source": "libgpg-error",
+      "filename": "libgpg-error-l10n_1.37-1_all.deb",
+      "relative_path": "libgpg-error-l10n_1.37-1_all.deb",
+      "bytes": 6880,
+      "sha256": "7da4507e79d0d2ea2a56bb90bd7dfff9a3edbe25a1d336052e7fbea48f42eef8"
+    },
+    {
+      "Package": "libgpg-error0",
+      "Version": "1.37-1",
+      "Architecture": "armhf",
+      "Source": "libgpg-error",
+      "filename": "libgpg-error0_1.37-1_armhf.deb",
+      "relative_path": "libgpg-error0_1.37-1_armhf.deb",
+      "bytes": 50020,
+      "sha256": "b4617b87745de5fce9ad2a7aa2098f590ae40c432c70608f54b18772dda325df"
+    },
+    {
+      "Package": "libhogweed5",
+      "Version": "3.5.1+really3.5.1-2",
+      "Architecture": "armhf",
+      "Source": "nettle",
+      "filename": "libhogweed5_3.5.1+really3.5.1-2_armhf.deb",
+      "relative_path": "libhogweed5_3.5.1+really3.5.1-2_armhf.deb",
+      "bytes": 126876,
+      "sha256": "5e1a71a8138fbd6f074530aa5703c0b867dab3c0602a247fd2b7dcee43b073c2"
+    },
+    {
+      "Package": "libidn2-0",
+      "Version": "2.2.0-2",
+      "Architecture": "armhf",
+      "Source": "libidn2",
+      "filename": "libidn2-0_2.2.0-2_armhf.deb",
+      "relative_path": "libidn2-0_2.2.0-2_armhf.deb",
+      "bytes": 47716,
+      "sha256": "c04241e94a6f3d30e53451996005f7f207bab8136e530c65dec2f2b0042390b8"
+    },
+    {
+      "Package": "libjbig-dev",
+      "Version": "2.1-3.1build1",
+      "Architecture": "armhf",
+      "Source": "jbigkit",
+      "filename": "libjbig-dev_2.1-3.1build1_armhf.deb",
+      "relative_path": "libjbig-dev_2.1-3.1build1_armhf.deb",
+      "bytes": 22888,
+      "sha256": "436523b6aab3ffa8673c0bdb6c2c317ba1b6d3342eb8c8c0788d17beaadf5fb3"
+    },
+    {
+      "Package": "libjbig0",
+      "Version": "2.1-3.1build1",
+      "Architecture": "armhf",
+      "Source": "jbigkit",
+      "filename": "libjbig0_2.1-3.1build1_armhf.deb",
+      "relative_path": "libjbig0_2.1-3.1build1_armhf.deb",
+      "bytes": 23888,
+      "sha256": "2237881bb53ea6ad74a123aee64eaa34f6a231202cfb2bc00d540c5b116ae046"
+    },
+    {
+      "Package": "libjpeg-dev",
+      "Version": "8c-2ubuntu8",
+      "Architecture": "armhf",
+      "Source": "libjpeg8-empty",
+      "filename": "libjpeg-dev_8c-2ubuntu8_armhf.deb",
+      "relative_path": "libjpeg-dev_8c-2ubuntu8_armhf.deb",
+      "bytes": 1554,
+      "sha256": "e52835011f2f46e246ca2386dd4cdbf8adf10bed7fd0475579b18484198be031"
+    },
+    {
+      "Package": "libjpeg-turbo8-dev",
+      "Version": "2.0.3-0ubuntu1",
+      "Architecture": "armhf",
+      "Source": "libjpeg-turbo",
+      "filename": "libjpeg-turbo8-dev_2.0.3-0ubuntu1_armhf.deb",
+      "relative_path": "libjpeg-turbo8-dev_2.0.3-0ubuntu1_armhf.deb",
+      "bytes": 203192,
+      "sha256": "3f2e306f28ce9579d4c1b1ba538d92dc9b1b27c5e62374515d39bfc1030f74e0"
+    },
+    {
+      "Package": "libjpeg-turbo8",
+      "Version": "2.0.3-0ubuntu1",
+      "Architecture": "armhf",
+      "Source": "libjpeg-turbo",
+      "filename": "libjpeg-turbo8_2.0.3-0ubuntu1_armhf.deb",
+      "relative_path": "libjpeg-turbo8_2.0.3-0ubuntu1_armhf.deb",
+      "bytes": 90372,
+      "sha256": "80405b8c005007152777d74c0e2eb33da339d875a8ccf2d2339f21e50ee9877e"
+    },
+    {
+      "Package": "libjpeg8-dev",
+      "Version": "8c-2ubuntu8",
+      "Architecture": "armhf",
+      "Source": "libjpeg8-empty",
+      "filename": "libjpeg8-dev_8c-2ubuntu8_armhf.deb",
+      "relative_path": "libjpeg8-dev_8c-2ubuntu8_armhf.deb",
+      "bytes": 1554,
+      "sha256": "19f9b21aefd0d2833df7c1f452d2b856151916120ee18bf9a93cd81316bdadf2"
+    },
+    {
+      "Package": "libjpeg8",
+      "Version": "8c-2ubuntu8",
+      "Architecture": "armhf",
+      "Source": "libjpeg8-empty",
+      "filename": "libjpeg8_8c-2ubuntu8_armhf.deb",
+      "relative_path": "libjpeg8_8c-2ubuntu8_armhf.deb",
+      "bytes": 2202,
+      "sha256": "6079043b0af8e2e380969de614dec473facc9593a08345786fd838b96cad2c5f"
+    },
+    {
+      "Package": "liblcms2-2",
+      "Version": "2.9-4",
+      "Architecture": "armhf",
+      "Source": "lcms2",
+      "filename": "liblcms2-2_2.9-4_armhf.deb",
+      "relative_path": "liblcms2-2_2.9-4_armhf.deb",
+      "bytes": 114680,
+      "sha256": "9d6a6d34ea37687673f0c9ac319543a9fde9b57e98073406a0f9e834ca3bd866"
+    },
+    {
+      "Package": "liblcms2-dev",
+      "Version": "2.9-4",
+      "Architecture": "armhf",
+      "Source": "lcms2",
+      "filename": "liblcms2-dev_2.9-4_armhf.deb",
+      "relative_path": "liblcms2-dev_2.9-4_armhf.deb",
+      "bytes": 9097488,
+      "sha256": "9795d0ee357449a0aa498455f07fed3fb4581d6d2d4cc9d8807262d3c367845f"
+    },
+    {
+      "Package": "liblocale-gettext-perl",
+      "Version": "1.07-4",
+      "Architecture": "armhf",
+      "Source": null,
+      "filename": "liblocale-gettext-perl_1.07-4_armhf.deb",
+      "relative_path": "liblocale-gettext-perl_1.07-4_armhf.deb",
+      "bytes": 16236,
+      "sha256": "d8f1136e55b826ac5a99e4f3c4e84cd033721cf2a7303ebca725ef84ed93a85a"
+    },
+    {
+      "Package": "liblz4-1",
+      "Version": "1.9.2-2",
+      "Architecture": "armhf",
+      "Source": "lz4",
+      "filename": "liblz4-1_1.9.2-2_armhf.deb",
+      "relative_path": "liblz4-1_1.9.2-2_armhf.deb",
+      "bytes": 51728,
+      "sha256": "f53a244b3e670febbc9fde0b0f7696168bed35899b54d095129222418765879e"
+    },
+    {
+      "Package": "liblzma-dev",
+      "Version": "5.2.4-1",
+      "Architecture": "armhf",
+      "Source": "xz-utils",
+      "filename": "liblzma-dev_5.2.4-1_armhf.deb",
+      "relative_path": "liblzma-dev_5.2.4-1_armhf.deb",
+      "bytes": 139020,
+      "sha256": "b9ff3111bbf04140b1b85d70d3f13ec2a12c4e76638a97616b61667cd5d251a2"
+    },
+    {
+      "Package": "liblzma5",
+      "Version": "5.2.4-1",
+      "Architecture": "armhf",
+      "Source": "xz-utils",
+      "filename": "liblzma5_5.2.4-1_armhf.deb",
+      "relative_path": "liblzma5_5.2.4-1_armhf.deb",
+      "bytes": 84584,
+      "sha256": "a00fd3671ab43ec3659313055c995abfd2839b852b121d9b702b3052afacd751"
+    },
+    {
+      "Package": "libnettle7",
+      "Version": "3.5.1+really3.5.1-2",
+      "Architecture": "armhf",
+      "Source": "nettle",
+      "filename": "libnettle7_3.5.1+really3.5.1-2_armhf.deb",
+      "relative_path": "libnettle7_3.5.1+really3.5.1-2_armhf.deb",
+      "bytes": 126384,
+      "sha256": "2d2b534d19b4d3cb6438ece8f3c17ba7522eb4bc78fd5df15d1d3a5b8f3b268e"
+    },
+    {
+      "Package": "libopenjp2-7-dev",
+      "Version": "2.3.1-1ubuntu4",
+      "Architecture": "armhf",
+      "Source": "openjpeg2",
+      "filename": "libopenjp2-7-dev_2.3.1-1ubuntu4_armhf.deb",
+      "relative_path": "libopenjp2-7-dev_2.3.1-1ubuntu4_armhf.deb",
+      "bytes": 26740,
+      "sha256": "e96e4ee44dc4a8bce4ebc7cf12b8a22cccaf94289df92f00fb98b1ff2c70c0d5"
+    },
+    {
+      "Package": "libopenjp2-7",
+      "Version": "2.3.1-1ubuntu4",
+      "Architecture": "armhf",
+      "Source": "openjpeg2",
+      "filename": "libopenjp2-7_2.3.1-1ubuntu4_armhf.deb",
+      "relative_path": "libopenjp2-7_2.3.1-1ubuntu4_armhf.deb",
+      "bytes": 125664,
+      "sha256": "f2494baea53fd8d2e9e3a98e0ca9cff5e1c74a8dfe52caee09f9b7906815d09d"
+    },
+    {
+      "Package": "libp11-kit0",
+      "Version": "0.23.20-1build1",
+      "Architecture": "armhf",
+      "Source": "p11-kit",
+      "filename": "libp11-kit0_0.23.20-1build1_armhf.deb",
+      "relative_path": "libp11-kit0_0.23.20-1build1_armhf.deb",
+      "bytes": 167236,
+      "sha256": "cd5b2cbf7ea3e36b62e4ae1eb6dd13db1f3984ee5a9bce9b5adaff55741284c3"
+    },
+    {
+      "Package": "libpam-modules-bin",
+      "Version": "1.3.1-5ubuntu4",
+      "Architecture": "armhf",
+      "Source": "pam",
+      "filename": "libpam-modules-bin_1.3.1-5ubuntu4_armhf.deb",
+      "relative_path": "libpam-modules-bin_1.3.1-5ubuntu4_armhf.deb",
+      "bytes": 33812,
+      "sha256": "02b1a4d0b4e640bb0a21b6f80e27a672662291b6fc5e072ceb5519b37ac4bb29"
+    },
+    {
+      "Package": "libpam-modules",
+      "Version": "1.3.1-5ubuntu4",
+      "Architecture": "armhf",
+      "Source": "pam",
+      "filename": "libpam-modules_1.3.1-5ubuntu4_armhf.deb",
+      "relative_path": "libpam-modules_1.3.1-5ubuntu4_armhf.deb",
+      "bytes": 231828,
+      "sha256": "9b3f266e0077bb5cf70242a592a548c8241a89a7fee0ee4812d3aeeb723e8d46"
+    },
+    {
+      "Package": "libpam0g",
+      "Version": "1.3.1-5ubuntu4",
+      "Architecture": "armhf",
+      "Source": "pam",
+      "filename": "libpam0g_1.3.1-5ubuntu4_armhf.deb",
+      "relative_path": "libpam0g_1.3.1-5ubuntu4_armhf.deb",
+      "bytes": 49628,
+      "sha256": "6d6248683668f770cd79764ae75630285af7b52540d6a62bb103edab2b35dd84"
+    },
+    {
+      "Package": "libpcre2-8-0",
+      "Version": "10.34-7",
+      "Architecture": "armhf",
+      "Source": "pcre2",
+      "filename": "libpcre2-8-0_10.34-7_armhf.deb",
+      "relative_path": "libpcre2-8-0_10.34-7_armhf.deb",
+      "bytes": 172440,
+      "sha256": "e984ac5285d29a231ddcf763bc4151796f5c39784aa59eebc5fb014b6efd57a4"
+    },
+    {
+      "Package": "libpng-dev",
+      "Version": "1.6.37-2",
+      "Architecture": "armhf",
+      "Source": "libpng1.6",
+      "filename": "libpng-dev_1.6.37-2_armhf.deb",
+      "relative_path": "libpng-dev_1.6.37-2_armhf.deb",
+      "bytes": 160176,
+      "sha256": "3db8f9de4da8ed4e0cb7417d251639a7058833b185c095d7c39636a98ba35548"
+    },
+    {
+      "Package": "libpng-tools",
+      "Version": "1.6.37-2",
+      "Architecture": "armhf",
+      "Source": "libpng1.6",
+      "filename": "libpng-tools_1.6.37-2_armhf.deb",
+      "relative_path": "libpng-tools_1.6.37-2_armhf.deb",
+      "bytes": 23304,
+      "sha256": "45c8193b03eb232927adc9cd7b674ebd2f91408c1ea050afcbcc4c50676cb476"
+    },
+    {
+      "Package": "libpng16-16",
+      "Version": "1.6.37-2",
+      "Architecture": "armhf",
+      "Source": "libpng1.6",
+      "filename": "libpng16-16_1.6.37-2_armhf.deb",
+      "relative_path": "libpng16-16_1.6.37-2_armhf.deb",
+      "bytes": 161964,
+      "sha256": "b34727ce3e7f19285ee7b2c0e223136fad4c975064cbf48cd4199dc67990ba77"
+    },
+    {
+      "Package": "libseccomp2",
+      "Version": "2.4.3-1ubuntu1",
+      "Architecture": "armhf",
+      "Source": "libseccomp",
+      "filename": "libseccomp2_2.4.3-1ubuntu1_armhf.deb",
+      "relative_path": "libseccomp2_2.4.3-1ubuntu1_armhf.deb",
+      "bytes": 32468,
+      "sha256": "1f66a54d6ae9dd1fb4b0d60eabf8003d3ac344f01e972c83894bda7317ed9d90"
+    },
+    {
+      "Package": "libselinux1",
+      "Version": "3.0-1build2",
+      "Architecture": "armhf",
+      "Source": "libselinux",
+      "filename": "libselinux1_3.0-1build2_armhf.deb",
+      "relative_path": "libselinux1_3.0-1build2_armhf.deb",
+      "bytes": 60112,
+      "sha256": "d8d98082098077e5490e0b23895748768fff8ce03e6e928a3f353da0f6738387"
+    },
+    {
+      "Package": "libsemanage-common",
+      "Version": "3.0-1build2",
+      "Architecture": "all",
+      "Source": "libsemanage",
+      "filename": "libsemanage-common_3.0-1build2_all.deb",
+      "relative_path": "libsemanage-common_3.0-1build2_all.deb",
+      "bytes": 9792,
+      "sha256": "4141f803c811277d2ea56568a676a79f06017b8c5eb57891741808a27c55fffb"
+    },
+    {
+      "Package": "libsemanage1",
+      "Version": "3.0-1build2",
+      "Architecture": "armhf",
+      "Source": "libsemanage",
+      "filename": "libsemanage1_3.0-1build2_armhf.deb",
+      "relative_path": "libsemanage1_3.0-1build2_armhf.deb",
+      "bytes": 74124,
+      "sha256": "4866fc06ed38f711337c177902cb83a9a7dd2b61f8c93893c8d1f8ab5e244b53"
+    },
+    {
+      "Package": "libsepol1",
+      "Version": "3.0-1",
+      "Architecture": "armhf",
+      "Source": "libsepol",
+      "filename": "libsepol1_3.0-1_armhf.deb",
+      "relative_path": "libsepol1_3.0-1_armhf.deb",
+      "bytes": 220424,
+      "sha256": "97ffa660824513f0a6be4dd7ceaf57636b7ae04c0d285c80b3aa2f280c992d3d"
+    },
+    {
+      "Package": "libssl-dev",
+      "Version": "1.1.1f-1ubuntu2",
+      "Architecture": "armhf",
+      "Source": "openssl",
+      "filename": "libssl-dev_1.1.1f-1ubuntu2_armhf.deb",
+      "relative_path": "libssl-dev_1.1.1f-1ubuntu2_armhf.deb",
+      "bytes": 1381036,
+      "sha256": "2e0428c7fa61ad7a785236ac741ab09291cd1da2336eb25c8434a4af41e7e8ce"
+    },
+    {
+      "Package": "libssl1.1",
+      "Version": "1.1.1f-1ubuntu2",
+      "Architecture": "armhf",
+      "Source": "openssl",
+      "filename": "libssl1.1_1.1.1f-1ubuntu2_armhf.deb",
+      "relative_path": "libssl1.1_1.1.1f-1ubuntu2_armhf.deb",
+      "bytes": 1081388,
+      "sha256": "fde1628edbebc3b4aba18f2568b703a4c2003e4903c4e01f899b489f4e426d3f"
+    },
+    {
+      "Package": "libstdc++-9-dev",
+      "Version": "9.3.0-10ubuntu2",
+      "Architecture": "armhf",
+      "Source": "gcc-9",
+      "filename": "libstdc++-9-dev_9.3.0-10ubuntu2_armhf.deb",
+      "relative_path": "libstdc++-9-dev_9.3.0-10ubuntu2_armhf.deb",
+      "bytes": 1780424,
+      "sha256": "f920be1eb1ef6228b307c82c8cc8b9ea50d65dbd849b654153255363e8b0e18a"
+    },
+    {
+      "Package": "libstdc++6",
+      "Version": "10-20200411-0ubuntu1",
+      "Architecture": "armhf",
+      "Source": "gcc-10",
+      "filename": "libstdc++6_10-20200411-0ubuntu1_armhf.deb",
+      "relative_path": "libstdc++6_10-20200411-0ubuntu1_armhf.deb",
+      "bytes": 440052,
+      "sha256": "b9163ef6b9bb2c5047cf47eeefbfbecff1b5be4b0fabf0aa63cf537c0fab5314"
+    },
+    {
+      "Package": "libsystemd0",
+      "Version": "245.4-4ubuntu3",
+      "Architecture": "armhf",
+      "Source": "systemd",
+      "filename": "libsystemd0_245.4-4ubuntu3_armhf.deb",
+      "relative_path": "libsystemd0_245.4-4ubuntu3_armhf.deb",
+      "bytes": 249204,
+      "sha256": "d7150b4dadbf0612c35bc5e0b056a3aeec4f5a67225205d02b7206bb454c8562"
+    },
+    {
+      "Package": "libtasn1-6",
+      "Version": "4.16.0-2",
+      "Architecture": "armhf",
+      "Source": null,
+      "filename": "libtasn1-6_4.16.0-2_armhf.deb",
+      "relative_path": "libtasn1-6_4.16.0-2_armhf.deb",
+      "bytes": 33116,
+      "sha256": "08627ec1fac8e1069eb1cf68e757031733db81e6957cd67fc25943ea0b16eda6"
+    },
+    {
+      "Package": "libtext-charwidth-perl",
+      "Version": "0.04-10",
+      "Architecture": "armhf",
+      "Source": null,
+      "filename": "libtext-charwidth-perl_0.04-10_armhf.deb",
+      "relative_path": "libtext-charwidth-perl_0.04-10_armhf.deb",
+      "bytes": 9464,
+      "sha256": "3906f4af60e6c6426d2f806a58d80df989adaa73cb112bb85a2f64f44dbae41d"
+    },
+    {
+      "Package": "libtext-iconv-perl",
+      "Version": "1.7-7",
+      "Architecture": "armhf",
+      "Source": null,
+      "filename": "libtext-iconv-perl_1.7-7_armhf.deb",
+      "relative_path": "libtext-iconv-perl_1.7-7_armhf.deb",
+      "bytes": 13096,
+      "sha256": "ac443cab8b6896bbe760dc6bcaaf55a88e8834e24d74487e77a6c98ec697eab4"
+    },
+    {
+      "Package": "libtext-wrapi18n-perl",
+      "Version": "0.06-9",
+      "Architecture": "all",
+      "Source": null,
+      "filename": "libtext-wrapi18n-perl_0.06-9_all.deb",
+      "relative_path": "libtext-wrapi18n-perl_0.06-9_all.deb",
+      "bytes": 8264,
+      "sha256": "a1bbfbe0d94907ea023f2051f8a3e99b3e7a23b1eac0be57e8a69e15031f450b"
+    },
+    {
+      "Package": "libtiff-dev",
+      "Version": "4.1.0+git191117-2build1",
+      "Architecture": "armhf",
+      "Source": "tiff",
+      "filename": "libtiff-dev_4.1.0+git191117-2build1_armhf.deb",
+      "relative_path": "libtiff-dev_4.1.0+git191117-2build1_armhf.deb",
+      "bytes": 265436,
+      "sha256": "ded0a5ff70d0bc91d823131a4c79f21272fe489b174838ad77bdf553305cd9df"
+    },
+    {
+      "Package": "libtiff5",
+      "Version": "4.1.0+git191117-2build1",
+      "Architecture": "armhf",
+      "Source": "tiff",
+      "filename": "libtiff5_4.1.0+git191117-2build1_armhf.deb",
+      "relative_path": "libtiff5_4.1.0+git191117-2build1_armhf.deb",
+      "bytes": 142972,
+      "sha256": "20e9b2d6c5970017f19b0658ee93d3cde1c39ac0523a7a5b5761924cc36688d4"
+    },
+    {
+      "Package": "libtiffxx5",
+      "Version": "4.1.0+git191117-2build1",
+      "Architecture": "armhf",
+      "Source": "tiff",
+      "filename": "libtiffxx5_4.1.0+git191117-2build1_armhf.deb",
+      "relative_path": "libtiffxx5_4.1.0+git191117-2build1_armhf.deb",
+      "bytes": 5800,
+      "sha256": "3eab52eeb02be19b3bd5ab00aa6c512f9f19fd21e1f30a551a9258434066f5be"
+    },
+    {
+      "Package": "libubsan1",
+      "Version": "10-20200411-0ubuntu1",
+      "Architecture": "armhf",
+      "Source": "gcc-10",
+      "filename": "libubsan1_10-20200411-0ubuntu1_armhf.deb",
+      "relative_path": "libubsan1_10-20200411-0ubuntu1_armhf.deb",
+      "bytes": 121468,
+      "sha256": "3c29bb4e7cf45fb7d4d3b6da36021dca1323aebb86533bcfdf903f61eb9258eb"
+    },
+    {
+      "Package": "libudev1",
+      "Version": "245.4-4ubuntu3",
+      "Architecture": "armhf",
+      "Source": "systemd",
+      "filename": "libudev1_245.4-4ubuntu3_armhf.deb",
+      "relative_path": "libudev1_245.4-4ubuntu3_armhf.deb",
+      "bytes": 70860,
+      "sha256": "557a2bbf182c52712e7f36a48998258bb440528329b270d53c86a4e2a5ee27dd"
+    },
+    {
+      "Package": "libunistring2",
+      "Version": "0.9.10-2",
+      "Architecture": "armhf",
+      "Source": "libunistring",
+      "filename": "libunistring2_0.9.10-2_armhf.deb",
+      "relative_path": "libunistring2_0.9.10-2_armhf.deb",
+      "bytes": 364244,
+      "sha256": "80d298c2bf711c27c2db4c9a8c6a34795a4aa91dbde7e6ed1fb729aad810eb16"
+    },
+    {
+      "Package": "libwebp-dev",
+      "Version": "0.6.1-2",
+      "Architecture": "armhf",
+      "Source": "libwebp",
+      "filename": "libwebp-dev_0.6.1-2_armhf.deb",
+      "relative_path": "libwebp-dev_0.6.1-2_armhf.deb",
+      "bytes": 227716,
+      "sha256": "48086d8400477bd7410a9e74b63eaaaaa7c1cc03efc498e207871fd526155af2"
+    },
+    {
+      "Package": "libwebp6",
+      "Version": "0.6.1-2",
+      "Architecture": "armhf",
+      "Source": "libwebp",
+      "filename": "libwebp6_0.6.1-2_armhf.deb",
+      "relative_path": "libwebp6_0.6.1-2_armhf.deb",
+      "bytes": 151560,
+      "sha256": "577c881479557d14d99f39399783276a760fc6933515d1b97a50b835c56a2d91"
+    },
+    {
+      "Package": "libwebpdemux2",
+      "Version": "0.6.1-2",
+      "Architecture": "armhf",
+      "Source": "libwebp",
+      "filename": "libwebpdemux2_0.6.1-2_armhf.deb",
+      "relative_path": "libwebpdemux2_0.6.1-2_armhf.deb",
+      "bytes": 8760,
+      "sha256": "4c227851667ff311276423b0cd300a55f3ee62882fa0d2c4d8c501bbf120e345"
+    },
+    {
+      "Package": "libwebpmux3",
+      "Version": "0.6.1-2",
+      "Architecture": "armhf",
+      "Source": "libwebp",
+      "filename": "libwebpmux3_0.6.1-2_armhf.deb",
+      "relative_path": "libwebpmux3_0.6.1-2_armhf.deb",
+      "bytes": 16028,
+      "sha256": "15aa4bd6dc659e3abf90dc2b1d0d4a0256faf31771bd5c32c787c1344c27f8e3"
+    },
+    {
+      "Package": "libzstd1",
+      "Version": "1.4.4+dfsg-3",
+      "Architecture": "armhf",
+      "Source": "libzstd",
+      "filename": "libzstd1_1.4.4+dfsg-3_armhf.deb",
+      "relative_path": "libzstd1_1.4.4+dfsg-3_armhf.deb",
+      "bytes": 207284,
+      "sha256": "f0a38251f0ad5caafbff1bf960dfca119129b50db451dd158b1bd8009509957a"
+    },
+    {
+      "Package": "linux-libc-dev",
+      "Version": "5.4.0-26.30",
+      "Architecture": "armhf",
+      "Source": "linux",
+      "filename": "linux-libc-dev_5.4.0-26.30_armhf.deb",
+      "relative_path": "linux-libc-dev_5.4.0-26.30_armhf.deb",
+      "bytes": 1088484,
+      "sha256": "ff001343d94e63047d4509826cc33a507f42a29a108bd91840cbaaa73558324e"
+    },
+    {
+      "Package": "manpages-dev",
+      "Version": "5.05-1",
+      "Architecture": "all",
+      "Source": "manpages",
+      "filename": "manpages-dev_5.05-1_all.deb",
+      "relative_path": "manpages-dev_5.05-1_all.deb",
+      "bytes": 2265524,
+      "sha256": "512c79390eb690ee9e60943f233d45141c04a511eee9573888e795f523979d25"
+    },
+    {
+      "Package": "manpages",
+      "Version": "5.05-1",
+      "Architecture": "all",
+      "Source": null,
+      "filename": "manpages_5.05-1_all.deb",
+      "relative_path": "manpages_5.05-1_all.deb",
+      "bytes": 1314408,
+      "sha256": "726c7d3207d211188d3b0483972683d0c1e2408809f27a59466e123f0131113a"
+    },
+    {
+      "Package": "openssl",
+      "Version": "1.1.1f-1ubuntu2",
+      "Architecture": "armhf",
+      "Source": null,
+      "filename": "openssl_1.1.1f-1ubuntu2_armhf.deb",
+      "relative_path": "openssl_1.1.1f-1ubuntu2_armhf.deb",
+      "bytes": 597164,
+      "sha256": "77f7d994534ef8ff0b6f91daa9bec84628a62cc6c2fb6827ad1d310836433127"
+    },
+    {
+      "Package": "passwd",
+      "Version": "1:4.8.1-1ubuntu5",
+      "Architecture": "armhf",
+      "Source": "shadow",
+      "filename": "passwd_1%3a4.8.1-1ubuntu5_armhf.deb",
+      "relative_path": "passwd_1%3a4.8.1-1ubuntu5_armhf.deb",
+      "bytes": 749756,
+      "sha256": "bec6d37ff17c4f7c826150d03ae8a6ca7c68380e84b5910234fa62d4470d82b7"
+    },
+    {
+      "Package": "perl-base",
+      "Version": "5.30.0-9build1",
+      "Architecture": "armhf",
+      "Source": "perl",
+      "filename": "perl-base_5.30.0-9build1_armhf.deb",
+      "relative_path": "perl-base_5.30.0-9build1_armhf.deb",
+      "bytes": 1407256,
+      "sha256": "5b259050dfdc3e42c156b25d080ace5d1a639567214b2ad5b1c2aabb119d9d2a"
+    },
+    {
+      "Package": "tar",
+      "Version": "1.30+dfsg-7",
+      "Architecture": "armhf",
+      "Source": null,
+      "filename": "tar_1.30+dfsg-7_armhf.deb",
+      "relative_path": "tar_1.30+dfsg-7_armhf.deb",
+      "bytes": 217396,
+      "sha256": "20f0a9650dbeadc370eddbf5b4c9d3dcbfce5e0e1fa23491b153f08ef2cdca0c"
+    },
+    {
+      "Package": "ubuntu-keyring",
+      "Version": "2020.02.11.2",
+      "Architecture": "all",
+      "Source": null,
+      "filename": "ubuntu-keyring_2020.02.11.2_all.deb",
+      "relative_path": "ubuntu-keyring_2020.02.11.2_all.deb",
+      "bytes": 22244,
+      "sha256": "7564f3f76fbc9f165ecc30e2cf2695d38b284e234bffa0c6441ff37f8a7aebd7"
+    },
+    {
+      "Package": "update-motd",
+      "Version": "3.6-0ubuntu6",
+      "Architecture": "all",
+      "Source": null,
+      "filename": "update-motd_3.6-0ubuntu6_all.deb",
+      "relative_path": "update-motd_3.6-0ubuntu6_all.deb",
+      "bytes": 5224,
+      "sha256": "8c69969a404880f67e1b3f996bacd8e738b6ad61ebf56cb6de4c65c9af662f08"
+    },
+    {
+      "Package": "zlib1g-dev",
+      "Version": "1:1.2.11.dfsg-2ubuntu1",
+      "Architecture": "armhf",
+      "Source": "zlib",
+      "filename": "zlib1g-dev_1%3a1.2.11.dfsg-2ubuntu1_armhf.deb",
+      "relative_path": "zlib1g-dev_1%3a1.2.11.dfsg-2ubuntu1_armhf.deb",
+      "bytes": 150172,
+      "sha256": "4669e60f38a7756befc3c7d620f00d328ad0e05f5fac953445d3a45062af3cbc"
+    },
+    {
+      "Package": "zlib1g",
+      "Version": "1:1.2.11.dfsg-2ubuntu1",
+      "Architecture": "armhf",
+      "Source": "zlib",
+      "filename": "zlib1g_1%3a1.2.11.dfsg-2ubuntu1_armhf.deb",
+      "relative_path": "zlib1g_1%3a1.2.11.dfsg-2ubuntu1_armhf.deb",
+      "bytes": 48720,
+      "sha256": "4643f4fb8542144d731cb4f4cb7984218024d1552b28fbe50da6321f3e2640aa"
+    }
+  ]
+}
