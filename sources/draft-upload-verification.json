@@ -1,0 +1,56 @@
+{
+  "draft": true,
+  "release_id": 411403155,
+  "verified_assets": [
+    {
+      "bytes": 3382187,
+      "digest": "sha256:3dd3e2a6e976e57b7b1e668806c2f56284babfe023f01506f9f6184fd499bdae",
+      "name": "android-bison-7467d52a.tar.gz"
+    },
+    {
+      "bytes": 5066674,
+      "digest": "sha256:0835aa8be242ee43f3b786c28b76582afaeaa5cf5ed9a035ae8a25fcea40fdb0",
+      "name": "android-gpg-0ff5187b.tar.gz"
+    },
+    {
+      "bytes": 16421,
+      "digest": "sha256:1ffb1886952e0b36e0b079743a042005757907343621dac0325e9fee8cc501ff",
+      "name": "device-sony-common.tar.gz"
+    },
+    {
+      "bytes": 230623,
+      "digest": "sha256:391508e6b448b68a8fd8c02bd4acbc493f74fbc065c8801a84906274a69f8a6a",
+      "name": "device-sony-fusion3-common.tar.gz"
+    },
+    {
+      "bytes": 12030,
+      "digest": "sha256:e9060b7ba96c52fc3dfadaab7de7a63ab8a46073aec8ce1768f3388ffbf13156",
+      "name": "device-sony-yuga.tar.gz"
+    },
+    {
+      "bytes": 9409,
+      "digest": "sha256:f1dd00d9507b9805cbb2e033d5ed801da520e980911d72395a6cee76893a865a",
+      "name": "halium-boot-499ea587.tar.gz"
+    },
+    {
+      "bytes": 81181089,
+      "digest": "sha256:a88ae3f634a3fd45050d3418d80b30ee5af51c89b9de40ec1ea3039d3024d77a",
+      "name": "hermes-71d34bad.tar.gz"
+    },
+    {
+      "bytes": 114242890,
+      "digest": "sha256:0880b3bfc246e0c3ae782f9221ebde28e48275e6af03845c2326f3e1a622f2b2",
+      "name": "kernel-base-3e373fec.tar.gz"
+    },
+    {
+      "bytes": 256549,
+      "digest": "sha256:00cb09f267031fb528bebc4621268037fca64677040123ebb184a50afcb43430",
+      "name": "libpinyin-2.3.0.tar.gz"
+    },
+    {
+      "bytes": 12854736,
+      "digest": "sha256:b62c0e7937551d0cc02b8fd5cb0f544f9405bafc9a54d3808ed4594812edef43",
+      "name": "Python-2.7.18.tar.xz"
+    }
+  ]
+}
