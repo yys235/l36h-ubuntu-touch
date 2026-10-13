@@ -1,0 +1,180 @@
+{
+  "scope": "top-level notices only; not complete dependency license audit",
+  "archives": [
+    {
+      "archive": "Python-2.7.18.tar.xz",
+      "notices": [
+        {
+          "member": "Python-2.7.18/LICENSE",
+          "sha256": "de4d1f2d2ad5ad0cfd1657a106476b31cb5db5ef9d1ff842b237c0c81f0c8a23"
+        }
+      ]
+    },
+    {
+      "archive": "android-bison-7467d52a.tar.gz",
+      "notices": [
+        {
+          "member": "android-bison/COPYING",
+          "sha256": "8ceb4b9ee5adedde47b31e975c1d90c73ad27b6b165a1dcd80c7c545eb65b903"
+        },
+        {
+          "member": "android-bison/NOTICE",
+          "sha256": "8ceb4b9ee5adedde47b31e975c1d90c73ad27b6b165a1dcd80c7c545eb65b903"
+        }
+      ]
+    },
+    {
+      "archive": "android-gpg-0ff5187b.tar.gz",
+      "notices": [
+        {
+          "member": "android-gpg/COPYING",
+          "sha256": "fc82ca8b6fdb18d4e3e85cfd8ab58d1bcd3f1b29abe782895abd91d64763f8e7"
+        }
+      ]
+    },
+    {
+      "archive": "device-sony-common.tar.gz",
+      "notices": []
+    },
+    {
+      "archive": "device-sony-fusion3-common.tar.gz",
+      "notices": []
+    },
+    {
+      "archive": "device-sony-yuga.tar.gz",
+      "notices": []
+    },
+    {
+      "archive": "gcc49-48ef1e67.tar.gz",
+      "notices": [
+        {
+          "member": "gcc49/COPYING",
+          "sha256": "231f7edcc7352d7734a96eef0b8030f77982678c516876fcb81e25b32d68564c"
+        },
+        {
+          "member": "gcc49/COPYING.LIB",
+          "sha256": "a9bdde5616ecdd1e980b44f360600ee8783b1f99b8cc83a2beb163a0a390e861"
+        },
+        {
+          "member": "gcc49/COPYING.RUNTIME",
+          "sha256": "9d6b43ce4d8de0c878bf16b54d8e7a10d9bd42b75178153e3af6a815bdc90f74"
+        },
+        {
+          "member": "gcc49/COPYING3",
+          "sha256": "8ceb4b9ee5adedde47b31e975c1d90c73ad27b6b165a1dcd80c7c545eb65b903"
+        },
+        {
+          "member": "gcc49/COPYING3.LIB",
+          "sha256": "a853c2ffec17057872340eee242ae4d96cbf2b520ae27d903e1b2fef1a5f9d1c"
+        },
+        {
+          "member": "gcc49/NOTICE",
+          "sha256": "231f7edcc7352d7734a96eef0b8030f77982678c516876fcb81e25b32d68564c"
+        }
+      ]
+    },
+    {
+      "archive": "halium-boot-499ea587.tar.gz",
+      "notices": [
+        {
+          "member": "halium-boot/LICENSE",
+          "sha256": "b40930bbcf80744c86c46a12bc9da056641d722716c378f5659b9e555ef833e1"
+        }
+      ]
+    },
+    {
+      "archive": "hermes-71d34bad.tar.gz",
+      "notices": [
+        {
+          "member": "hermes-agent-71d34bad1045610252eda02ee79549436896e784/LICENSE",
+          "sha256": "821556e6336796450ab852d375117b48a4887e71d255794fd6318d99982a5ab6"
+        }
+      ]
+    },
+    {
+      "archive": "hermes-native/cffi-2.1.1.tar.gz",
+      "notices": [
+        {
+          "member": "cffi-2.1.1/LICENSE",
+          "sha256": "5ba24ddc57067f9249add644c3afc41a5d6dc37e23433ef759d95df370b0af63"
+        }
+      ]
+    },
+    {
+      "archive": "hermes-native/firecrawl_anydoc-0.2.4.tar.gz",
+      "notices": [
+        {
+          "member": "firecrawl_anydoc-0.2.4/LICENSE",
+          "sha256": "03a9e7657aac6536fb6458bd220347c4e7f85bd0a51d8d9e8528530b7a682ade"
+        }
+      ]
+    },
+    {
+      "archive": "hermes-native/httptools-0.8.0.tar.gz",
+      "notices": [
+        {
+          "member": "httptools-0.8.0/LICENSE",
+          "sha256": "f4573e7cb7676745fb5b8d36fa548aa93e391cfb6872ddacd65130c45ea6a92d"
+        }
+      ]
+    },
+    {
+      "archive": "hermes-native/libheif-1.23.6.tar.gz",
+      "notices": [
+        {
+          "member": "libheif-1.23.6/COPYING",
+          "sha256": "fa81ce652315b013359d6e8e4744335f31a50c7c192907176d3632f78a3b4596"
+        }
+      ]
+    },
+    {
+      "archive": "hermes-native/pillow-12.3.0.tar.gz",
+      "notices": [
+        {
+          "member": "pillow-12.3.0/LICENSE",
+          "sha256": "15181e7363dca9aed78b79bebebc7fde7f1814b8bd311ea3b87ae8ccadfc185b"
+        }
+      ]
+    },
+    {
+      "archive": "hermes-native/pillow_heif-1.8.1.tar.gz",
+      "notices": [
+        {
+          "member": "pillow_heif-1.8.1/LICENSE.txt",
+          "sha256": "9e2635f155b00af5a46cb2f2c9b052072ec546d59837ee74efc9cba2cbb83f3d"
+        },
+        {
+          "member": "pillow_heif-1.8.1/LICENSES_bundled.txt",
+          "sha256": "7c5eab5b0bc4ed21688891149081b38432b2bbe8e8b49c12708a8ddcf7d700d8"
+        }
+      ]
+    },
+    {
+      "archive": "hermes-native/psutil-7.2.2.tar.gz",
+      "notices": [
+        {
+          "member": "psutil-7.2.2/LICENSE",
+          "sha256": "b89c063b3786e28e0c0a38f1931db61fed35e69dd2a2966fbecffee0f46c8d10"
+        }
+      ]
+    },
+    {
+      "archive": "kernel-base-3e373fec.tar.gz",
+      "notices": [
+        {
+          "member": "kernel-base/COPYING",
+          "sha256": "af8067302947c01fd9eee72befa54c7e3ef8a48fecde7fd71277f2290b2bf0f7"
+        }
+      ]
+    },
+    {
+      "archive": "libpinyin-2.3.0.tar.gz",
+      "notices": [
+        {
+          "member": "libpinyin-2.3.0/COPYING",
+          "sha256": "8ceb4b9ee5adedde47b31e975c1d90c73ad27b6b165a1dcd80c7c545eb65b903"
+        }
+      ]
+    }
+  ]
+}
