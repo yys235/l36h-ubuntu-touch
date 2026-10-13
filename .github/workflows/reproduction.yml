@@ -68,6 +68,7 @@ jobs:
         with:
           name: yuga-kernel-reproduction
           if-no-files-found: error
+          include-hidden-files: true
           path: |
             kernel-output/arch/arm/boot/zImage
             kernel-output/.config
