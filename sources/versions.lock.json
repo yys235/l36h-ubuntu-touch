@@ -5,7 +5,7 @@
     "patched_tree": "07328d79afdcf92919072de97c35c738eba4c544",
     "url": "https://github.com/Halium/android_kernel_sony_apq8064.git",
     "commit": "3e373fec12898bacbcb93713732dbc26f5b3b3f5",
-    "clean_build": "not-yet-verified",
+    "clean_build": "passed on GitHub Ubuntu24.04 at publication commit 7520a9838fff561d0190073b1022d136e613caa7; see CI-VERIFICATION.md",
     "patch_sha256": "1347413d36ea67807fcdc7a382bdd1cf0f41ec6f4d11cede69f2b79f3915526b",
     "patch_application": "verified-index-tree-equality",
     "config_sha256": "291f69b0ef18c53c8018b35fbbaeaf89627216b7ab7c3c71368c1c5f51fa06f6",
