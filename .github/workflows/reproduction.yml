@@ -1,0 +1,70 @@
+name: Reproduction checks
+on:
+  push:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  portable-tests:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+      - name: Test public tooling without flashing hardware
+        run: |
+          set -eu
+          python3 scripts/test-yuga-udev.py
+          python3 scripts/test-ut-image-receiver.py
+          python3 scripts/test-ut-image-sender.py
+          sudo python3 scripts/test-touch-extraction.py
+          python3 scripts/test-halium-initrd.py
+          python3 scripts/test-publication-checksums.py
+          python3 scripts/test-https-config.py
+          python3 scripts/test-rootfs-image-builder.py
+          python3 scripts/test-reboot-bootloader.py
+  fixed-kernel-build:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+      - name: Fetch exact kernel and GCC revisions
+        run: |
+          set -eu
+          mkdir kernel-source gcc49
+          git -C kernel-source init
+          git -C kernel-source remote add origin https://github.com/Halium/android_kernel_sony_apq8064.git
+          git -C kernel-source fetch --depth=1 origin 3e373fec12898bacbcb93713732dbc26f5b3b3f5
+          git -C kernel-source checkout --detach FETCH_HEAD
+          test "$(git -C kernel-source rev-parse HEAD)" = 3e373fec12898bacbcb93713732dbc26f5b3b3f5
+          git -C kernel-source apply --check "$GITHUB_WORKSPACE/kernel/yuga-final-working-tree.patch"
+          git -C kernel-source apply --whitespace=nowarn "$GITHUB_WORKSPACE/kernel/yuga-final-working-tree.patch"
+          git -C gcc49 init
+          git -C gcc49 remote add origin https://github.com/LineageOS/android_prebuilts_gcc_linux-x86_arm_arm-linux-androideabi-4.9.git
+          git -C gcc49 fetch --depth=1 origin 48ef1e67aa261116d2c244a52a30b8ba044399ff
+          git -C gcc49 checkout --detach FETCH_HEAD
+          test "$(git -C gcc49 rev-parse HEAD)" = 48ef1e67aa261116d2c244a52a30b8ba044399ff
+      - name: Build Python 2.7.18 for the legacy wrapper
+        run: |
+          set -eu
+          curl --fail --location --retry 3 https://www.python.org/ftp/python/2.7.18/Python-2.7.18.tar.xz -o Python-2.7.18.tar.xz
+          echo 'b62c0e7937551d0cc02b8fd5cb0f544f9405bafc9a54d3808ed4594812edef43  Python-2.7.18.tar.xz' | sha256sum --check
+          tar -xf Python-2.7.18.tar.xz
+          cd Python-2.7.18
+          ./configure --prefix="$GITHUB_WORKSPACE/python2" CFLAGS='-std=gnu11 -fcommon'
+          make -j2
+          make install
+          "$GITHUB_WORKSPACE/python2/bin/python" --version
+      - name: Build the public final configuration
+        run: |
+          set -euo pipefail
+          JOBS=2 bash kernel/build-kernel.sh kernel-source kernel-output gcc49 python2/bin | tee kernel-build.log
+      - name: Preserve diagnostic build output
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: yuga-kernel-reproduction
+          if-no-files-found: error
+          path: |
+            kernel-output/arch/arm/boot/zImage
+            kernel-output/.config
+            kernel-build.log
+          retention-days: 14
