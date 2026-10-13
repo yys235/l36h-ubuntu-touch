@@ -1,6 +1,11 @@
 name: Reproduction checks
 on:
   push:
+    paths:
+      - 'kernel/**'
+      - 'scripts/**'
+      - '.github/workflows/**'
+      - 'sources/versions.lock.json'
   workflow_dispatch:
 permissions:
   contents: read
