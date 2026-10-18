@@ -11,6 +11,10 @@
 - 原生依赖需兼容 UT20.04 的 glibc2.31；不得替换系统 Python 或 libc。
 - 当前实机72个包的名称和版本见 installed-package-versions.json。
   这是运行快照，不是带发行文件哈希的 pip 完整锁文件。
+- 2026-10-18核对现有本地wheel：native-wheel-inventory.json记录6个
+  与快照版本匹配的ARMv7文件、字节数、SHA256、平台标签、依赖声明和
+  9份内嵌许可证文件哈希；另外66个包当时没有对应的本地wheel。
+  此清单不证明原生动态库闭包、源码构建复现或全部72个包可离线安装。
 - Anthropic 必须匹配此版源码要求的0.87.0；此前误装1.13.0会混用
   httpx/httpx2 Timeout类型。不能仅用 pip install -U anthropic 修复。
 - 官方 Node20.20.2 linux-armv7l + 对应源码构建的 tui/dist/entry.js；
