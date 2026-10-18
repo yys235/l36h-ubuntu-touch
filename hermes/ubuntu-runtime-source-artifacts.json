@@ -1,0 +1,322 @@
+{
+  "scope": "Exact-version Ubuntu source files, hash-verified against authenticated focal base source indices; see ubuntu-source-signature-verification.json; clean builds pending",
+  "indices": [
+    {
+      "url": "https://ports.ubuntu.com/ubuntu-ports/dists/focal/main/source/Sources.xz",
+      "sha256": "ceffb8e80e87a28cbb74d40a3d04497d89d7dad318c53ebb2d72acd1ff31e395"
+    },
+    {
+      "url": "https://ports.ubuntu.com/ubuntu-ports/dists/focal/universe/source/Sources.xz",
+      "sha256": "0505450893eccdd89d66f43acfc94d94ba869fddcb5e70f341291c6f7230e069"
+    }
+  ],
+  "packages": [
+    {
+      "package": "gcc-10",
+      "version": "10-20200411-0ubuntu1",
+      "component": "main",
+      "files": [
+        {
+          "filename": "gcc-10_10-20200411-0ubuntu1.dsc",
+          "bytes": 31097,
+          "sha256": "31e14253df2c6e84c158969c6832777a6d249a15af3e8887f96f7adcccb72217",
+          "url": "https://ports.ubuntu.com/ubuntu-ports/pool/main/g/gcc-10/gcc-10_10-20200411-0ubuntu1.dsc"
+        },
+        {
+          "filename": "gcc-10_10-20200411.orig.tar.gz",
+          "bytes": 90370841,
+          "sha256": "3370dce39f863735c44f1c5f002132a84d1c7de621d4ca81a24d6613034201a8",
+          "url": "https://ports.ubuntu.com/ubuntu-ports/pool/main/g/gcc-10/gcc-10_10-20200411.orig.tar.gz"
+        },
+        {
+          "filename": "gcc-10_10-20200411-0ubuntu1.debian.tar.xz",
+          "bytes": 557752,
+          "sha256": "b028f2e1e8f430f4c451222fba1caed9aea78e58c6b87970bd2dd119c29ac0fb",
+          "url": "https://ports.ubuntu.com/ubuntu-ports/pool/main/g/gcc-10/gcc-10_10-20200411-0ubuntu1.debian.tar.xz"
+        }
+      ]
+    },
+    {
+      "package": "jbigkit",
+      "version": "2.1-3.1build1",
+      "component": "main",
+      "files": [
+        {
+          "filename": "jbigkit_2.1-3.1build1.dsc",
+          "bytes": 2085,
+          "sha256": "fc768c7dac53f37f89c8d0a25760a29cd9afffc5cf55821f92d0d7e8f8f26e38",
+          "url": "https://ports.ubuntu.com/ubuntu-ports/pool/main/j/jbigkit/jbigkit_2.1-3.1build1.dsc"
+        },
+        {
+          "filename": "jbigkit_2.1.orig.tar.gz",
+          "bytes": 438710,
+          "sha256": "de7106b6bfaf495d6865c7dd7ac6ca1381bd12e0d81405ea81e7f2167263d932",
+          "url": "https://ports.ubuntu.com/ubuntu-ports/pool/main/j/jbigkit/jbigkit_2.1.orig.tar.gz"
+        },
+        {
+          "filename": "jbigkit_2.1-3.1build1.debian.tar.xz",
+          "bytes": 7672,
+          "sha256": "d7151df94f409045aa4d27dab88e538398196330d1ce135b60564dbc5db0a5c4",
+          "url": "https://ports.ubuntu.com/ubuntu-ports/pool/main/j/jbigkit/jbigkit_2.1-3.1build1.debian.tar.xz"
+        }
+      ]
+    },
+    {
+      "package": "lcms2",
+      "version": "2.9-4",
+      "component": "main",
+      "files": [
+        {
+          "filename": "lcms2_2.9-4.dsc",
+          "bytes": 1956,
+          "sha256": "6db871353515693e8813911a8f81668b92e8c09fa9e6752e701fa8b14247775d",
+          "url": "https://ports.ubuntu.com/ubuntu-ports/pool/main/l/lcms2/lcms2_2.9-4.dsc"
+        },
+        {
+          "filename": "lcms2_2.9.orig.tar.gz",
+          "bytes": 10974649,
+          "sha256": "48c6fdf98396fa245ed86e622028caf49b96fa22f3e5734f853f806fbc8e7d20",
+          "url": "https://ports.ubuntu.com/ubuntu-ports/pool/main/l/lcms2/lcms2_2.9.orig.tar.gz"
+        },
+        {
+          "filename": "lcms2_2.9-4.debian.tar.xz",
+          "bytes": 10748,
+          "sha256": "3dd811c431bed101269937299d28708dfe91f32070cf9786680bec26f408b65b",
+          "url": "https://ports.ubuntu.com/ubuntu-ports/pool/main/l/lcms2/lcms2_2.9-4.debian.tar.xz"
+        }
+      ]
+    },
+    {
+      "package": "libjpeg-turbo",
+      "version": "2.0.3-0ubuntu1",
+      "component": "main",
+      "files": [
+        {
+          "filename": "libjpeg-turbo_2.0.3-0ubuntu1.dsc",
+          "bytes": 1651,
+          "sha256": "8523ac58f878db995950b0ce7eb2b10c629012a5b4cb2534969c85a14b807913",
+          "url": "https://ports.ubuntu.com/ubuntu-ports/pool/main/libj/libjpeg-turbo/libjpeg-turbo_2.0.3-0ubuntu1.dsc"
+        },
+        {
+          "filename": "libjpeg-turbo_2.0.3.orig.tar.gz",
+          "bytes": 2161279,
+          "sha256": "a69598bf079463b34d45ca7268462a18b6507fdaa62bb1dfd212f02041499b5d",
+          "url": "https://ports.ubuntu.com/ubuntu-ports/pool/main/libj/libjpeg-turbo/libjpeg-turbo_2.0.3.orig.tar.gz"
+        },
+        {
+          "filename": "libjpeg-turbo_2.0.3-0ubuntu1.debian.tar.xz",
+          "bytes": 16944,
+          "sha256": "72b44a4cff7d6c5cd1543b0d6fe1c0320903b93ceac7113334477bd0af834ab7",
+          "url": "https://ports.ubuntu.com/ubuntu-ports/pool/main/libj/libjpeg-turbo/libjpeg-turbo_2.0.3-0ubuntu1.debian.tar.xz"
+        }
+      ]
+    },
+    {
+      "package": "libwebp",
+      "version": "0.6.1-2",
+      "component": "main",
+      "files": [
+        {
+          "filename": "libwebp_0.6.1-2.dsc",
+          "bytes": 2064,
+          "sha256": "321ee69e44f0d037d5fec47692251e35ed22c9ad0bbf0a6bf0fae990a52319f4",
+          "url": "https://ports.ubuntu.com/ubuntu-ports/pool/main/libw/libwebp/libwebp_0.6.1-2.dsc"
+        },
+        {
+          "filename": "libwebp_0.6.1.orig.tar.gz",
+          "bytes": 3554290,
+          "sha256": "a86045e3ec24704bddbaa369ca30980d6bf4f2625f4cdca03715e91f9c08bbb4",
+          "url": "https://ports.ubuntu.com/ubuntu-ports/pool/main/libw/libwebp/libwebp_0.6.1.orig.tar.gz"
+        },
+        {
+          "filename": "libwebp_0.6.1-2.debian.tar.xz",
+          "bytes": 9532,
+          "sha256": "5af543e277abb97f6b2c72ca0d7ce95de79108d88da383d511ef729683fa7a45",
+          "url": "https://ports.ubuntu.com/ubuntu-ports/pool/main/libw/libwebp/libwebp_0.6.1-2.debian.tar.xz"
+        }
+      ]
+    },
+    {
+      "package": "libzstd",
+      "version": "1.4.4+dfsg-3",
+      "component": "main",
+      "files": [
+        {
+          "filename": "libzstd_1.4.4+dfsg-3.dsc",
+          "bytes": 2266,
+          "sha256": "f6e3cc2b022b9812daca4f427a00fc6e109e6e1e72e64d6a254add040853b110",
+          "url": "https://ports.ubuntu.com/ubuntu-ports/pool/main/libz/libzstd/libzstd_1.4.4+dfsg-3.dsc"
+        },
+        {
+          "filename": "libzstd_1.4.4+dfsg.orig.tar.xz",
+          "bytes": 1357144,
+          "sha256": "be9f9bfd3f6816f21e1108869a9acad6efdc4882ed3f7a1f58ec752f67864890",
+          "url": "https://ports.ubuntu.com/ubuntu-ports/pool/main/libz/libzstd/libzstd_1.4.4+dfsg.orig.tar.xz"
+        },
+        {
+          "filename": "libzstd_1.4.4+dfsg-3.debian.tar.xz",
+          "bytes": 16068,
+          "sha256": "f7fec89f1fae04dfa551d124973167e09e84c864a25961aa20727cc91277b0e6",
+          "url": "https://ports.ubuntu.com/ubuntu-ports/pool/main/libz/libzstd/libzstd_1.4.4+dfsg-3.debian.tar.xz"
+        }
+      ]
+    },
+    {
+      "package": "openjpeg2",
+      "version": "2.3.1-1ubuntu4",
+      "component": "main",
+      "files": [
+        {
+          "filename": "openjpeg2_2.3.1-1ubuntu4.dsc",
+          "bytes": 2842,
+          "sha256": "d1ce35b17b6c40cbea1a2291d94ee29fbd334ff622590e3939b749430a0d6e73",
+          "url": "https://ports.ubuntu.com/ubuntu-ports/pool/main/o/openjpeg2/openjpeg2_2.3.1-1ubuntu4.dsc"
+        },
+        {
+          "filename": "openjpeg2_2.3.1.orig.tar.xz",
+          "bytes": 1381768,
+          "sha256": "69d39843a25f1a482e1b568fd042eb34837ffc0d708ab7717edeb52e592ecbeb",
+          "url": "https://ports.ubuntu.com/ubuntu-ports/pool/main/o/openjpeg2/openjpeg2_2.3.1.orig.tar.xz"
+        },
+        {
+          "filename": "openjpeg2_2.3.1-1ubuntu4.debian.tar.xz",
+          "bytes": 21052,
+          "sha256": "b42c551474c33926840df7b8fe73d85fb1c5d2d28dc9c08b0ecb6be22af1edb9",
+          "url": "https://ports.ubuntu.com/ubuntu-ports/pool/main/o/openjpeg2/openjpeg2_2.3.1-1ubuntu4.debian.tar.xz"
+        }
+      ]
+    },
+    {
+      "package": "tiff",
+      "version": "4.1.0+git191117-2build1",
+      "component": "main",
+      "files": [
+        {
+          "filename": "tiff_4.1.0+git191117-2build1.dsc",
+          "bytes": 2291,
+          "sha256": "18dad308fbc18f27de10de1b83d315a31aca20449651c01767993dfcabbb7ba0",
+          "url": "https://ports.ubuntu.com/ubuntu-ports/pool/main/t/tiff/tiff_4.1.0+git191117-2build1.dsc"
+        },
+        {
+          "filename": "tiff_4.1.0+git191117.orig.tar.xz",
+          "bytes": 1533524,
+          "sha256": "67e1d045e994adb7144b0cca228d70dd6d520aaf8c75c342064bc0fd601e6e42",
+          "url": "https://ports.ubuntu.com/ubuntu-ports/pool/main/t/tiff/tiff_4.1.0+git191117.orig.tar.xz"
+        },
+        {
+          "filename": "tiff_4.1.0+git191117-2build1.debian.tar.xz",
+          "bytes": 19460,
+          "sha256": "4a78c0fbfdc708793d23c7030f2b5ee5ac2752f64efa40ef62864f0fe9d867f5",
+          "url": "https://ports.ubuntu.com/ubuntu-ports/pool/main/t/tiff/tiff_4.1.0+git191117-2build1.debian.tar.xz"
+        }
+      ]
+    },
+    {
+      "package": "xz-utils",
+      "version": "5.2.4-1",
+      "component": "main",
+      "files": [
+        {
+          "filename": "xz-utils_5.2.4-1.dsc",
+          "bytes": 2518,
+          "sha256": "b1572c4efb3c8ebf6f0e044b70e1e0451c919a99d3f80be03b624a54dd7ea593",
+          "url": "https://ports.ubuntu.com/ubuntu-ports/pool/main/x/xz-utils/xz-utils_5.2.4-1.dsc"
+        },
+        {
+          "filename": "xz-utils_5.2.4.orig.tar.xz",
+          "bytes": 1053868,
+          "sha256": "9717ae363760dedf573dad241420c5fea86256b65bc21d2cf71b2b12f0544f4b",
+          "url": "https://ports.ubuntu.com/ubuntu-ports/pool/main/x/xz-utils/xz-utils_5.2.4.orig.tar.xz"
+        },
+        {
+          "filename": "xz-utils_5.2.4.orig.tar.xz.asc",
+          "bytes": 879,
+          "sha256": "88290c1deeaf674ae2a4821f4373fe0e4cc2a94199eae6dcc26df1e70cc15303",
+          "url": "https://ports.ubuntu.com/ubuntu-ports/pool/main/x/xz-utils/xz-utils_5.2.4.orig.tar.xz.asc"
+        },
+        {
+          "filename": "xz-utils_5.2.4-1.debian.tar.xz",
+          "bytes": 135296,
+          "sha256": "d37b558444b76e88a69601df008cf1c0343c58cb7765b7bbb2099b0a19619361",
+          "url": "https://ports.ubuntu.com/ubuntu-ports/pool/main/x/xz-utils/xz-utils_5.2.4-1.debian.tar.xz"
+        }
+      ]
+    },
+    {
+      "package": "zlib",
+      "version": "1:1.2.11.dfsg-2ubuntu1",
+      "component": "main",
+      "files": [
+        {
+          "filename": "zlib_1.2.11.dfsg-2ubuntu1.dsc",
+          "bytes": 2970,
+          "sha256": "2e56b0d54d841d974c96e6cc4361da7c75b1848cded85412cdb4b4bc7791233a",
+          "url": "https://ports.ubuntu.com/ubuntu-ports/pool/main/z/zlib/zlib_1.2.11.dfsg-2ubuntu1.dsc"
+        },
+        {
+          "filename": "zlib_1.2.11.dfsg.orig.tar.gz",
+          "bytes": 370248,
+          "sha256": "80c481411a4fe8463aeb8270149a0e80bb9eaf7da44132b6e16f2b5af01bc899",
+          "url": "https://ports.ubuntu.com/ubuntu-ports/pool/main/z/zlib/zlib_1.2.11.dfsg.orig.tar.gz"
+        },
+        {
+          "filename": "zlib_1.2.11.dfsg-2ubuntu1.debian.tar.xz",
+          "bytes": 49448,
+          "sha256": "11c13ba58bd033dbfd2c7408f4a4eaa02035e007dea79ae20f0db580eaa53c9c",
+          "url": "https://ports.ubuntu.com/ubuntu-ports/pool/main/z/zlib/zlib_1.2.11.dfsg-2ubuntu1.debian.tar.xz"
+        }
+      ]
+    },
+    {
+      "package": "aom",
+      "version": "1.0.0.errata1-3build1",
+      "component": "universe",
+      "files": [
+        {
+          "filename": "aom_1.0.0.errata1-3build1.dsc",
+          "bytes": 2273,
+          "sha256": "2258c82054c8377a1610024c3d3a044fda21a43611ac3695f906d1fcf1be2319",
+          "url": "https://ports.ubuntu.com/ubuntu-ports/pool/universe/a/aom/aom_1.0.0.errata1-3build1.dsc"
+        },
+        {
+          "filename": "aom_1.0.0.errata1.orig.tar.xz",
+          "bytes": 1898808,
+          "sha256": "1dd501c622d871acf31fb942bd3b73a00883fc10f7c498fec97b22c858ca415f",
+          "url": "https://ports.ubuntu.com/ubuntu-ports/pool/universe/a/aom/aom_1.0.0.errata1.orig.tar.xz"
+        },
+        {
+          "filename": "aom_1.0.0.errata1-3build1.debian.tar.xz",
+          "bytes": 21208,
+          "sha256": "6a397c5e85f1fe1f5139d72c52da99d6645313420985d26734fdbee21cdc9d35",
+          "url": "https://ports.ubuntu.com/ubuntu-ports/pool/universe/a/aom/aom_1.0.0.errata1-3build1.debian.tar.xz"
+        }
+      ]
+    },
+    {
+      "package": "libde265",
+      "version": "1.0.4-1build1",
+      "component": "universe",
+      "files": [
+        {
+          "filename": "libde265_1.0.4-1build1.dsc",
+          "bytes": 2265,
+          "sha256": "576854aef64fd570bb3992906ed32f31c2c74c25ffa7c5f033d306fd3556e97b",
+          "url": "https://ports.ubuntu.com/ubuntu-ports/pool/universe/libd/libde265/libde265_1.0.4-1build1.dsc"
+        },
+        {
+          "filename": "libde265_1.0.4.orig.tar.gz",
+          "bytes": 856952,
+          "sha256": "c3f033bd59777624859c8d04a5b7ce4210adbce4a500943d2e211c4d517d0116",
+          "url": "https://ports.ubuntu.com/ubuntu-ports/pool/universe/libd/libde265/libde265_1.0.4.orig.tar.gz"
+        },
+        {
+          "filename": "libde265_1.0.4-1build1.debian.tar.xz",
+          "bytes": 8308,
+          "sha256": "d5bfca083effcdc229f6e8901188f4524d6f66253338860ad11855989ff45f28",
+          "url": "https://ports.ubuntu.com/ubuntu-ports/pool/universe/libd/libde265/libde265_1.0.4-1build1.debian.tar.xz"
+        }
+      ]
+    }
+  ],
+  "missing": []
+}

@@ -101,6 +101,12 @@
       "digest": "sha256:b62c0e7937551d0cc02b8fd5cb0f544f9405bafc9a54d3808ed4594812edef43",
       "bytes": 12854736,
       "name": "Python-2.7.18.tar.xz"
+    },
+    {
+      "relative_path": "assets/hermes-dependencies-armv7-cp314.tar.gz",
+      "digest": "sha256:489faa689476e89771c38cfc1aa6e8e75526ad793163c45427b0201b95b4778b",
+      "bytes": 111488833,
+      "name": "hermes-dependencies-armv7-cp314.tar.gz"
     }
   ],
   "draft": true,

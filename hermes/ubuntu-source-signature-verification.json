@@ -1,0 +1,22 @@
+{
+  "scope": "Ubuntu focal base source indices verified against signed InRelease using installed Ubuntu archive keyring; no claim about updates/security freshness",
+  "inrelease_url": "https://ports.ubuntu.com/ubuntu-ports/dists/focal/InRelease",
+  "inrelease_sha256": "cc9be89a0984aeca9e3ca40ae0e6decff75aa32653a5925b04956a7c12487e99",
+  "signing_fingerprints": [
+    "790BC7277767219C42C86F933B4FE6ACC0B21F32",
+    "F6ECB3762474EDA9D21B7022871920D1991BC93C"
+  ],
+  "keyring_sha256": "80a36b0a6de2f69f49d2df75ef473ccde121e9e190b9ea01d20a4f63778d5c31",
+  "indices": [
+    {
+      "path": "main/source/Sources.xz",
+      "sha256": "ceffb8e80e87a28cbb74d40a3d04497d89d7dad318c53ebb2d72acd1ff31e395",
+      "bytes": 846504
+    },
+    {
+      "path": "universe/source/Sources.xz",
+      "sha256": "0505450893eccdd89d66f43acfc94d94ba869fddcb5e70f341291c6f7230e069",
+      "bytes": 9707388
+    }
+  ]
+}

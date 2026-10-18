@@ -57,8 +57,13 @@ native-runtime-library-provenance.json记录当前native/lib中16个库的
 gcc-10-base共享声明，记录中同时保留该.deb的哈希。
 libheif已有对应源码归档和许可证，完整参数化构建配方仍待补齐。
 
-这些库尚未作为完整运行时发行包发布。Ubuntu库对应源包归档、源包版本
-及构建环境仍需补齐；仅有.deb来源及版权文件不代表对应源码已完整交付。
+这些库尚未作为完整运行时发行包发布。2026-10-18已取得对应的12个
+Ubuntu精确版本源包，共37份.dsc/上游归档/发行补丁文件，逐一验证SHA256。
+源索引与Ubuntu archive keyring验证通过的focal InRelease一致；证据见
+ubuntu-source-signature-verification.json。文件、版本、下载URL和摘要见
+ubuntu-runtime-source-artifacts.json，组合包信息见ubuntu-runtime-source-bundle.json。
+这补齐了当前15个Ubuntu运行库的对应源文件，不代表编译工具链、构建期
+依赖或干净重建已经完成，也不代表这些旧版本已包含后续安全更新。
 
 ## 卡挂载保护
 

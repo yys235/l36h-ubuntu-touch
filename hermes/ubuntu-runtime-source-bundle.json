@@ -1,0 +1,8 @@
+{
+  "filename": "hermes-ubuntu-runtime-sources.tar.gz",
+  "bytes": 127525792,
+  "sha256": "944fe158abfefa90b5bcc7c2cc93204bd5d7fd3523690597d1b7f2e487cd6503",
+  "source_packages": 12,
+  "source_files": 37,
+  "scope": "Corresponding runtime library sources and signed index evidence; not a complete build toolchain or runtime installation bundle"
+}
