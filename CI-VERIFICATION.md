@@ -1,5 +1,10 @@
 # 干净环境复现记录
 
+2026-10-18回查：运行38368747428（提交
+9916d7584d591b097a7a61b66bd7426c4db9d6a7）的portable-tests和
+fixed-kernel-build均已完成且success，包含新增的覆盖层集成测试。
+此状态证明工具测试和内核编译通过，不代替设备启动验证。
+
 首轮GitHub运行： https://github.com/yys235/l36h-ubuntu-touch/actions/runs/38365035808
 
 对应仓库提交7520a9838fff561d0190073b1022d136e613caa7，Ubuntu24.04运行器。
