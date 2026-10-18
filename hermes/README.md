@@ -48,6 +48,18 @@ YOUR_ARMV7_VENV/bin/python -m pip install --no-index --require-hashes \
 Hermes应用及其Web/TUI构建仍需分别准备，完整安装流程仍未完成。
 sources/含运行依赖源码，不代表Rust/C编译工具及构建期依赖已全部离线化。
 
+## 原生共享库来源
+
+native-runtime-library-provenance.json记录当前native/lib中16个库的
+字节数、SHA256和来源匹配：15个与固定Ubuntu ARMhf .deb内成员逐字节
+相同，libheif.so.1与本地1.23.6安装输出逐字节相同。对应Ubuntu版权
+文件保存在../licenses/hermes-runtime/；GCC运行库使用同版本
+gcc-10-base共享声明，记录中同时保留该.deb的哈希。
+libheif已有对应源码归档和许可证，完整参数化构建配方仍待补齐。
+
+这些库尚未作为完整运行时发行包发布。Ubuntu库对应源包归档、源包版本
+及构建环境仍需补齐；仅有.deb来源及版权文件不代表对应源码已完整交付。
+
 ## 卡挂载保护
 
 hermes-tf-launch.sh 支持 /etc/hermes-server.env 中指定本机卡UUID。

@@ -1,0 +1,307 @@
+{
+  "scope": "Exact byte identity of bundled native libraries against cached Ubuntu ARMhf packages or local libheif install output; package source retrieval and build recipes remain separate",
+  "libraries": [
+    {
+      "filename": "libaom.so.0",
+      "sha256": "63c3b432cd45ebaf97ace00fc18398dea9ae3a5e35aa75a7a8ae9f607e0f65ac",
+      "bytes": 1844792,
+      "matched_packages": [
+        {
+          "package": "libaom0",
+          "version": "1.0.0.errata1-3build1",
+          "source": "aom",
+          "deb": "libaom0_1.0.0.errata1-3build1_armhf.deb",
+          "deb_sha256": "6b6eff5bc55e7accacc4dc9a9be0a216d0cc9fd6144b6602626480c679377cfb",
+          "member": "./usr/lib/arm-linux-gnueabihf/libaom.so.0",
+          "copyright": {
+            "path": "licenses/hermes-runtime/libaom0/copyright",
+            "sha256": "107b8be1b902509f5da43fa65946f2132217bac0302b9b6af8c3370c42ba2652"
+          }
+        }
+      ]
+    },
+    {
+      "filename": "libde265.so.0",
+      "sha256": "21c1918a55509dd34b3637db96ef08f9b64067c8f7478a0e2c50962a7cd68e23",
+      "bytes": 411196,
+      "matched_packages": [
+        {
+          "package": "libde265-0",
+          "version": "1.0.4-1build1",
+          "source": "libde265",
+          "deb": "libde265-0_1.0.4-1build1_armhf.deb",
+          "deb_sha256": "1d96ccf107c97c949967c912668f8ba23456541b6fd156714c3c51e072acddb4",
+          "member": "./usr/lib/arm-linux-gnueabihf/libde265.so.0.0.11",
+          "copyright": {
+            "path": "licenses/hermes-runtime/libde265-0/copyright",
+            "sha256": "ae80d24c2f303a838b9ebd380f7fd8e7669dee85ef7f4dcf93034122c8321185"
+          }
+        }
+      ]
+    },
+    {
+      "filename": "libgcc_s.so.1",
+      "sha256": "5f0299dcfa688bc483448dbc73375f3424838a8351f1af4923554f32379cb63e",
+      "bytes": 99996,
+      "matched_packages": [
+        {
+          "package": "libgcc-s1",
+          "version": "10-20200411-0ubuntu1",
+          "source": "gcc-10",
+          "deb": "libgcc-s1_10-20200411-0ubuntu1_armhf.deb",
+          "deb_sha256": "4bc4caf635e57ecde7dde7a565c0187b566195184e14c83e3934791bab0c5185",
+          "member": "./lib/arm-linux-gnueabihf/libgcc_s.so.1",
+          "copyright": {
+            "path": "licenses/hermes-runtime/gcc-10-base/copyright",
+            "sha256": "719dd73912334e65a64c63fb1f7ccdacf70c27258570de0fb123b33d490eddf5",
+            "shared_package": "gcc-10-base_10-20200411-0ubuntu1_armhf.deb",
+            "shared_package_sha256": "7615e1e9ac1b5e69f1c2a2eb6b2bd06cac19b3b6dc8ce6363f6ce8a85ed1a121"
+          }
+        }
+      ]
+    },
+    {
+      "filename": "libheif.so.1",
+      "sha256": "52a591e5a31627a0dfea15660465ee4fab8a54d083e9ca10b548d4a9f7972cb7",
+      "bytes": 2080224,
+      "matched_packages": [],
+      "local_build": {
+        "matched_install_output": "heif-runtime/lib/libheif.so.1.23.6",
+        "source_archive": "libheif-1.23.6.tar.gz",
+        "source_sha256": "c9a00b0452f5c16d72ef71e5e40c0e90fbe2ad37148d27a1b2f9bb21546f5f03",
+        "license_directory": "licenses/libheif-1.23.6.tar.gz",
+        "reproducible_build_recipe": "pending"
+      }
+    },
+    {
+      "filename": "libjbig.so.0",
+      "sha256": "fc70976a2edaef13a72c336a07592970158df0077e3d7f9329a489253d16f4a1",
+      "bytes": 41096,
+      "matched_packages": [
+        {
+          "package": "libjbig0",
+          "version": "2.1-3.1build1",
+          "source": "jbigkit",
+          "deb": "libjbig0_2.1-3.1build1_armhf.deb",
+          "deb_sha256": "2237881bb53ea6ad74a123aee64eaa34f6a231202cfb2bc00d540c5b116ae046",
+          "member": "./usr/lib/arm-linux-gnueabihf/libjbig.so.0",
+          "copyright": {
+            "path": "licenses/hermes-runtime/libjbig0/copyright",
+            "sha256": "89ab20c324a191652e94598f2144a65442faed4f14f77bbd10516130ee20f05a"
+          }
+        }
+      ]
+    },
+    {
+      "filename": "libjpeg.so.8",
+      "sha256": "320e98c7ce62805572ed614cfcd27852d876678a3064f0cf62f7a62ab20b49dd",
+      "bytes": 169988,
+      "matched_packages": [
+        {
+          "package": "libjpeg-turbo8",
+          "version": "2.0.3-0ubuntu1",
+          "source": "libjpeg-turbo",
+          "deb": "libjpeg-turbo8_2.0.3-0ubuntu1_armhf.deb",
+          "deb_sha256": "80405b8c005007152777d74c0e2eb33da339d875a8ccf2d2339f21e50ee9877e",
+          "member": "./usr/lib/arm-linux-gnueabihf/libjpeg.so.8.2.2",
+          "copyright": {
+            "path": "licenses/hermes-runtime/libjpeg-turbo8/copyright",
+            "sha256": "193468d9eb043a180f6f9e3386f7205104908dcb8525ad39c8236990dfd452ef"
+          }
+        }
+      ]
+    },
+    {
+      "filename": "liblcms2.so.2",
+      "sha256": "74360d4f06d98cad64bb075166309e7dac5ee93fe30eb90c63a8ec2e4f2f5629",
+      "bytes": 224088,
+      "matched_packages": [
+        {
+          "package": "liblcms2-2",
+          "version": "2.9-4",
+          "source": "lcms2",
+          "deb": "liblcms2-2_2.9-4_armhf.deb",
+          "deb_sha256": "9d6a6d34ea37687673f0c9ac319543a9fde9b57e98073406a0f9e834ca3bd866",
+          "member": "./usr/lib/arm-linux-gnueabihf/liblcms2.so.2.0.8",
+          "copyright": {
+            "path": "licenses/hermes-runtime/liblcms2-2/copyright",
+            "sha256": "13d19c136af4fc6fb594f491884d37677a555e7e193540037cab1693704bfe5a"
+          }
+        }
+      ]
+    },
+    {
+      "filename": "liblzma.so.5",
+      "sha256": "fe54c58670c8b77fee7f8acea97458bb26995a3cb58a8933577163e4c70ec32b",
+      "bytes": 104024,
+      "matched_packages": [
+        {
+          "package": "liblzma5",
+          "version": "5.2.4-1",
+          "source": "xz-utils",
+          "deb": "liblzma5_5.2.4-1_armhf.deb",
+          "deb_sha256": "a00fd3671ab43ec3659313055c995abfd2839b852b121d9b702b3052afacd751",
+          "member": "./lib/arm-linux-gnueabihf/liblzma.so.5.2.4",
+          "copyright": {
+            "path": "licenses/hermes-runtime/liblzma5/copyright",
+            "sha256": "a2dc8fac0f496e1c58aff67018cf0c6b88336316afa5642f9335b71642e28aa8"
+          }
+        }
+      ]
+    },
+    {
+      "filename": "libopenjp2.so.7",
+      "sha256": "d285895c8b98e0771a991fa7109c159e278e6b3c7617c1ea18cdbb399c3f164a",
+      "bytes": 231168,
+      "matched_packages": [
+        {
+          "package": "libopenjp2-7",
+          "version": "2.3.1-1ubuntu4",
+          "source": "openjpeg2",
+          "deb": "libopenjp2-7_2.3.1-1ubuntu4_armhf.deb",
+          "deb_sha256": "f2494baea53fd8d2e9e3a98e0ca9cff5e1c74a8dfe52caee09f9b7906815d09d",
+          "member": "./usr/lib/arm-linux-gnueabihf/libopenjp2.so.2.3.1",
+          "copyright": {
+            "path": "licenses/hermes-runtime/libopenjp2-7/copyright",
+            "sha256": "428cdae664cba894a1a69b9cf22ac3812a84b6d4df9c19b5c8f9cc4c4530eb5e"
+          }
+        }
+      ]
+    },
+    {
+      "filename": "libstdc++.so.6",
+      "sha256": "447438ede99d330f9369c7d201a65fe08fcee0b7d4661b7c6319d94ce1a00a73",
+      "bytes": 1270664,
+      "matched_packages": [
+        {
+          "package": "libstdc++6",
+          "version": "10-20200411-0ubuntu1",
+          "source": "gcc-10",
+          "deb": "libstdc++6_10-20200411-0ubuntu1_armhf.deb",
+          "deb_sha256": "b9163ef6b9bb2c5047cf47eeefbfbecff1b5be4b0fabf0aa63cf537c0fab5314",
+          "member": "./usr/lib/arm-linux-gnueabihf/libstdc++.so.6.0.28",
+          "copyright": {
+            "path": "licenses/hermes-runtime/gcc-10-base/copyright",
+            "sha256": "719dd73912334e65a64c63fb1f7ccdacf70c27258570de0fb123b33d490eddf5",
+            "shared_package": "gcc-10-base_10-20200411-0ubuntu1_armhf.deb",
+            "shared_package_sha256": "7615e1e9ac1b5e69f1c2a2eb6b2bd06cac19b3b6dc8ce6363f6ce8a85ed1a121"
+          }
+        }
+      ]
+    },
+    {
+      "filename": "libtiff.so.5",
+      "sha256": "c7c8e0f4b728da034ded49c6131b5b5528c9be4f4817b2e6564c30188873736b",
+      "bytes": 370360,
+      "matched_packages": [
+        {
+          "package": "libtiff5",
+          "version": "4.1.0+git191117-2build1",
+          "source": "tiff",
+          "deb": "libtiff5_4.1.0+git191117-2build1_armhf.deb",
+          "deb_sha256": "20e9b2d6c5970017f19b0658ee93d3cde1c39ac0523a7a5b5761924cc36688d4",
+          "member": "./usr/lib/arm-linux-gnueabihf/libtiff.so.5.5.0",
+          "copyright": {
+            "path": "licenses/hermes-runtime/libtiff5/copyright",
+            "sha256": "76d76328df19f51ad6b48e925cc2fd8aeaea7d2f1ce905983753fc855466de8b"
+          }
+        }
+      ]
+    },
+    {
+      "filename": "libwebp.so.6",
+      "sha256": "d098473a11f68d8c80d00ab6b74e8ebc1df635d0fdb8e2cf25f8abe8b6076fca",
+      "bytes": 252044,
+      "matched_packages": [
+        {
+          "package": "libwebp6",
+          "version": "0.6.1-2",
+          "source": "libwebp",
+          "deb": "libwebp6_0.6.1-2_armhf.deb",
+          "deb_sha256": "577c881479557d14d99f39399783276a760fc6933515d1b97a50b835c56a2d91",
+          "member": "./usr/lib/arm-linux-gnueabihf/libwebp.so.6.0.2",
+          "copyright": {
+            "path": "licenses/hermes-runtime/libwebp6/copyright",
+            "sha256": "01eb328708a9454061dd13931b19135e1c2c6251a7e6a6d0efc4b9bc436109c7"
+          }
+        }
+      ]
+    },
+    {
+      "filename": "libwebpdemux.so.2",
+      "sha256": "73eb2cf9db1c79c8ab63f88012ac6f7c1c417cc3141cc9351c11d3ec92e7b628",
+      "bytes": 13704,
+      "matched_packages": [
+        {
+          "package": "libwebpdemux2",
+          "version": "0.6.1-2",
+          "source": "libwebp",
+          "deb": "libwebpdemux2_0.6.1-2_armhf.deb",
+          "deb_sha256": "4c227851667ff311276423b0cd300a55f3ee62882fa0d2c4d8c501bbf120e345",
+          "member": "./usr/lib/arm-linux-gnueabihf/libwebpdemux.so.2.0.3",
+          "copyright": {
+            "path": "licenses/hermes-runtime/libwebpdemux2/copyright",
+            "sha256": "01eb328708a9454061dd13931b19135e1c2c6251a7e6a6d0efc4b9bc436109c7"
+          }
+        }
+      ]
+    },
+    {
+      "filename": "libwebpmux.so.3",
+      "sha256": "f84bc03691874cf80b6496ae519c04f11a2afc0c53fcc32f242a702221f9e98c",
+      "bytes": 21944,
+      "matched_packages": [
+        {
+          "package": "libwebpmux3",
+          "version": "0.6.1-2",
+          "source": "libwebp",
+          "deb": "libwebpmux3_0.6.1-2_armhf.deb",
+          "deb_sha256": "15aa4bd6dc659e3abf90dc2b1d0d4a0256faf31771bd5c32c787c1344c27f8e3",
+          "member": "./usr/lib/arm-linux-gnueabihf/libwebpmux.so.3.0.1",
+          "copyright": {
+            "path": "licenses/hermes-runtime/libwebpmux3/copyright",
+            "sha256": "01eb328708a9454061dd13931b19135e1c2c6251a7e6a6d0efc4b9bc436109c7"
+          }
+        }
+      ]
+    },
+    {
+      "filename": "libz.so.1",
+      "sha256": "097b19aedb9491849c6d99a47caff532424b4e9041cf5bde8704d33039f47941",
+      "bytes": 75340,
+      "matched_packages": [
+        {
+          "package": "zlib1g",
+          "version": "1:1.2.11.dfsg-2ubuntu1",
+          "source": "zlib",
+          "deb": "zlib1g_1%3a1.2.11.dfsg-2ubuntu1_armhf.deb",
+          "deb_sha256": "4643f4fb8542144d731cb4f4cb7984218024d1552b28fbe50da6321f3e2640aa",
+          "member": "./lib/arm-linux-gnueabihf/libz.so.1.2.11",
+          "copyright": {
+            "path": "licenses/hermes-runtime/zlib1g/copyright",
+            "sha256": "d77204eee882807240f6351c4f5ae2a4bcdb5b773ff77d10647b9b66b826b2fb"
+          }
+        }
+      ]
+    },
+    {
+      "filename": "libzstd.so.1",
+      "sha256": "9a409757864d0a38f65e9c110ee29b4dbe6d0fd69cb2443eb1b1e1712e8ddadb",
+      "bytes": 435576,
+      "matched_packages": [
+        {
+          "package": "libzstd1",
+          "version": "1.4.4+dfsg-3",
+          "source": "libzstd",
+          "deb": "libzstd1_1.4.4+dfsg-3_armhf.deb",
+          "deb_sha256": "f0a38251f0ad5caafbff1bf960dfca119129b50db451dd158b1bd8009509957a",
+          "member": "./usr/lib/arm-linux-gnueabihf/libzstd.so.1.4.4",
+          "copyright": {
+            "path": "licenses/hermes-runtime/libzstd1/copyright",
+            "sha256": "d8fe9cda0bfb0f3d3a68a88033c3110420e857df1ae91a35a4ba6d3a2c994523"
+          }
+        }
+      ]
+    }
+  ]
+}
