@@ -22,7 +22,9 @@
   "hermes": {
     "commit": "71d34bad1045610252eda02ee79549436896e784",
     "url": "https://github.com/NousResearch/hermes-agent.git",
-    "dependency_lock": "../hermes/installed-package-versions.json (runtime version snapshot; not full artifact lock)",
+    "dependency_lock": "../hermes/requirements-armv7-cp314.txt (71 third-party runtime wheels, SHA256 locked; offline target resolution passed, hardware runtime validation pending)",
+    "dependency_artifacts": "../hermes/dependency-artifacts.json",
+    "dependency_bundle": "../hermes/dependency-bundle.json",
     "source_archive": "hermes-71d34bad.tar.gz",
     "source_archive_sha256": "a88ae3f634a3fd45050d3418d80b30ee5af51c89b9de40ec1ea3039d3024d77a",
     "native_source_inventory": "hermes-native/archive-checksums.json"

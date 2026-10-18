@@ -22,6 +22,32 @@
 - Web静态资源从同一源码版本构建。当前运行所需的完整依赖归档、编译
   配方与哈希校验仍在汇总，本文还不是完整安装指南。
 
+## 固定依赖归档与离线解析
+
+2026-10-18补齐71个第三方依赖的源码归档，以及71个匹配的wheel：
+59个通用wheel、6个本地交叉构建ARMv7 wheel、6个上游ARMv7 wheel。
+Hermes主程序本身使用前述固定源码归档，不在这71项中重复计数。
+dependency-artifacts.json记录PyPI精确版本、来源、长度和SHA256；
+upstream-arm-wheel-artifacts.json记录新取得的6个ARMv7文件。
+dependency-bundle.json记录组合包哈希及内容，
+requirements-armv7-cp314.txt为逐项固定SHA256的运行依赖锁文件。
+
+组合包hermes-dependencies-armv7-cp314.tar.gz包含wheels/、sources/和
+锁文件。下载后先验证外层哈希。准备好匹配Python、venv和原生共享库后，
+在该包解压目录中可使用以下依赖安装命令：
+
+```bash
+YOUR_ARMV7_VENV/bin/python -m pip install --no-index --require-hashes \
+  --find-links wheels -r requirements-armv7-cp314.txt
+```
+
+在主机以CPython3.14、非free-threaded ARMv7及manylinux<=glibc2.31目标
+执行pip dry-run，禁用网络索引和已安装包，完整解析与require-hashes校验
+均退出0。该检查读取实际wheel元数据及依赖约束，但不执行ARM代码；
+它不等于新设备安装、导入或模型调用成功。Python运行时、原生共享库、
+Hermes应用及其Web/TUI构建仍需分别准备，完整安装流程仍未完成。
+sources/含运行依赖源码，不代表Rust/C编译工具及构建期依赖已全部离线化。
+
 ## 卡挂载保护
 
 hermes-tf-launch.sh 支持 /etc/hermes-server.env 中指定本机卡UUID。
