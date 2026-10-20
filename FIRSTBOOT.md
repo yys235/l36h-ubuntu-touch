@@ -67,6 +67,13 @@ sshd有效配置必须为22端口、公钥认证、无密码/交互认证，才�
 因此不假设所有持久化路径都在/sbin/init之前挂载完成，unit显式要求这些
 挂载点，运行时也复查。初始化同时准备sshd的/run目录，供启动前配置检查。
 
+核对对象为固定halium-initrd-armhf-input.gz内的文件：
+
+- `init` SHA256：cda3570b6edc38c6aebf8a058bf75f5ada94e63a32b27da4d2f1eabf2200d0dc；
+  第230行调用mountroot，第306行执行run-init。
+- `scripts/halium` SHA256：02dd7445f272564ce2379ffa2fc9ef8bbdf8c414f39b9316d824f4bf2a507acd；
+  第378–385行分别处理立即绑定和fstab，第623行调用process_bind_mounts。
+
 标记为/userdata/yuga-firstboot/status.json。正常重启不覆盖管理员修改过的
 authorized_keys，不重新生成已有主机密钥。标记存在但密钥、授权文件或
 输入损坏/丢失时拒绝继续；不要删除input目录作为日常清理步骤。
@@ -80,3 +87,7 @@ authorized_keys，不重新生成已有主机密钥。标记存在但密钥、�
 启动主机SSH，也不修改主机账号。目标ARM sshd的模拟执行在此WSL环境
 遇到guest address mapping错误，不能列为通过。实机首次登录、拒绝密码、
 重启指纹不变、关屏持续运行与Wi-Fi/背光验收仍是发行前必须完成的项目。
+
+2026-10-20本地完整13个公开测试脚本通过；新增准备18项、运行时17项、
+userdata组装6项，共41项。提交f1cbd85的[GitHub CI](https://github.com/yys235/l36h-ubuntu-touch/actions/runs/39370911668)
+也通过工具测试及固定内核构建。上述结果均不能替代设备验收。
