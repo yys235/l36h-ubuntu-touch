@@ -1,0 +1,21 @@
+{
+  "schema": 1,
+  "source_commit": "9e4514751f87a2f2034c6707396794a74337866c",
+  "purpose": "Modern kernel RAM diagnostics; not final OS",
+  "files": [
+    {
+      "name": "linux-apq8064-9e4514751f87a2f2034c6707396794a74337866c.tar.gz",
+      "url": "https://codeload.github.com/apq8064-mainline/linux/tar.gz/9e4514751f87a2f2034c6707396794a74337866c",
+      "bytes": 266028687,
+      "sha256": "9dcaf63738f07286d0ebf16397afdfee73ebb40c0dc1a82f1bbd3aa4603ed7ae",
+      "commit": "9e4514751f87a2f2034c6707396794a74337866c",
+      "provenance": "GitHub upstream fixed-commit archive over HTTPS; not an upstream signed release tarball"
+    },
+    {
+      "name": "kernel.config",
+      "bytes": 235434,
+      "sha256": "6c559b3b68c92b7532c7885cc5807e0321ce79c956958272e1cb5bb7e2f3a70d",
+      "provenance": "pmaports 34a4e3c3a38c88f52319ecce80f02b561d2eeee2 linux-postmarketos-qcom-apq8064 config"
+    }
+  ]
+}

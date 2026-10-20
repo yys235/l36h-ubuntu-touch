@@ -1,0 +1,78 @@
+name: Yuga modern kernel diagnostic build
+on:
+  workflow_dispatch:
+  workflow_call:
+permissions:
+  contents: read
+jobs:
+  kernel:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+      - name: Install and record build tools
+        run: |
+          set -euo pipefail
+          mkdir -p "$RUNNER_TEMP/kernel-products"
+          sudo apt-get update
+          sudo apt-get install --yes clang llvm lld bc bison flex libssl-dev libelf-dev device-tree-compiler kmod cpio xz-utils
+          clang --version > "$RUNNER_TEMP/kernel-products/toolchain.txt"
+          ld.lld --version >> "$RUNNER_TEMP/kernel-products/toolchain.txt"
+          dpkg-query -W clang llvm lld bc bison flex libssl-dev libelf-dev device-tree-compiler kmod cpio xz-utils >> "$RUNNER_TEMP/kernel-products/toolchain.txt"
+      - name: Test verification and obtain immutable input
+        run: |
+          set -euo pipefail
+          python3 -m unittest discover -s server/modern-boot/tests -v
+          python3 - <<'PY'
+          import json, os, pathlib, shutil, tarfile, urllib.request
+          metadata = json.loads(pathlib.Path('server/modern-boot/inputs.json').read_text())
+          root = pathlib.Path(os.environ['RUNNER_TEMP'])/'kernel-inputs'
+          root.mkdir()
+          for item in metadata['files']:
+              target = root/item['name']
+              if item.get('url'):
+                  with urllib.request.urlopen(item['url'], timeout=180) as response, target.open('xb') as output:
+                      shutil.copyfileobj(response, output)
+              else:
+                  shutil.copyfile(pathlib.Path('server/modern-boot')/item['name'], target)
+          PY
+          python3 server/modern-boot/verify-inputs.py --manifest server/modern-boot/inputs.json --directory "$RUNNER_TEMP/kernel-inputs"
+          python3 - <<'PY'
+          import json, os, pathlib, tarfile
+          metadata = json.loads(pathlib.Path('server/modern-boot/inputs.json').read_text())
+          base = pathlib.Path(os.environ['RUNNER_TEMP'])
+          archive = base/'kernel-inputs'/metadata['files'][0]['name']
+          destination = base/'kernel-source'
+          destination.mkdir()
+          with tarfile.open(archive) as stream:
+              stream.extractall(destination, filter='data')
+          roots = list(destination.iterdir())
+          assert len(roots) == 1 and roots[0].is_dir()
+          assert roots[0].name == 'linux-'+metadata['source_commit']
+          with open(os.environ['GITHUB_ENV'], 'a') as output:
+              output.write('KERNEL_SOURCE='+str(roots[0])+'\n')
+          PY
+      - name: Build matching kernel DTB and modules
+        run: |
+          set -euo pipefail
+          bash server/modern-boot/build-kernel.sh "$KERNEL_SOURCE" server/modern-boot/kernel.config "$RUNNER_TEMP/kernel-products" 2>&1 | tee "$RUNNER_TEMP/kernel-products/build.log"
+          cp server/modern-boot/inputs.json "$RUNNER_TEMP/kernel-products/inputs.json"
+      - name: Preserve build evidence and products
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: yuga-modern-kernel-${{ github.sha }}
+          if-no-files-found: warn
+          retention-days: 14
+          path: |
+            ${{ runner.temp }}/kernel-products/zImage
+            ${{ runner.temp }}/kernel-products/yuga.dtb
+            ${{ runner.temp }}/kernel-products/yuga.dts
+            ${{ runner.temp }}/kernel-products/kernel.config
+            ${{ runner.temp }}/kernel-products/kernel.release
+            ${{ runner.temp }}/kernel-products/dtb-compatible.txt
+            ${{ runner.temp }}/kernel-products/modules.tar.xz
+            ${{ runner.temp }}/kernel-products/build-manifest.json
+            ${{ runner.temp }}/kernel-products/inputs.json
+            ${{ runner.temp }}/kernel-products/toolchain.txt
+            ${{ runner.temp }}/kernel-products/build.log

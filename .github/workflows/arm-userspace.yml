@@ -4,7 +4,11 @@ on:
 permissions:
   contents: read
 jobs:
+  modern-kernel:
+    if: github.ref_name == 'codex/yuga-modern-boot'
+    uses: ./.github/workflows/yuga-modern-boot.yml
   arm-sshd-policy:
+    if: github.ref_name != 'codex/yuga-modern-boot'
     runs-on: ubuntu-24.04
     timeout-minutes: 20
     steps:
