@@ -54,6 +54,18 @@ jobs:
           module.validate_sshd(pathlib.Path('arm-sshd-effective.conf').read_text())
           print('Target ARM sshd effective key-only root policy passed')
           PY
+      - name: Import initializer under the target ARM system Python
+        run: |
+          set -eu
+          root="$RUNNER_TEMP/stage/system"
+          sudo env PYTHONHOME="$root/usr" qemu-arm -L "$root" "$root/usr/bin/python3.8" - <<'PY'
+          import importlib.util, pathlib, sys
+          spec = importlib.util.spec_from_file_location('firstboot', 'firstboot/yuga_firstboot.py')
+          module = importlib.util.module_from_spec(spec)
+          spec.loader.exec_module(module)
+          module.validate_sshd(pathlib.Path('arm-sshd-effective.conf').read_text())
+          print('Target ARM Python initializer import and SSH policy validation passed:', sys.version)
+          PY
       - name: Preserve configuration evidence only
         if: always()
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
