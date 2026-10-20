@@ -1,0 +1,66 @@
+name: ARM userspace configuration check
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  arm-sshd-policy:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+      - name: Install userspace emulator
+        run: |
+          set -eu
+          sudo apt-get update
+          sudo apt-get install --yes qemu-user
+          qemu-arm --version | tee qemu-version.log
+      - name: Fetch and verify fixed official input
+        run: |
+          set -eu
+          python3 - <<'PY'
+          import hashlib, json, os, pathlib, urllib.request
+          metadata = json.loads(pathlib.Path('rootfs-input.json').read_text())
+          target = pathlib.Path(os.environ['RUNNER_TEMP'])/'official-rootfs.tar.xz'
+          digest = hashlib.sha256()
+          with urllib.request.urlopen(metadata['upstream_url'], timeout=120) as response, target.open('xb') as output:
+              while chunk := response.read(1024*1024):
+                  output.write(chunk)
+                  digest.update(chunk)
+          assert target.stat().st_size == metadata['bytes']
+          assert digest.hexdigest() == metadata['sha256']
+          print('Fixed official rootfs input size and SHA256 verified')
+          PY
+      - name: Prepare an isolated fresh rootfs
+        run: |
+          set -eu
+          sudo python3 scripts/extract_touch_rootfs.py "$RUNNER_TEMP/official-rootfs.tar.xz" "$RUNNER_TEMP/stage"
+          sudo python3 scripts/integrate-rootfs-overlay.py --root "$RUNNER_TEMP/stage/system" --overlay overlay --userdata "$RUNNER_TEMP/overlay-data"
+          ssh-keygen -q -t ed25519 -N '' -f "$RUNNER_TEMP/installer-key"
+          sudo python3 scripts/prepare-yuga-firstboot.py --root "$RUNNER_TEMP/stage/system" --userdata "$RUNNER_TEMP/firstboot-data" --public-key "$RUNNER_TEMP/installer-key.pub" --server-mode
+          sudo mkdir -p "$RUNNER_TEMP/stage/system/run/sshd"
+          sudo chmod 0755 "$RUNNER_TEMP/stage/system/run/sshd"
+          sudo ssh-keygen -q -t ed25519 -N '' -f "$RUNNER_TEMP/stage/system/etc/ssh/ssh_host_ed25519_key"
+      - name: Execute target ARM sshd and validate effective policy
+        run: |
+          set -eu
+          root="$RUNNER_TEMP/stage/system"
+          sudo qemu-arm -L "$root" "$root/usr/sbin/sshd" -T -C user=root,host=localhost,addr=192.0.2.1 > arm-sshd-effective.conf
+          python3 - <<'PY'
+          import importlib.util, pathlib
+          spec = importlib.util.spec_from_file_location('firstboot', 'firstboot/yuga_firstboot.py')
+          module = importlib.util.module_from_spec(spec)
+          spec.loader.exec_module(module)
+          module.validate_sshd(pathlib.Path('arm-sshd-effective.conf').read_text())
+          print('Target ARM sshd effective key-only root policy passed')
+          PY
+      - name: Preserve configuration evidence only
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: yuga-arm-sshd-policy
+          if-no-files-found: warn
+          path: |
+            qemu-version.log
+            arm-sshd-effective.conf
+          retention-days: 14
