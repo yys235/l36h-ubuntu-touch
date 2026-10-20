@@ -1,0 +1,27 @@
+{
+  "archive": "caddy-offline-build-inputs-72dd0fb0-go1.26.0.tar.gz",
+  "bytes": 471314993,
+  "sha256": "1d1af29ab60738bebda19928be0529d2486e2308ec7e4ef5b8ca715e5e116b55",
+  "modules": 595,
+  "archived_files": 2384,
+  "build": {
+    "goos": "linux",
+    "goarch": "arm",
+    "goarm": "7",
+    "cgo_enabled": false,
+    "goproxy": "off",
+    "gosumdb": "off",
+    "source_go_mod_and_sum_match_upstream": true,
+    "bytes": 75904221,
+    "sha256": "346e093f11f444fdf6db798d4af637a8630aa5acbd151e6a8ac74228a0d66dbb"
+  },
+  "limits": "Fresh archive extraction, fresh module and build caches, offline ARMv7 cross-build passed with byte-identical artifact. Target ARM execution and deployment pending. Archive internal manifest predates this final rebuild; this record supersedes its pending status.",
+  "fresh_archive_build": {
+    "bytes": 75904221,
+    "sha256": "346e093f11f444fdf6db798d4af637a8630aa5acbd151e6a8ac74228a0d66dbb",
+    "fresh_module_and_build_caches": true,
+    "goproxy": "off",
+    "gosumdb": "off",
+    "upstream_go_mod_and_sum_unchanged": true
+  }
+}

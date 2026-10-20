@@ -9,5 +9,5 @@
   "go_mod_sha256": "62fdd786b2f9ced74c818132ebaeba320e25528ed316202902918afa73473b72",
   "go_sum_sha256": "c4f0fb5c57d37da907d0620d19556c6889b56b82f350adf64da738803fb0a92c",
   "license_sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
-  "scope": "Pinned main module source with go.mod/go.sum; transitive source archives and clean ARMv7 build still pending"
+  "scope": "Pinned main source and licenses; 595 transitive modules and Go toolchain archived separately. Fresh archive, fresh-cache offline ARMv7 cross-build passed; target execution pending. See caddy-offline-build.json."
 }

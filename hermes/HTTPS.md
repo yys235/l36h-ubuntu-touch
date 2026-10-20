@@ -6,8 +6,13 @@
 来源： https://github.com/caddyserver/caddy/releases/tag/v2.11.7 。
 固定提交源码归档、哈希和许可证已整理，见../sources/caddy-source.json；
 go.mod与go.sum分别保留为../sources/caddy.go.mod和caddy.go.sum。
-这固定了主模块和依赖校验信息，传递依赖源码归档及干净ARMv7构建仍待
-完成。不包含作者CA私钥。
+离线输入归档另包含Go1.26.0主机编译器、对应Go源码及595个模块的
+zip/mod/info/ziphash，逐文件SHA256见../sources/caddy-offline-modules.json。
+使用原始go.mod/go.sum、GOPROXY=off、GOSUMDB=off和已有展开缓存的ARMv7
+交叉编译已成功，产物信息见../sources/caddy-offline-build.json。
+从归档重新提取、使用全新模块与编译缓存的断网依赖重建也已通过，产物
+字节相同。目标ARM执行仍待验证，未替换手机正在使用的官方Caddy。
+不包含作者CA私钥。
 
 先固定或保留手机局域网IP，再生成自己的配置：
 
