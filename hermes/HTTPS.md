@@ -4,7 +4,10 @@
 官方预编译归档SHA256为
 492c730b1b992e0d3e4346d1652128ae6ad99208834d3d78c27b3b6c9541c841。
 来源： https://github.com/caddyserver/caddy/releases/tag/v2.11.7 。
-对应源码及依赖的归档仍待补齐，不包含作者CA私钥。
+固定提交源码归档、哈希和许可证已整理，见../sources/caddy-source.json；
+go.mod与go.sum分别保留为../sources/caddy.go.mod和caddy.go.sum。
+这固定了主模块和依赖校验信息，传递依赖源码归档及干净ARMv7构建仍待
+完成。不包含作者CA私钥。
 
 先固定或保留手机局域网IP，再生成自己的配置：
 

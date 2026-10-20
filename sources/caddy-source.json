@@ -1,0 +1,13 @@
+{
+  "repository": "https://github.com/caddyserver/caddy",
+  "commit": "72dd0fb067f6d7826c7f79907670ba4a713bfe37",
+  "version": "2.11.7",
+  "archive": "caddy-72dd0fb0.tar.gz",
+  "bytes": 1108653,
+  "sha256": "e86c49311c0c9f7e9b3b80527f0139e5739dfe28effeaa41c444dd743f0bbd7e",
+  "source_url": "https://codeload.github.com/caddyserver/caddy/tar.gz/72dd0fb067f6d7826c7f79907670ba4a713bfe37",
+  "go_mod_sha256": "62fdd786b2f9ced74c818132ebaeba320e25528ed316202902918afa73473b72",
+  "go_sum_sha256": "c4f0fb5c57d37da907d0620d19556c6889b56b82f350adf64da738803fb0a92c",
+  "license_sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+  "scope": "Pinned main module source with go.mod/go.sum; transitive source archives and clean ARMv7 build still pending"
+}

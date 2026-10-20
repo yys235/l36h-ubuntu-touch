@@ -107,6 +107,18 @@
       "digest": "sha256:489faa689476e89771c38cfc1aa6e8e75526ad793163c45427b0201b95b4778b",
       "bytes": 111488833,
       "name": "hermes-dependencies-armv7-cp314.tar.gz"
+    },
+    {
+      "relative_path": "sources/hermes-ubuntu-runtime-sources.tar.gz",
+      "digest": "sha256:944fe158abfefa90b5bcc7c2cc93204bd5d7fd3523690597d1b7f2e487cd6503",
+      "bytes": 127525792,
+      "name": "hermes-ubuntu-runtime-sources.tar.gz"
+    },
+    {
+      "relative_path": "sources/caddy-72dd0fb0.tar.gz",
+      "digest": "sha256:e86c49311c0c9f7e9b3b80527f0139e5739dfe28effeaa41c444dd743f0bbd7e",
+      "bytes": 1108653,
+      "name": "caddy-72dd0fb0.tar.gz"
     }
   ],
   "draft": true,
