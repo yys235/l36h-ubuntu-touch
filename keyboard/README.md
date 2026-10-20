@@ -18,9 +18,10 @@ git apply /path/to/libpinyin-alignment.patch
 不依赖作者电脑。`patch-pinyin-alignment.py SOURCE_DIRECTORY` 是等价的
 严格匹配修补脚本，两种方法只选一种，不能重复应用。
 
-构建还需固定的 Focal ARMhf glib/数据库开发头文件和匹配运行库，使用
-`-mno-unaligned-access`。完整构建配方与依赖归档仍待整理，不能仅靠
-补丁通过断言即可认为编译环境可复现。
+构建使用固定Focal ARMhf glib/数据库开发头文件和匹配运行库，以及
+`-mno-unaligned-access`。新目录重建已通过，完整命令、旧头文件兼容
+补丁和依赖清单见[BUILD.md](BUILD.md)。开发依赖对应源码已取得，
+完整构建工具源码闭包和新产物实机输入验收仍待完成。
 
 原实机修正版库 SHA256：
 `9310425bcca56df5cf6173f6500209540a0cbb97638491eb4af30a6133041204`。

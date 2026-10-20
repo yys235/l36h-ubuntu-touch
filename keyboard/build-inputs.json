@@ -1,0 +1,133 @@
+{
+  "scope": "Keyboard reconstruction inputs, exact development .deb files and corresponding Ubuntu sources. Tool package versions recorded; compiler/tool source closure and signed Ubuntu index linkage pending.",
+  "development_packages": [
+    {
+      "filename": "glib-dev.deb",
+      "bytes": 1405776,
+      "sha256": "f68f5aa6462e64b8ca0001828494b52e6b022603698eeca0ee3fdc2a432d40ad",
+      "fields": "Package: libglib2.0-dev\nVersion: 2.64.6-1~ubuntu20.04.9\nArchitecture: armhf\nSource: glib2.0\n"
+    },
+    {
+      "filename": "db-dev.deb",
+      "bytes": 769792,
+      "sha256": "44988b66c01d0b3264036070e8f62af06089aa5aa1300efb48490741de0a4114",
+      "fields": "Package: libdb5.3-dev\nVersion: 5.3.28+dfsg1-0.8ubuntu3\nArchitecture: armhf\nSource: db5.3\n"
+    },
+    {
+      "filename": "libc-dev.deb",
+      "bytes": 1917948,
+      "sha256": "fedd4b12c29a45094dacedf727101b6674c3f89ed07656eb5baffc072e0f411c",
+      "fields": "Package: libc6-dev\nVersion: 2.31-0ubuntu9.18\nArchitecture: armhf\nSource: glibc\n"
+    }
+  ],
+  "sources": {
+    "scope": "Exact development-package corresponding sources downloaded from Ubuntu Ports; .dsc file lengths and SHA256 recorded, component hashes verified against .dsc. Signed archive index linkage still pending.",
+    "packages": [
+      {
+        "package": "glib2.0",
+        "version": "2.64.6-1~ubuntu20.04.9",
+        "files": [
+          {
+            "filename": "glib2.0_2.64.6-1~ubuntu20.04.9.dsc",
+            "bytes": 3338,
+            "sha256": "30df29e08162a1e38f7e83819d07bc18d8c2f6667a40c6a24a7e7c3761f723e6",
+            "url": "https://ports.ubuntu.com/ubuntu-ports/pool/main/g/glib2.0/glib2.0_2.64.6-1~ubuntu20.04.9.dsc"
+          },
+          {
+            "filename": "glib2.0_2.64.6.orig.tar.xz",
+            "bytes": 4781576,
+            "sha256": "c36ee07a70164c71f046016fe6aaacd6368333c42590bc0cba47c344ffb853f1",
+            "url": "https://ports.ubuntu.com/ubuntu-ports/pool/main/g/glib2.0/glib2.0_2.64.6.orig.tar.xz"
+          },
+          {
+            "filename": "glib2.0_2.64.6-1~ubuntu20.04.9.debian.tar.xz",
+            "bytes": 150280,
+            "sha256": "049ab2d89b1cf703013678e716dada54b35acd328151afb0ed4efaf30d40a0c9",
+            "url": "https://ports.ubuntu.com/ubuntu-ports/pool/main/g/glib2.0/glib2.0_2.64.6-1~ubuntu20.04.9.debian.tar.xz"
+          }
+        ]
+      },
+      {
+        "package": "db5.3",
+        "version": "5.3.28+dfsg1-0.8ubuntu3",
+        "files": [
+          {
+            "filename": "db5.3_5.3.28+dfsg1-0.8ubuntu3.dsc",
+            "bytes": 2875,
+            "sha256": "b183b38fb1e90510dd962c30f8c652a1e55b03a4c1d99dbac9f0a128abe52d0e",
+            "url": "https://ports.ubuntu.com/ubuntu-ports/pool/main/d/db5.3/db5.3_5.3.28+dfsg1-0.8ubuntu3.dsc"
+          },
+          {
+            "filename": "db5.3_5.3.28+dfsg1.orig.tar.xz",
+            "bytes": 19723860,
+            "sha256": "b19bf3dd8ce74b95a7b215be9a7c8489e8e8f18da60d64d6340a06e75f497749",
+            "url": "https://ports.ubuntu.com/ubuntu-ports/pool/main/d/db5.3/db5.3_5.3.28+dfsg1.orig.tar.xz"
+          },
+          {
+            "filename": "db5.3_5.3.28+dfsg1-0.8ubuntu3.debian.tar.xz",
+            "bytes": 32028,
+            "sha256": "b141784b0395dcd4b9c2e3bf4eb1e7948d938a6f8643fac5285ca43e643bf63b",
+            "url": "https://ports.ubuntu.com/ubuntu-ports/pool/main/d/db5.3/db5.3_5.3.28+dfsg1-0.8ubuntu3.debian.tar.xz"
+          }
+        ]
+      },
+      {
+        "package": "glibc",
+        "version": "2.31-0ubuntu9.18",
+        "files": [
+          {
+            "filename": "glibc_2.31-0ubuntu9.18.dsc",
+            "bytes": 9422,
+            "sha256": "b21e6952f2bb957d2c8bae40485ad94b1f6fb539b91bb3ceedce3af4a6340f13",
+            "url": "https://ports.ubuntu.com/ubuntu-ports/pool/main/g/glibc/glibc_2.31-0ubuntu9.18.dsc"
+          },
+          {
+            "filename": "glibc_2.31.orig.tar.xz",
+            "bytes": 17317924,
+            "sha256": "2b22c7b04a36747d6c74796a73193a6f8856bfd1efc551b5db96baefa053fe5e",
+            "url": "https://ports.ubuntu.com/ubuntu-ports/pool/main/g/glibc/glibc_2.31.orig.tar.xz"
+          },
+          {
+            "filename": "glibc_2.31-0ubuntu9.18.debian.tar.xz",
+            "bytes": 891764,
+            "sha256": "958d60a6e4f212f6438862b2ac2a4c45eca75891b5dc1894f62053cc775d2ea3",
+            "url": "https://ports.ubuntu.com/ubuntu-ports/pool/main/g/glibc/glibc_2.31-0ubuntu9.18.debian.tar.xz"
+          }
+        ]
+      }
+    ]
+  },
+  "host_packages": {
+    "g++-15-arm-linux-gnueabihf": "15.2.0-16ubuntu1cross1",
+    "gcc-15-arm-linux-gnueabihf": "15.2.0-16ubuntu1cross1",
+    "binutils-arm-linux-gnueabihf": "2.46-3ubuntu2",
+    "autoconf": "2.72-3.1ubuntu2",
+    "automake": "1:1.18.1-3build1",
+    "libtool": "2.5.4-9",
+    "pkgconf": "2.5.1-4",
+    "make": "4.4.1-3"
+  },
+  "source_sha256": "00cb09f267031fb528bebc4621268037fca64677040123ebb184a50afcb43430",
+  "patches": [
+    {
+      "path": "patches/libpinyin-alignment.patch",
+      "sha256": "0c467e3fa26adce4dab558db7e4a89b990f49e2c518b8b921e26acbece519676"
+    },
+    {
+      "path": "patches/glibc2.31-gcc13-header.patch",
+      "sha256": "1dec17a001edf61b4580e68019803ed652fc22ee008470ea9d347e11c99f8a64"
+    }
+  ],
+  "rebuilt_output": {
+    "bytes": 610212,
+    "sha256": "eb368d13c0f895cdeba7f4b809464fe6cc21999032f2f847b57824dac4d023d3",
+    "soname": "libpinyin.so.13",
+    "maximum_glibc_requirement": "2.29",
+    "device_execution": "pending; original deployed build differs"
+  },
+  "bundle": {
+    "archive": "keyboard-build-inputs-libpinyin2.3.0.tar.gz",
+    "bytes": 47273440,
+    "sha256": "201dc8944b7673a914067865576612c8c2e94f51210841428ac288a0b8f03292"
+  }
+}

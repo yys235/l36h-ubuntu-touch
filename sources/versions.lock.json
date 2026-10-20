@@ -73,9 +73,11 @@
     "archive": "libpinyin-2.3.0.tar.gz",
     "patch": "../keyboard/libpinyin-alignment.patch",
     "sha256": "00cb09f267031fb528bebc4621268037fca64677040123ebb184a50afcb43430",
-    "complete_build_recipe": "pending",
+    "complete_build_recipe": "../keyboard/BUILD.md (documented recipe re-executed from bundled inputs successfully; compiler source closure and new device execution pending)",
     "patch_check": "passed-against-original-file-in-source-archive",
-    "version": "2.3.0"
+    "version": "2.3.0",
+    "build_inputs": "../keyboard/build-inputs.json",
+    "rebuilt_sha256": "eb368d13c0f895cdeba7f4b809464fe6cc21999032f2f847b57824dac4d023d3"
   },
   "initramfs": {
     "patched_sha256": "91b3e166edaeeae323ba2f34af2342533072b20a68cc7607599c50ebde499ce4",

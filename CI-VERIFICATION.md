@@ -1,5 +1,11 @@
 # 干净环境复现记录
 
+2026-10-20运行[39370911668](https://github.com/yys235/l36h-ubuntu-touch/actions/runs/39370911668)
+（提交f1cbd8551b7d98150b885d9a0ea35e246519a0b7）已完成且success。
+包含首次启动准备、运行时、userdata组装在内的13个工具测试脚本，以及
+固定内核完整构建均通过。新增41项测试使用隔离目录，不修改运行器账号
+或启动SSH；这不替代ARM SSH与设备冷启动验收。
+
 2026-10-18回查：运行38368747428（提交
 9916d7584d591b097a7a61b66bd7426c4db9d6a7）的portable-tests和
 fixed-kernel-build均已完成且success，包含新增的覆盖层集成测试。
