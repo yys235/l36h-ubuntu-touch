@@ -4,6 +4,7 @@ on:
     paths:
       - 'kernel/**'
       - 'scripts/**'
+      - 'firstboot/**'
       - '.github/workflows/**'
       - 'sources/versions.lock.json'
   workflow_dispatch:
@@ -27,6 +28,9 @@ jobs:
           python3 scripts/test-https-config.py
           python3 scripts/test-rootfs-image-builder.py
           sudo python3 scripts/test-overlay-integration.py
+          sudo python3 scripts/test-yuga-firstboot-preparation.py
+          sudo python3 scripts/test-yuga-firstboot-runtime.py
+          sudo python3 scripts/test-yuga-userdata-assembly.py
           python3 scripts/test-reboot-bootloader.py
   fixed-kernel-build:
     runs-on: ubuntu-24.04

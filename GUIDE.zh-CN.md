@@ -81,8 +81,9 @@ LXC禁用console、WLAN初始化、蓝牙SMD、upower兼容和真实LM3533背光
 网络、SSH及Hermes运行，屏蔽sleep/suspend/hibernate/hybrid-sleep targets。
 普通移动使用可选择不启用。手动关屏和唤醒应实测，不能只看sysfs缓存值。
 
-新设备自己生成SSH主机密钥，设置自己的管理员账号和密码。SSH默认22。
-不复用作者账户、锁屏密码或diagnostic-authorizedkeys。
+首次启动准备与独立userdata载荷见[FIRSTBOOT.md](FIRSTBOOT.md)。初始入口为
+root SSH公钥登录，端口22，禁止密码认证；安装者自备公钥，设备生成自己的
+主机密钥。不复用作者账户、锁屏密码或diagnostic-authorizedkeys。
 
 ## 可选TF卡与Hermes
 
@@ -105,7 +106,7 @@ ARMv7运行时和原生库放卡上。HTTPS可选：外部9119代理到本机912
 
 - 匹配boot/rootfs/system及匿名化覆盖层的完整产物和校验清单。
 - 首次救援进入、镜像传输、挂载和刷写的一体化流程。
-- 不含共享密码/主机密钥的首次启动初始化。
+- 首次启动初始化的实机验收（准备工具和隔离测试已完成）。
 - 冷启动复现、TF自动挂载、服务器模式及Hermes启动验证。
 - 源码/依赖归档、对应许可证、干净构建验证和远程资产回读。
 

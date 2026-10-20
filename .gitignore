@@ -1,5 +1,6 @@
 **/__pycache__/
 *.pyc
+.superpowers/
 assets/
 sources/*.tar.gz
 sources/*.tar.xz
