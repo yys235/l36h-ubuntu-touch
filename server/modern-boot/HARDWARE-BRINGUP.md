@@ -41,6 +41,7 @@ Sony's downstream regulator map assigns PM8921 S3 to both riva_vddcx and HSUSB_V
 ## Camera exclusion
 
 The server kernel build explicitly disables MEDIA_SUPPORT and checks the effective Kconfig result after olddefconfig. DRM display support is separate and remains enabled. This implements the requested camera exclusion for subsequent builds; the already running wireless diagnostic CI39574233322 predates this configuration change and is not evidence that the new constraint has passed a kernel build or hardware test.
+The completed traced CI39574233322 build predates this camera constraint; current hardware probes therefore do not verify the later camera-disabled configuration.
 
 ## TF-backed WCNSS evidence
 
@@ -51,3 +52,5 @@ A controlled derivative adds only regulator-always-on to `/soc/rpm@108000/regula
 Subsequent snapshots retained USB addressing, route, carrier1 and UDC configured state while packet counters stopped advancing. Clock/regulator summaries were unchanged. Windows retained addressing and neighbor state but ping failed. Gadget unbind/rebind later returned0 without recovering enumeration (powered, carrier0); this remains a diagnostic result, not a deployed fix.
 
 Wi-Fi's all-zero MAC was a separate reproducible configuration defect. Pinned `drivers/net/wireless/ath/wcn36xx/main.c` consumes DT local-mac-address but does not generate a fallback here. Assigning a valid locally administered per-device MAC with ip link allowed interface-up and iw6.17 scanning to succeed, yielding172 BSS entries on5GHz. This does not verify association,2.4GHz, coexistence or stability. The final installation must obtain or generate a stable unique address before bringing the interface up.
+
+Further controlled tests also failed to restore USB: gadget disconnect before WCNSS startup and reconnect afterward (scan0,194 BSS); then identity-checked12500000.usb/msm_hsusb controller remove/probe followed by gadget binding (all operations0, scan0,167 BSS). UDC remained powered/carrier0. Each round returned automatically to old charging diagnostics. The pinned voltage_triplet helper's explicit fallback means the L3 warning is not sufficient evidence of a voltage fault. Continue with host-versus-device USB recovery isolation.
