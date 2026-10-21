@@ -43,6 +43,7 @@ make -C "$source_dir" O="$build" -j"${BUILD_JOBS:-2}" \
     zImage qcom/qcom-apq8064-sony-xperia-lagan-yuga.dtb modules
 make -C "$source_dir" O="$build" INSTALL_MOD_PATH="$output/modules" \
     INSTALL_MOD_STRIP=1 modules_install
+python3 "$script_dir/verify-modules.py" --directory "$output/modules"
 cp "$build/arch/arm/boot/zImage" "$output/zImage"
 cp "$build/arch/arm/boot/dts/qcom/qcom-apq8064-sony-xperia-lagan-yuga.dtb" "$output/yuga.dtb"
 cp "$build/.config" "$output/kernel.config"
