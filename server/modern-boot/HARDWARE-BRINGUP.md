@@ -41,3 +41,9 @@ Sony's downstream regulator map assigns PM8921 S3 to both riva_vddcx and HSUSB_V
 ## Camera exclusion
 
 The server kernel build explicitly disables MEDIA_SUPPORT and checks the effective Kconfig result after olddefconfig. DRM display support is separate and remains enabled. This implements the requested camera exclusion for subsequent builds; the already running wireless diagnostic CI39574233322 predates this configuration change and is not evidence that the new constraint has passed a kernel build or hardware test.
+
+## TF-backed WCNSS evidence
+
+CI39574233322 completed successfully. Persistent synchronous TF logs show all seven traced WCNSS boundaries complete, authentication/reset returning0, remoteproc running, WCNSS Version1.5 1.2 and wlan0 creation. The firmware-start syscall returned0 and heartbeat continued despite USB command loss. Two explicitly armed60-second deadlines and automatic returns to the old charging diagnostic were observed. These are evidence of successful firmware startup and a surviving CPU, not working USB/Wi-Fi coexistence or verified Wi-Fi scanning/connection.
+
+A controlled derivative adds only regulator-always-on to `/soc/rpm@108000/regulators/s3`; sorted decompiled DTB comparison contains exactly that one additional property. Voltage constraints, kernel and modules are unchanged. This derivative also lost USB commands, so S3 always-on alone is not a fix. Continue with USB state/address/counter and clock/regulator snapshots, rather than treating the shared-rail hypothesis as established.
