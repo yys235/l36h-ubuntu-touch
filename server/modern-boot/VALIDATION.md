@@ -13,8 +13,7 @@ This is a hardware bring-up branch. Ubuntu26.10 is not yet installed as a comple
 - First experiment ended within five minutes. Old diagnostic boot was restored by checking boot PARTNAME/size, validating source SHA256 and matching a complete-length readback SHA256. Old3.4 uname and charging were confirmed afterward.
 - Second hardware boot with GPIO26 fix: Windows RNDIS/DHCP/telnet worked; eMMC mmcblk1 and64GB SDXC mmcblk0/p1 detected, previous GPIO ownership error absent. The run ended around135seconds, recovery boot source/readback hashes matched before reboot. Third hardware boot repeated this corrected configuration successfully. Storage enumeration changed again: internal eMMC became mmcblk0, TF mmcblk1; partition identity checks are mandatory.
 
-Still required: repeatable modern boot with storage, standard26.10 systemd PID1 probe,
-display/touch/backlight, PM8921 charging/BMS/temperature, Wi-Fi, local touch management,
+Still required: full display/touch/backlight support, PM8921 charging/BMS/temperature, Wi-Fi, local touch management,
 full rootfs installation and oldOS removal, cold boots/restarts, screen-off server
 continuity and the approved24-hour stability run. No CI/unit result substitutes for these.
 
@@ -34,6 +33,16 @@ This proves standard systemd and SSH can run on this phone with the modern kerne
 ## Wi-Fi bring-up follow-up
 
 - WCNSS vendor firmware hashes and board NV SHA512 were checked against existing source inventories. iw6.17 and libnl3.12 ARMhf package hashes were verified against signed Ubuntu26.10 package indices.
-- A host-side binary interchange bug truncated decompressed module files. The kernel rejected the malformed ELF; file-based interchange fixed this. An ARM module section-table/content bounds validator now gates kernel build output. The current45-test suite passes under Linux.
+- A host-side binary interchange bug truncated decompressed module files. The kernel rejected the malformed ELF; file-based interchange fixed this. An ARM module section-table/content bounds validator now gates kernel build output. The current56-test suite passes under Linux; its dpkg-query test must run on Linux rather than native Windows.
 - Actual phone loading of rfkill, cfg80211, mac80211 and wcn36xx succeeded after that correction. No Wi-Fi interface has been verified yet.
-- Starting WCNSS with the verified firmware causes command-channel loss. Continuous kernel logging captured `Booting fw image wcnss.mdt` as the final message. The fault is not yet localized inside metadata authentication/loading or subsequent startup. Diagnostic printk instrumentation around the secure firmware calls is prepared; no claim of Wi-Fi functionality or charging support follows from this test.
+- Starting WCNSS with the verified firmware causes command-channel loss. Later instrumented probes captured PAS init_image returning0. Subsequent startup is still unlocalized. Two probes overlapped the automatic deadline; a fresh-watchdog initramfs-only probe also lost communication and did not recover automatically. Normal watchdog stop-feeding had recovered successfully in a separate test, which does not prove recovery from this failure.
+
+## Modular hardware build and remaining gates
+
+- CI [39538605466](https://github.com/yys235/l36h-ubuntu-touch/actions/runs/39538605466) succeeded at publication commit ae4e1adf7061f3a7420ef237c6a65b08ed4bd9b0. Downloaded ZIP and matched kernel/DTB/module manifest hashes were checked;555 module ELF structures passed the build verifier.
+- Delayed RMI4 loading on that build identified TM2282-001 and registered event2. IRQ setup, function configuration and pending-interrupt handling each returned0 while SSH remained available. Physical input events and repeat cold-boot reliability remain unverified.
+- No modern power_supply/charger support has been established. Bounded experiments return to the old diagnostic environment with charging confirmed; do not infer charging support from ADC modules or the USB connection.
+- A new diagnostic build [39574233322](https://github.com/yys235/l36h-ubuntu-touch/actions/runs/39574233322), publication commit b706983d5853e1d7983a56329f9e25bc9e625b80, adds seven WCNSS startup-boundary traces. At this update it is still compiling, not a verified runtime result.
+- Phone storage inventory confirms approximately16GB eMMC and64GB ext4 TF. Hardware diagnostic logging may mount the identity-verified TF synchronously to retain kernel messages and heartbeat across USB loss. This is a separate follow-up from the completed no-storage-mount RAM systemd probe, not a rootfs installation.
+
+The complete Ubuntu reinstall, camera exclusion, local screen Wi-Fi/device-information interface, reliable charging, Wi-Fi, cold boot/reboot, screen-off server continuity and24-hour stability acceptance remain outstanding. The old OS data partitions have not been formatted or replaced.
