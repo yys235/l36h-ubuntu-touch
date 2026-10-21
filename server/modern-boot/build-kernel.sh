@@ -30,8 +30,8 @@ for option in DEVTMPFS DEVTMPFS_MOUNT CGROUPS MEMCG CGROUP_PIDS NAMESPACES \
     USB_F_RNDIS USB_F_ECM; do
     "$settings" --file "$build/.config" --enable "$option"
 done
-# Keep touch probing out of early boot; load these only after USB logging is ready.
-for option in RMI4_CORE RMI4_I2C; do
+# Keep optional hardware probes out of early boot; load after USB logging is ready.
+for option in RMI4_CORE RMI4_I2C QCOM_PM8XXX_XOADC SENSORS_IIO_HWMON; do
     "$settings" --file "$build/.config" --module "$option"
 done
 "$settings" --file "$build/.config" --disable LOCALVERSION_AUTO
@@ -45,9 +45,9 @@ for option in DEVTMPFS CGROUPS FHANDLE INOTIFY_USER SIGNALFD TIMERFD EPOLL \
         exit 1
     fi
 done
-for option in RMI4_CORE RMI4_I2C; do
+for option in RMI4_CORE RMI4_I2C QCOM_PM8XXX_XOADC SENSORS_IIO_HWMON; do
     if ! grep -qx "CONFIG_${option}=m" "$build/.config"; then
-        echo "Diagnostic touch driver must be modular: CONFIG_${option}" >&2
+        echo "Diagnostic hardware driver must be modular: CONFIG_${option}" >&2
         exit 1
     fi
 done
