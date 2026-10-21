@@ -4,6 +4,10 @@ import pathlib
 import stat
 import struct
 import unittest
+import gzip
+import subprocess
+import sys
+import tempfile
 
 SCRIPT = pathlib.Path(__file__).resolve().parents[1] / 'build-initramfs.py'
 
@@ -66,6 +70,18 @@ class Initramfs(unittest.TestCase):
         self.entries[1] = ('bin/busybox', bytes(blob), stat.S_IFREG | 0o755)
         with self.assertRaisesRegex(ValueError, 'static'):
             self.module.build_archive(self.entries)
+
+    def test_cli_packages_executable_pid1_handoff(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = pathlib.Path(directory)
+            busybox = root/'busybox'
+            busybox.write_bytes(arm_fixture())
+            output = root/'initramfs.cpio.gz'
+            result = subprocess.run([sys.executable, str(SCRIPT), '--busybox', str(busybox), '--output', str(output)], capture_output=True, text=True)
+            self.assertEqual(result.returncode, 0, result.stderr)
+            entries = {name: (data, fields) for name, data, fields in self.module.newc.read_entries(gzip.decompress(output.read_bytes()))}
+            self.assertIn('sbin/probe-handoff.sh', entries)
+            self.assertTrue(entries['sbin/probe-handoff.sh'][1][1] & 0o111)
 
 
 if __name__ == '__main__':

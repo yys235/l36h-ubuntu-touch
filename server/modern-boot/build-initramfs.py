@@ -91,7 +91,8 @@ def main():
     entries += [('bin/busybox', args.busybox.read_bytes(), stat.S_IFREG | 0o755),
                 ('bin/sh', b'busybox', stat.S_IFLNK | 0o777)]
     for name, source in [('init', 'init'), ('sbin/usb-gadget.sh', 'usb-gadget.sh'),
-                         ('sbin/collect-state.sh', 'collect-state.sh')]:
+                         ('sbin/collect-state.sh', 'collect-state.sh'),
+                         ('sbin/probe-handoff.sh', 'probe-handoff.sh')]:
         entries.append((name, (HERE/source).read_bytes(), stat.S_IFREG | 0o755))
     payload = gzip.compress(build_archive(entries), mtime=0)
     with args.output.open('xb') as output:

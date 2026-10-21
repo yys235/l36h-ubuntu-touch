@@ -17,6 +17,12 @@ else
     echo 'USB setup failed; inspect init log via a verified alternate channel'
 fi
 while :; do
+    if [ -f /run/yuga-probe-ready ]; then
+        if ! . /sbin/probe-handoff.sh; then
+            echo 'PID1 probe handoff rejected'
+            rm -f /run/yuga-probe-ready
+        fi
+    fi
     /sbin/collect-state.sh >/run/yuga-state.next 2>&1
     mv /run/yuga-state.next /run/yuga-state.txt
     sleep 10
