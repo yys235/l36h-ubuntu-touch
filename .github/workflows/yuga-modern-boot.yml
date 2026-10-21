@@ -55,6 +55,11 @@ jobs:
       - name: Build matching kernel DTB and modules
         run: |
           set -euo pipefail
+          echo "Runner CPUs: $(nproc)"
+          free -m
+          runner_jobs=$(nproc)
+          if [ "$runner_jobs" -gt 4 ]; then runner_jobs=4; fi
+          export BUILD_JOBS="$runner_jobs"
           bash server/modern-boot/build-kernel.sh "$KERNEL_SOURCE" server/modern-boot/kernel.config "$RUNNER_TEMP/kernel-products" 2>&1 | tee "$RUNNER_TEMP/kernel-products/build.log"
           cp server/modern-boot/inputs.json "$RUNNER_TEMP/kernel-products/inputs.json"
       - name: Preserve build evidence and products
