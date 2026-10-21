@@ -26,7 +26,14 @@ Private full hardware logs contain identifiers and stay outside this public tree
 - Third diagnostic boot used the corrected DTB and handoff-capable initramfs. Boot image SHA256 74bfbf657973902266a02a8986de7c2c2499d682a4bb41d8be01e43097947f73.
 - Rootfs and installer public key were downloaded and hash-checked in RAM. Host keys were generated on the phone. Diagnostic PID1 executed switch_root into actual Ubuntu systemd.
 - SSH on port22 authenticated the installer public key. Actual `/proc/1/exe` was `/usr/lib/systemd/systemd`, `/proc/1/comm` was `systemd`, `/etc/os-release` reported Ubuntu26.10, and `systemctl is-system-running` reached `running`. There were zero failed units and no pending jobs; the journal confirmed udev coldplug and yuga-probe.target completed.
-- An early SSH session showed a booting/nologin notice while startup was still in progress. Root key login worked. The RAM probe lacks a configured locale and real-time clock correction; these remain production configuration work. Explicit cgroup2 mount evidence still needs capture in the next probe; systemd startup alone is not that check.
+- An early SSH session showed a booting/nologin notice while startup was still in progress. Root key login worked. The RAM probe lacks a configured locale and real-time clock correction; these remain production configuration work. The following probe explicitly captured cgroup2 mounted at /sys/fs/cgroup with nsdelegate and memory accounting flags.
 - Recovery boot source and full-length boot-partition readback SHA256 matched before reboot. Old3.4 diagnostic environment returned and reported Charging. No system/userdata/TF filesystem was formatted or installed by this RAM probe.
 
 This proves standard systemd and SSH can run on this phone with the modern kernel. It does not complete display, touch, charging, Wi-Fi, local UI, persistent installation or stability acceptance.
+
+## Wi-Fi bring-up follow-up
+
+- WCNSS vendor firmware hashes and board NV SHA512 were checked against existing source inventories. iw6.17 and libnl3.12 ARMhf package hashes were verified against signed Ubuntu26.10 package indices.
+- A host-side binary interchange bug truncated decompressed module files. The kernel rejected the malformed ELF; file-based interchange fixed this. An ARM module section-table/content bounds validator now gates kernel build output. The current45-test suite passes under Linux.
+- Actual phone loading of rfkill, cfg80211, mac80211 and wcn36xx succeeded after that correction. No Wi-Fi interface has been verified yet.
+- Starting WCNSS with the verified firmware causes command-channel loss. Continuous kernel logging captured `Booting fw image wcnss.mdt` as the final message. The fault is not yet localized inside metadata authentication/loading or subsequent startup. Diagnostic printk instrumentation around the secure firmware calls is prepared; no claim of Wi-Fi functionality or charging support follows from this test.

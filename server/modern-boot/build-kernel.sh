@@ -18,6 +18,7 @@ export KBUILD_BUILD_USER=yuga-builder KBUILD_BUILD_HOST=ci
 export KBUILD_BUILD_TIMESTAMP='2026-10-20 00:00:00 +0000'
 export KCONFIG_NOTIMESTAMP=1
 python3 "$script_dir/adjust-source.py" "$source_dir"
+python3 "$script_dir/trace-firmware.py" "$source_dir"
 make -C "$source_dir" O="$build" olddefconfig
 settings="$source_dir/scripts/config"
 for option in DEVTMPFS DEVTMPFS_MOUNT CGROUPS MEMCG CGROUP_PIDS NAMESPACES \
