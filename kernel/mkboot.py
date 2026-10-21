@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
 """Build yuga boot image: header from base, new kernel + ramdisk."""
-import struct, hashlib, sys, os
+import struct, hashlib, sys, os, pathlib
 
 def u32(buf, off): return struct.unpack_from('<I', buf, off)[0]
 
 def build(base_path, kernel_path, ramdisk_path, out_path, cmdline_extra=""):
-    base = open(base_path, 'rb').read()
+    base = pathlib.Path(base_path).read_bytes()
     assert base[:8] == b'ANDROID!', 'not an android boot image'
     page = u32(base, 36)
     assert page == 2048, f'unexpected page {page}'
@@ -25,8 +25,8 @@ def build(base_path, kernel_path, ramdisk_path, out_path, cmdline_extra=""):
     cmd = cmdline.encode('ascii')
     assert len(cmd) <= 1536, 'cmdline too long'
 
-    kernel = open(kernel_path, 'rb').read()
-    ramdisk = open(ramdisk_path, 'rb').read() if ramdisk_path else b''
+    kernel = pathlib.Path(kernel_path).read_bytes()
+    ramdisk = pathlib.Path(ramdisk_path).read_bytes() if ramdisk_path else b''
 
     align = lambda s: (s + page - 1) // page * page
     out = bytearray(base[:page])  # keep header page
@@ -54,7 +54,7 @@ def build(base_path, kernel_path, ramdisk_path, out_path, cmdline_extra=""):
     out += ramdisk
     out += b'\x00' * (align(len(ramdisk)) - len(ramdisk))
     if os.path.exists(out_path): os.remove(out_path)
-    open(out_path, 'wb').write(bytes(out))
+    pathlib.Path(out_path).write_bytes(bytes(out))
     print(f'OK out={out_path} size={len(out)} kernel={len(kernel)} ramdisk={len(ramdisk)}')
     print('boot command line preserved; not printed')
 

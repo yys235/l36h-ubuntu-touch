@@ -1,0 +1,15 @@
+{
+  "name": "busybox-static_1.38.0-3ubuntu4_armhf.deb",
+  "url": "https://ports.ubuntu.com/ubuntu-ports/pool/universe/b/busybox/busybox-static_1.38.0-3ubuntu4_armhf.deb",
+  "bytes": 917358,
+  "sha256": "c9bdde41c729a848cb127584f3d63f87418365ea4f479cdbc90b8467c62f65d1",
+  "sha512": "9f5becdc8a0cbb95957c20e662a202007fc4a08581bfdafd6dcef9844fe5d1666014cf494359061aa23a2d0a1fc0529ecadb21e2ba805a92fe0a559ea01ed015",
+  "provenance": "SHA512 matched package entry in previously signature-verified stonking universe index",
+  "binary": {
+    "name": "busybox-armhf",
+    "bytes": 1385736,
+    "sha256": "d18300e7a5298d9d6733c8a62844db858691129323ca52d41cf106a2f8d07f1c",
+    "format": "ARM ELF32 EABI5 static",
+    "execution": "Actual Yuga old diagnostic kernel: applet listing and ip address replace succeeded; modern kernel pending"
+  }
+}

@@ -1,0 +1,23 @@
+#!/bin/sh
+export PATH=/bin:/sbin
+/bin/busybox --install -s /bin
+mount -t proc proc /proc
+mount -t sysfs sysfs /sys
+mount -t devtmpfs devtmpfs /dev
+mount -t tmpfs -o mode=0755 tmpfs /run
+mount -t tmpfs -o mode=1777 tmpfs /tmp
+mkdir -p /dev/pts /sys/kernel/config
+mount -t devpts -o mode=0620,ptmxmode=0666 devpts /dev/pts
+exec >/run/init.log 2>&1
+echo YUGA_MODERN_RAM_DIAGNOSTIC_V1
+uname -a
+if /sbin/usb-gadget.sh; then
+    telnetd -b 172.16.42.1:23 -l /bin/sh
+else
+    echo 'USB setup failed; inspect init log via a verified alternate channel'
+fi
+while :; do
+    /sbin/collect-state.sh >/run/yuga-state.next 2>&1
+    mv /run/yuga-state.next /run/yuga-state.txt
+    sleep 10
+done
