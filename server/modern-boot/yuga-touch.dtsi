@@ -1,0 +1,40 @@
+// Yuga touch wiring from Sony board-sony_fusion3.c and board-sony_yuga-regulator.c.
+// No touch firmware update or camera nodes are added.
+&gsbi3 {
+    qcom,mode = <GSBI_PROT_I2C>;
+    status = "okay";
+};
+
+&gsbi3_i2c {
+    clock-frequency = <400000>;
+    status = "okay";
+
+    touchscreen@2c {
+        compatible = "syna,rmi4-i2c";
+        reg = <0x2c>;
+        interrupt-parent = <&tlmm_pinmux>;
+        interrupts = <6 IRQ_TYPE_EDGE_FALLING>;
+        pinctrl-names = "default";
+        pinctrl-0 = <&touch_irq_active>;
+        vdd-supply = <&pm8921_l17>;
+        vio-supply = <&pm8921_s4>;
+        syna,startup-delay-ms = <100>;
+        #address-cells = <1>;
+        #size-cells = <0>;
+
+        rmi4-f11@11 {
+            reg = <0x11>;
+            touchscreen-size-x = <1080>;
+            touchscreen-size-y = <1920>;
+        };
+    };
+};
+
+&tlmm_pinmux {
+    touch_irq_active: touch-irq-active-state {
+        pins = "gpio6";
+        drive-strength = <2>;
+        bias-pull-up;
+        input-enable;
+    };
+};
