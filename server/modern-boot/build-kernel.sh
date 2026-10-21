@@ -34,9 +34,15 @@ done
 for option in RMI4_CORE RMI4_I2C QCOM_PM8XXX_XOADC SENSORS_IIO_HWMON; do
     "$settings" --file "$build/.config" --module "$option"
 done
+# The server installation explicitly excludes cameras. DRM display is separate.
+"$settings" --file "$build/.config" --disable MEDIA_SUPPORT
 "$settings" --file "$build/.config" --disable LOCALVERSION_AUTO
 "$settings" --file "$build/.config" --set-str LOCALVERSION '-yuga-modern-probe'
 make -C "$source_dir" O="$build" olddefconfig
+if ! grep -qx '# CONFIG_MEDIA_SUPPORT is not set' "$build/.config"; then
+    echo 'Camera/media subsystem must remain disabled for the server build' >&2
+    exit 1
+fi
 for option in DEVTMPFS CGROUPS FHANDLE INOTIFY_USER SIGNALFD TIMERFD EPOLL \
     UNIX SYSFS PROC_FS BLK_DEV_INITRD RD_GZIP ARM_APPENDED_DTB ARM_ATAG_DTB_COMPAT \
     CONFIGFS_FS USB_GADGET USB_CONFIGFS USB_CONFIGFS_RNDIS USB_F_RNDIS; do
