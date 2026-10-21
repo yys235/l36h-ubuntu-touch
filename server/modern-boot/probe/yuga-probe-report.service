@@ -1,0 +1,8 @@
+[Unit]
+Description=Record actual PID1 and kernel state
+After=basic.target
+
+[Service]
+Type=oneshot
+ExecStart=/usr/local/sbin/yuga-probe-report.sh
+RemainAfterExit=yes

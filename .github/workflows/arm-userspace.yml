@@ -1,12 +1,20 @@
 name: ARM userspace configuration check
 on:
   workflow_dispatch:
+    inputs:
+      probe_rootfs:
+        description: Build the Ubuntu26 RAM systemd probe instead of the kernel
+        type: boolean
+        default: false
 permissions:
   contents: read
 jobs:
   modern-kernel:
-    if: github.ref_name == 'codex/yuga-modern-boot'
+    if: github.ref_name == 'codex/yuga-modern-boot' && !inputs.probe_rootfs
     uses: ./.github/workflows/yuga-modern-boot.yml
+  systemd-probe-rootfs:
+    if: github.ref_name == 'codex/yuga-modern-boot' && inputs.probe_rootfs
+    uses: ./.github/workflows/yuga-systemd-probe.yml
   arm-sshd-policy:
     if: github.ref_name != 'codex/yuga-modern-boot'
     runs-on: ubuntu-24.04

@@ -170,6 +170,8 @@ def main():
     image, metadata = make_boot(args.base.read_bytes(), kernel, dtb, args.ramdisk.read_bytes())
     metadata['kernel_release'] = build['kernel_release']
     metadata['source_commit'] = build['source_commit']
+    if 'dtb_derivation' in build:
+        metadata['dtb_derivation'] = build['dtb_derivation']
     with args.output.open('xb') as output:
         output.write(image)
     args.output.with_suffix(args.output.suffix+'.json').write_bytes((json.dumps(metadata, indent=2)+'\n').encode())

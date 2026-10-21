@@ -27,6 +27,17 @@ class SourceAdjustment(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, 'expected exactly one'):
             self.module.peripheral_role(node + node)
 
+    def test_card_detect_keeps_pinconf_without_claiming_gpio_mux(self):
+        self.assertTrue(hasattr(self.module, 'card_detect_pinconf'), 'Card detect fix not implemented')
+        original = '\tsdcc3_cd_pin_a: sdcc3-cd-pin-active-state {\n\t\tpins = "gpio26";\n\t\tfunction = "gpio";\n\n\t\tdrive-strength = <2>;\n\t\tbias-disable;\n\t};'
+        expected = '\tsdcc3_cd_pin_a: sdcc3-cd-pin-active-state {\n\t\tpins = "gpio26";\n\n\t\tdrive-strength = <2>;\n\t\tbias-disable;\n\t};'
+        self.assertEqual(self.module.card_detect_pinconf(original), expected)
+
+    def test_card_detect_rejects_unknown_pin(self):
+        self.assertTrue(hasattr(self.module, 'card_detect_pinconf'), 'Card detect fix not implemented')
+        with self.assertRaisesRegex(ValueError, 'expected exactly one'):
+            self.module.card_detect_pinconf('pins = "gpio27";')
+
 
 if __name__ == '__main__':
     unittest.main()

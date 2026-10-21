@@ -1,0 +1,40 @@
+name: Yuga Ubuntu26 ARM systemd probe rootfs
+on:
+  workflow_dispatch:
+  workflow_call:
+permissions:
+  contents: read
+jobs:
+  rootfs:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+      - name: Install ARM build emulator and official signing keys
+        run: |
+          sudo apt-get update
+          sudo apt-get install --yes qemu-user-static binfmt-support ubuntu-keyring gpgv
+          qemu-arm-static --version
+      - name: Test tools and build generic RAM rootfs
+        run: |
+          set -euo pipefail
+          python3 -m unittest discover -s server/modern-boot/tests -v
+          mkdir -p "$RUNNER_TEMP/systemd-probe"
+          sudo bash server/modern-boot/build-systemd-probe.sh "$RUNNER_TEMP/systemd-probe" 2>&1 | tee "$RUNNER_TEMP/systemd-probe/build.log"
+      - name: Preserve probe and build evidence
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: yuga-systemd-probe-${{ github.sha }}
+          if-no-files-found: warn
+          retention-days: 14
+          path: |
+            ${{ runner.temp }}/systemd-probe/ubuntu26-systemd-probe.tar.gz
+            ${{ runner.temp }}/systemd-probe/probe-manifest.json
+            ${{ runner.temp }}/systemd-probe/base-signature.log
+            ${{ runner.temp }}/systemd-probe/arm-sshd-effective.conf
+            ${{ runner.temp }}/systemd-probe/arm-systemd-version.txt
+            ${{ runner.temp }}/systemd-probe/arm-init-path.txt
+            ${{ runner.temp }}/systemd-probe/packages-and-apt.log
+            ${{ runner.temp }}/systemd-probe/package-versions.tsv
+            ${{ runner.temp }}/systemd-probe/build.log

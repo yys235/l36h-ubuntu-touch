@@ -1,0 +1,9 @@
+{
+  "schema": 1,
+  "purpose": "Ubuntu26.10 ARMhf RAM systemd probe; no account or host private keys",
+  "files": [
+    {"name": "ubuntu-base-26.10-base-armhf.tar.gz", "bytes": 34503671, "sha256": "8a82b281773fc6091b8f3d64814a7991169b955b12e3b21f4a977c7d7bdcdcfe", "url": "https://cdimage.ubuntu.com/ubuntu-base/releases/26.10/release/ubuntu-base-26.10-base-armhf.tar.gz"},
+    {"name": "SHA256SUMS", "bytes": 616, "sha256": "665aa328168a289618f49d212842fc9fc56d108fd31f821c1c26c6f7d355a250", "url": "https://cdimage.ubuntu.com/ubuntu-base/releases/26.10/release/SHA256SUMS"},
+    {"name": "SHA256SUMS.gpg", "bytes": 833, "sha256": "a2d4605c99fa5fbe96e9fff8ba56a33d228f13721f4feb0897c9b4713b06eeaa", "url": "https://cdimage.ubuntu.com/ubuntu-base/releases/26.10/release/SHA256SUMS.gpg"}
+  ]
+}

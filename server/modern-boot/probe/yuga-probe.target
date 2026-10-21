@@ -1,0 +1,6 @@
+[Unit]
+Description=Yuga RAM-only Ubuntu systemd probe
+Requires=basic.target
+After=basic.target
+Wants=ssh.service yuga-probe-report.service
+AllowIsolate=yes
