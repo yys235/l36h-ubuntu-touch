@@ -19,6 +19,7 @@ export KBUILD_BUILD_TIMESTAMP='2026-10-20 00:00:00 +0000'
 export KCONFIG_NOTIMESTAMP=1
 python3 "$script_dir/adjust-source.py" "$source_dir"
 python3 "$script_dir/trace-firmware.py" "$source_dir"
+python3 "$script_dir/trace-touch.py" "$source_dir"
 make -C "$source_dir" O="$build" olddefconfig
 settings="$source_dir/scripts/config"
 for option in DEVTMPFS DEVTMPFS_MOUNT CGROUPS MEMCG CGROUP_PIDS NAMESPACES \
@@ -29,6 +30,10 @@ for option in DEVTMPFS DEVTMPFS_MOUNT CGROUPS MEMCG CGROUP_PIDS NAMESPACES \
     USB_F_RNDIS USB_F_ECM; do
     "$settings" --file "$build/.config" --enable "$option"
 done
+# Keep touch probing out of early boot; load these only after USB logging is ready.
+for option in RMI4_CORE RMI4_I2C; do
+    "$settings" --file "$build/.config" --module "$option"
+done
 "$settings" --file "$build/.config" --disable LOCALVERSION_AUTO
 "$settings" --file "$build/.config" --set-str LOCALVERSION '-yuga-modern-probe'
 make -C "$source_dir" O="$build" olddefconfig
@@ -37,6 +42,12 @@ for option in DEVTMPFS CGROUPS FHANDLE INOTIFY_USER SIGNALFD TIMERFD EPOLL \
     CONFIGFS_FS USB_GADGET USB_CONFIGFS USB_CONFIGFS_RNDIS USB_F_RNDIS; do
     if ! grep -qx "CONFIG_${option}=y" "$build/.config"; then
         echo "Required built-in kernel option not enabled: CONFIG_${option}" >&2
+        exit 1
+    fi
+done
+for option in RMI4_CORE RMI4_I2C; do
+    if ! grep -qx "CONFIG_${option}=m" "$build/.config"; then
+        echo "Diagnostic touch driver must be modular: CONFIG_${option}" >&2
         exit 1
     fi
 done
