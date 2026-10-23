@@ -35,6 +35,10 @@ jobs:
             ${{ runner.temp }}/systemd-probe/arm-sshd-effective.conf
             ${{ runner.temp }}/systemd-probe/arm-systemd-version.txt
             ${{ runner.temp }}/systemd-probe/arm-init-path.txt
+            ${{ runner.temp }}/systemd-probe/arm-networkmanager-effective.conf
+            ${{ runner.temp }}/systemd-probe/arm-networkmanager-version.txt
+            ${{ runner.temp }}/systemd-probe/arm-wpa-version.txt
+            ${{ runner.temp }}/systemd-probe/arm-unit-verify.log
             ${{ runner.temp }}/systemd-probe/packages-and-apt.log
             ${{ runner.temp }}/systemd-probe/package-versions.tsv
             ${{ runner.temp }}/systemd-probe/build.log

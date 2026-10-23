@@ -46,20 +46,12 @@ trap cleanup EXIT
 chroot "$root" /usr/bin/env DEBIAN_FRONTEND=noninteractive /bin/sh -ec '
     test "$(dpkg --print-architecture)" = armhf
     apt-get update
-    apt-get install --yes --no-install-recommends systemd-sysv udev openssh-server busybox-static iproute2 ca-certificates dbus
+    apt-get install --yes --no-install-recommends systemd-sysv udev openssh-server busybox-static iproute2 ca-certificates dbus network-manager wpasupplicant iw python3-minimal
     apt-get clean
 ' >"$output/packages-and-apt.log" 2>&1
 chroot "$root" /usr/bin/dpkg-query -W '-f=${binary:Package}\t${Version}\t${Architecture}\n' >"$output/package-versions.tsv"
 mkdir -p "$root/etc/ssh/sshd_config.d" "$root/etc/systemd/system/ssh.service.d" "$root/etc/systemd/journald.conf.d" "$root/usr/local/sbin"
-cat >"$root/etc/ssh/sshd_config.d/10-yuga-probe.conf" <<'EOF'
-Port 22
-ListenAddress 172.16.42.1
-PermitRootLogin prohibit-password
-PasswordAuthentication no
-KbdInteractiveAuthentication no
-PubkeyAuthentication yes
-AuthenticationMethods publickey
-EOF
+python3 "$here/configure-network-probe.py" "$root"
 cat >"$root/etc/systemd/system/ssh.service.d/10-yuga-hostkeys.conf" <<'EOF'
 [Service]
 ExecStartPre=
@@ -74,7 +66,16 @@ ln -sfn yuga-probe.target "$root/etc/systemd/system/default.target"
 mkdir -p "$root/run/sshd"
 chroot "$root" /usr/bin/ssh-keygen -q -t ed25519 -N '' -f /tmp/probe-test-host
 chroot "$root" /usr/sbin/sshd -T -h /tmp/probe-test-host >"$output/arm-sshd-effective.conf"
-python3 "$here/validate-probe-sshd.py" "$output/arm-sshd-effective.conf"
+python3 "$here/validate-probe-sshd.py" "$output/arm-sshd-effective.conf" --network
+chroot "$root" /usr/sbin/NetworkManager --print-config >"$output/arm-networkmanager-effective.conf"
+grep -Eq '^unmanaged-devices=.*interface-name:usb0' "$output/arm-networkmanager-effective.conf"
+chroot "$root" /usr/bin/nmcli --version >"$output/arm-networkmanager-version.txt"
+chroot "$root" /usr/sbin/wpa_supplicant -v >"$output/arm-wpa-version.txt"
+chroot "$root" /usr/bin/systemd-analyze verify /etc/systemd/system/yuga-probe.target >"$output/arm-unit-verify.log" 2>&1
+if find "$root/etc/NetworkManager/system-connections" -type f | grep -q .; then
+    echo 'Generic probe must not contain private network profiles' >&2
+    exit 1
+fi
 chroot "$root" /usr/lib/systemd/systemd --version >"$output/arm-systemd-version.txt"
 chroot "$root" /bin/readlink -f /sbin/init >"$output/arm-init-path.txt"
 grep -qx '/usr/lib/systemd/systemd' "$output/arm-init-path.txt"
@@ -98,7 +99,9 @@ with path.open('rb') as stream:
 metadata = {'schema':1, 'purpose':'ARMhf Ubuntu26.10 RAM probe; actual PID1 hardware verification pending',
             'file':path.name, 'bytes':path.stat().st_size, 'sha256':digest.hexdigest(),
             'authorized_keys':'Not embedded; validated installer public key must be supplied at runtime',
-            'host_private_keys':'Not embedded; generated on the phone'}
+            'host_private_keys':'Not embedded; generated on the phone',
+            'network_manager': True, 'ssh_listener':'0.0.0.0:22',
+            'wifi_profiles':'Not embedded; private runtime injection only'}
 (root/'probe-manifest.json').write_text(json.dumps(metadata,indent=2)+'\n')
 print(json.dumps(metadata))
 PY

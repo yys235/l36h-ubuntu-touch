@@ -38,6 +38,17 @@ class ProbeSshd(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, 'port'):
             self.module.validate(GOOD+'port 2222\n')
 
+    def test_lan_listener_with_key_only_policy_accepted(self):
+        self.module.validate(GOOD.replace('172.16.42.1:22', '0.0.0.0:22'),
+                             listen_address='0.0.0.0:22')
+
+    def test_lan_listener_still_refuses_password_and_duplicate_listeners(self):
+        lan = GOOD.replace('172.16.42.1:22', '0.0.0.0:22')
+        for bad in [lan.replace('PasswordAuthentication no', 'PasswordAuthentication yes'),
+                    lan+'ListenAddress 172.16.42.1:22\n']:
+            with self.assertRaises(ValueError):
+                self.module.validate(bad, listen_address='0.0.0.0:22')
+
 
 if __name__ == '__main__':
     unittest.main()
