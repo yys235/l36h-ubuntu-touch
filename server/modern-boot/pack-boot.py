@@ -11,7 +11,7 @@ import struct
 import tempfile
 
 HERE = pathlib.Path(__file__).resolve().parent
-CMDLINE = 'console=ttyMSM0,115200,n8 fw_devlink=permissive yuga_probe=modern-v1'
+CMDLINE = 'console=tty0 console=ttyMSM0,115200,n8 fw_devlink=permissive yuga_probe=modern-v1'
 CAPACITY = 20 * 1024 * 1024
 spec = importlib.util.spec_from_file_location('mkboot', HERE.parents[1]/'kernel/mkboot.py')
 mkboot = importlib.util.module_from_spec(spec)

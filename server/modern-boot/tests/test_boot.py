@@ -81,6 +81,13 @@ class Boot(unittest.TestCase):
         with self.assertRaises(ValueError):
             self.module.verify_image(image[:-1], manifest)
 
+    def test_default_kernel_log_reaches_screen_and_serial(self):
+        _, manifest = self.pack()
+        options = manifest['cmdline'].split()
+        self.assertIn('console=tty0', options)
+        self.assertIn('console=ttyMSM0,115200,n8', options)
+        self.assertNotIn('quiet', options)
+
 
 if __name__ == '__main__':
     unittest.main()

@@ -1,5 +1,7 @@
 import importlib.util
 import pathlib
+import shutil
+import subprocess
 import tempfile
 import unittest
 
@@ -45,6 +47,15 @@ class Display(unittest.TestCase):
                 self.mod.install(root)
             self.assertEqual(board.read_text(), BOARD)
             self.assertFalse((root / 'drivers/gpu/drm/panel/panel-sharp-ls050t3sx01.c').exists())
+
+    @unittest.skipUnless(shutil.which('cc'), 'host C compiler required')
+    def test_lm3533_board_register_contract(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            binary = pathlib.Path(tmp) / 'lm3533-contract'
+            subprocess.run(['cc', '-std=c11', '-Wall', '-Wextra', '-Werror',
+                            str(HERE / 'tests/test_lm3533_board.c'), '-o', str(binary)], check=True)
+            result = subprocess.run([str(binary)])
+            self.assertEqual(result.returncode, 0, 'LM3533 Sony board register contract failed')
 
 
 if __name__ == '__main__':

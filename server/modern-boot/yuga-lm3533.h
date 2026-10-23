@@ -41,6 +41,10 @@ static int lm3533_yuga_outputs(struct lm3533 *chip)
 	ret = lm3533_set_hvled_config(chip, 2, 0);
 	if (ret)
 		return ret;
+	/* Sony connects both high-voltage LED anodes to the charge-pump output. */
+	ret = lm3533_update(chip, 0x25, 0x03, 0x03);
+	if (ret)
+		return ret;
 	/* Bank A linear, no ALS; bank B stays unconfigured/disabled. */
 	ret = lm3533_update(chip, 0x1a, 0x02, 0x03);
 	if (ret)

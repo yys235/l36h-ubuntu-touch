@@ -30,7 +30,8 @@ the dlogo panel's requirement. Disable sends display-off/20 ms then sleep/100 ms
 unprepare asserts reset/11 ms and lowers DCDC/25 ms before host rail teardown.
 
 LM3533: GSBI1 I2C address 0x36, PM8921 GPIO26 HWEN, boost 500 kHz/24 V,
-bank A 20200 uA, linear mapping, PWM disabled, both HVLED outputs on bank A.
+bank A 20200 uA, linear mapping, PWM disabled, both HVLED outputs on bank A
+with their anodes routed to CPOUT (register 0x25 bits 0 and 1).
 The integration reuses mainline MFD/backlight drivers and adds fixed board data
 only for `sony,yuga-lm3533` on Yuga. ALS and RGB banks are not initialized.
 DRM manages the backlight through the standard class so blanking can set actual
