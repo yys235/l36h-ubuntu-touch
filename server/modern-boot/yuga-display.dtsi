@@ -1,0 +1,59 @@
+/* Sony Yuga wiring from board-sony_fusion3-display.c and fusion3_yuga.c. */
+&mdp { status = "okay"; };
+/* Software scanout needs no 3D firmware or acceleration. */
+&gpu { status = "disabled"; };
+&mdp_dsi1_out { remote-endpoint = <&dsi0_in>; };
+&dsi0_in { remote-endpoint = <&mdp_dsi1_out>; };
+&dsi0_out {
+	remote-endpoint = <&yuga_panel_in>;
+	data-lanes = <0 1 2 3>;
+};
+&dsi0 {
+	vddio-supply = <&pm8921_l29>;
+	vdda-supply = <&pm8921_l2>;
+	status = "okay";
+	panel@0 {
+		compatible = "sharp,ls050t3sx01";
+		reg = <0>;
+		pinctrl-names = "default";
+		pinctrl-0 = <&yuga_panel_pins>;
+		reset-gpios = <&pm8921_gpio 25 GPIO_ACTIVE_LOW>;
+		dcdc-en-gpios = <&pm8921_gpio 24 GPIO_ACTIVE_HIGH>;
+		backlight = <&yuga_backlight>;
+		port {
+			yuga_panel_in: endpoint { remote-endpoint = <&dsi0_out>; };
+		};
+	};
+};
+&dsi0_phy {
+	vddio-supply = <&pm8921_l29>;
+	status = "okay";
+};
+&gsbi1 { qcom,mode = <GSBI_PROT_I2C>; status = "okay"; };
+&gsbi1_i2c {
+	clock-frequency = <400000>;
+	status = "okay";
+	yuga_backlight: backlight@36 {
+		compatible = "sony,yuga-lm3533";
+		reg = <0x36>;
+		pinctrl-names = "default";
+		pinctrl-0 = <&yuga_backlight_pins>;
+		gpios = <&pm8921_gpio 26 GPIO_ACTIVE_HIGH>;
+	};
+};
+&pm8921_gpio {
+	yuga_panel_pins: yuga-panel-state {
+		pins = "gpio24", "gpio25";
+		bias-disable;
+		drive-push-pull;
+		power-source = <2>; /* PM_GPIO_VIN_S4, 1.8 V */
+		qcom,drive-strength = <PMIC_GPIO_STRENGTH_LOW>;
+	};
+	yuga_backlight_pins: yuga-backlight-state {
+		pins = "gpio26";
+		bias-disable;
+		drive-push-pull;
+		power-source = <2>;
+		qcom,drive-strength = <PMIC_GPIO_STRENGTH_LOW>;
+	};
+};
