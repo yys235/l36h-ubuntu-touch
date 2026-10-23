@@ -57,6 +57,15 @@ class Display(unittest.TestCase):
             result = subprocess.run([str(binary)])
             self.assertEqual(result.returncode, 0, 'LM3533 Sony board register contract failed')
 
+    @unittest.skipUnless(shutil.which('cc'), 'host C compiler required')
+    def test_dsi_rail_order_and_failure_unwind_contract(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            binary = pathlib.Path(tmp) / 'dsi-contract'
+            subprocess.run(['cc', '-std=c11', '-Wall', '-Wextra', '-Werror',
+                            str(HERE / 'tests/test_dsi_power.c'), '-o', str(binary)], check=True)
+            result = subprocess.run([str(binary)])
+            self.assertEqual(result.returncode, 0, 'DSI Sony rail sequencing contract failed')
+
 
 if __name__ == '__main__':
     unittest.main()
