@@ -1,5 +1,6 @@
 import importlib.util
 import pathlib
+import re
 import shutil
 import subprocess
 import tempfile
@@ -65,6 +66,35 @@ class Display(unittest.TestCase):
                             str(HERE / 'tests/test_dsi_power.c'), '-o', str(binary)], check=True)
             result = subprocess.run([str(binary)])
             self.assertEqual(result.returncode, 0, 'DSI Sony rail sequencing contract failed')
+
+    def test_native_clock_fits_observed_pll_and_pixel_divider_tolerance(self):
+        source = (HERE / 'panel-sharp-ls050t3sx01.c').read_text()
+        clock_khz = int(re.search(r'\.clock\s*=\s*(\d+)', source)[1])
+        # Measured PLL=898 MHz, DIV3=2. Pixel RCG allows parent error <=100 kHz.
+        self.assertLessEqual(abs(clock_khz * 1000 * 3 - 449000000), 100000)
+
+    @unittest.skipUnless(shutil.which('cc'), 'host C compiler required')
+    def test_actual_panel_callbacks_use_lp_prepare_and_hs_video_commands(self):
+        source = (HERE / 'panel-sharp-ls050t3sx01.c').read_text()
+        functions = []
+        for name in ['yuga_prepare', 'yuga_enable', 'yuga_disable']:
+            start = source.index('static int ' + name + '(')
+            first = source.index('{', start)
+            depth = 1
+            end = first + 1
+            while depth:
+                depth += (source[end] == '{') - (source[end] == '}')
+                end += 1
+            functions.append(source[start:end])
+        template = (HERE / 'tests/test_panel_transfer.c').read_text()
+        with tempfile.TemporaryDirectory() as tmp:
+            program = pathlib.Path(tmp) / 'panel-transfer.c'
+            program.write_text(template.replace('/* PANEL_FUNCTIONS */', '\n\n'.join(functions)))
+            binary = pathlib.Path(tmp) / 'panel-transfer'
+            subprocess.run(['cc', '-std=c11', '-Wall', '-Wextra', '-Werror',
+                            str(program), '-o', str(binary)], check=True)
+            result = subprocess.run([str(binary)])
+            self.assertEqual(result.returncode, 0, 'Sony LP/HS panel callback contract failed')
 
 
 if __name__ == '__main__':

@@ -37,6 +37,7 @@ static int yuga_prepare(struct drm_panel *panel)
 	struct yuga_panel *ctx = to_yuga(panel);
 	struct mipi_dsi_multi_context dsi_ctx = { .dsi = ctx->dsi };
 
+	ctx->dsi->mode_flags |= MIPI_DSI_MODE_LPM;
 	/* Host has already sequenced L29 then L2. Reset GPIO is active low. */
 	gpiod_set_value_cansleep(ctx->dcdc, 1);
 	gpiod_set_value_cansleep(ctx->reset, 1);
@@ -57,6 +58,8 @@ static int yuga_enable(struct drm_panel *panel)
 	struct mipi_dsi_multi_context dsi_ctx = { .dsi = ctx->dsi };
 
 	/* Sony dlogo panel requires video data before DISPLAY_ON. */
+	/* panel_display_on() in the working Sony driver selects HS TX mode. */
+	ctx->dsi->mode_flags &= ~MIPI_DSI_MODE_LPM;
 	mipi_dsi_generic_write_seq_multi(&dsi_ctx, 0xb0, 0x04);
 	mipi_dsi_dcs_write_seq_multi(&dsi_ctx, 0x00);
 	mipi_dsi_dcs_write_seq_multi(&dsi_ctx, 0x00);
@@ -93,7 +96,8 @@ static int yuga_unprepare(struct drm_panel *panel)
 }
 
 static const struct drm_display_mode yuga_mode = {
-	.clock = 149845,
+	/* 898 MHz measured PLL / 2 / 3; match the 100 kHz RCG tolerance. */
+	.clock = 149667,
 	.hdisplay = 1080, .hsync_start = 1214, .hsync_end = 1230, .htotal = 1294,
 	.vdisplay = 1920, .vsync_start = 1924, .vsync_end = 1926, .vtotal = 1930,
 	.width_mm = 62, .height_mm = 110,

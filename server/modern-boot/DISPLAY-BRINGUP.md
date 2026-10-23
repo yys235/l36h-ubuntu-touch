@@ -20,13 +20,24 @@ Sony GPLv2 reference at kernel base `3e373fec12898bacbcb93713732dbc26f5b3b3f5`:
   `board-sony_yuga-pmic.c` for S4-powered GPIOs.
 
 Panel: 1080x1920 RGB888, four DSI lanes, 60 Hz; horizontal front/pulse/back
-134/16/64 and vertical 4/2/4. Pixel clock is 149845 kHz. Supply L29 is 1.8 V,
+134/16/64 and vertical 4/2/4. The original nominal pixel clock is 149845 kHz.
+The modern PLL measured 898 MHz (DIV3=2); the original request exceeded the
+pixel RCG's 100 kHz parent tolerance by 535 kHz and returned EINVAL. A bounded
+standard DRM userspace test at 149667 kHz programmed an actual 149666666 Hz
+pixel clock and restored MDP refresh interrupts. The diagnostic native mode now
+uses that clock, approximately 59.93 Hz, with all original porch values retained.
+Supply L29 is 1.8 V,
 L2 is 1.2 V. Reset is PM8921 GPIO25, active low; DCDC is GPIO24, active high.
 Only Yuga's v2 DSI host gets a private configuration without the absent avdd
 rail. It enables L29, waits 25 ms, then enables L2; panel prepare raises DCDC,
 holds reset for 25 ms, releases it for 11 ms, exits sleep and waits 150 ms.
 Gamma and display-on are sent in panel enable, after video starts, matching
-the dlogo panel's requirement. Disable sends display-off/20 ms then sleep/100 ms;
+the dlogo panel's requirement. As in Sony's `panel_display_on()` selecting TX
+power mode 0, these streaming-video commands use high-speed transmission.
+Sending the long C7 gamma packet in low-power mode timed out in the first
+modern test; the host source explicitly warns that LP packets may not fit in
+the video blanking interval. Prepare restores low-power mode for sleep exit.
+Disable sends display-off/20 ms then sleep/100 ms;
 unprepare asserts reset/11 ms and lowers DCDC/25 ms before host rail teardown.
 
 LM3533: GSBI1 I2C address 0x36, PM8921 GPIO26 HWEN, boost 500 kHz/24 V,
@@ -45,3 +56,12 @@ the known recovery boot partition, and use bounded watchdog recovery. Check
 panel logs, DRM modes, framebuffer output, physical image, repeated blank/wake,
 and uninterrupted maintenance commands. A successful build or the legacy RGB
 test does not satisfy these hardware acceptance gates.
+
+First modern probe: DSI connector, framebuffer and physical backlight class
+registered; USB remained responsive, but the pixel-clock rejection caused
+refresh timeouts. Second probe: a standard DRM adjusted mode restored refresh
+interrupts and the actual pixel clock, then C7 LP transfer timed out and panel
+enable failed. The user did not observe the transient test, so no physical
+modern image success is claimed. Both rounds automatically returned to the
+old charging diagnostic. The corrected native clock and HS transfer path still
+require a matched build and physical verification.
