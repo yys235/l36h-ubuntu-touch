@@ -18,6 +18,10 @@ $devices = @(& $Fastboot devices)
 if ($LASTEXITCODE -ne 0) { throw 'Cannot enumerate fastboot' }
 $phoneMatches = @($devices | Where-Object { ($_ -split '\s+')[0] -ceq $Serial -and ($_ -split '\s+')[1] -eq 'fastboot' })
 if ($phoneMatches.Count -ne 1) { throw 'Requested phone is not present exactly once; nothing flashed' }
+# PowerShell 5.1 promotes native stderr lines to terminating errors while EAP=Stop and
+# output is redirected; fastboot always emits a benign avb-footer warning to stderr.
+# Every failure path below uses explicit throw, so relaxing EAP here is safe.
+$ErrorActionPreference = 'Continue'
 $start = Get-Date -Format o
 Add-Content -LiteralPath $LogPath -Value "$start serial=$Serial image_sha256=$actualHash action=flash_boot_only"
 $flashOutput = @(& $Fastboot -s $Serial flash boot $imagePath 2>&1)
