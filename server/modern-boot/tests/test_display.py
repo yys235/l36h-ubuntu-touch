@@ -38,6 +38,23 @@ class Display(unittest.TestCase):
             with self.subTest(source=source), self.assertRaises(ValueError):
                 self.mod.enable_board(source)
 
+    def test_fbdev_marks_backing_store_virtual_exactly_once(self):
+        sample = ('\tstruct fb_info *fbi = helper->info;\n'
+                  '\tfbi->fbops = &msm_fb_ops;\n\n'
+                  '\tdrm_fb_helper_fill_info(fbi, helper, sizes);\n')
+        patched = self.mod.patch_fbdev(sample)
+        self.assertIn('\tfbi->fbops = &msm_fb_ops;\n\tfbi->flags |= FBINFO_VIRTFB;\n\n', patched)
+        self.assertEqual(patched.count('FBINFO_VIRTFB'), 1)
+        self.assertTrue(patched.startswith(sample[:sample.index('\tfbi->fbops')]))
+        self.assertIn('\tfbi->flags |= FBINFO_VIRTFB;\n\n\tdrm_fb_helper_fill_info', patched)
+        with self.assertRaises(ValueError):
+            self.mod.patch_fbdev(patched)
+
+    def test_fbdev_unknown_source_rejected(self):
+        for source in ['\tfbi->fbops = &other_ops;\n', '', '\tfbi->flags |= FBINFO_VIRTFB;\n']:
+            with self.subTest(source=source), self.assertRaises(ValueError):
+                self.mod.patch_fbdev(source)
+
     def test_unknown_source_rejected_without_partial_install(self):
         with tempfile.TemporaryDirectory() as tmp:
             root = pathlib.Path(tmp)

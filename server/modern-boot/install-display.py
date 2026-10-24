@@ -8,9 +8,11 @@ HERE = pathlib.Path(__file__).resolve().parent
 BOARD_PATH = 'arch/arm/boot/dts/qcom/qcom-apq8064-sony-xperia-lagan-yuga.dts'
 HOST_PATH = 'drivers/gpu/drm/msm/dsi/dsi_host.c'
 MFD_PATH = 'drivers/mfd/lm3533-core.c'
+FBDEV_PATH = 'drivers/gpu/drm/msm/msm_fbdev.c'
 PINNED = {
     HOST_PATH: '324fea12a3fa5d7a386afb2d0fdfaa20fad93cd8b580196ae1ebf1730781f090',
     MFD_PATH: 'bac2e938de22a2ad5768890fa4049c6f81be0534d2e6c83a34be05340f370ec6',
+    FBDEV_PATH: 'd91de279ed7ca5acf65f1f0a8798e8df4ca1fde13a26818239e0f8b7f7970657',
     'drivers/gpu/drm/panel/Kconfig': '1f610dac5145a51a8b1fb67ed248acef26520e7acb6c3948a54049ea98ed6087',
     'drivers/gpu/drm/panel/Makefile': 'f9f11436eb16a91b82828b59ccdff93e72c241d1cecff986899f684a81ec475c',
 }
@@ -56,6 +58,16 @@ def patch_mfd(text):
                         '\t\t   .name = "lm3533",\n\t\t   .of_match_table = lm3533_yuga_of_match,')
 
 
+def patch_fbdev(text):
+    # The 2025 fbdev core sys_* blit helpers warn once and callers may treat
+    # the warning as failure evidence; the msm fbdev backing store is a
+    # vmapped GEM buffer accessed through screen_buffer, so mark it virtual.
+    # The anchor includes the following blank line so re-application refuses
+    # instead of inserting the flag twice.
+    return replace_once(text, '\tfbi->fbops = &msm_fb_ops;\n\n',
+                        '\tfbi->fbops = &msm_fb_ops;\n\tfbi->flags |= FBINFO_VIRTFB;\n\n')
+
+
 def install(root):
     root = pathlib.Path(root)
     if root.is_symlink() or root.resolve() == pathlib.Path(root.anchor):
@@ -70,6 +82,7 @@ def install(root):
         pending[BOARD_PATH] = enable_board((root / BOARD_PATH).read_text())
         pending[HOST_PATH] = patch_host(pending[HOST_PATH])
         pending[MFD_PATH] = patch_mfd(pending[MFD_PATH])
+        pending[FBDEV_PATH] = patch_fbdev(pending[FBDEV_PATH])
         pending['drivers/gpu/drm/panel/Kconfig'] += '\nconfig DRM_PANEL_SHARP_LS050T3SX01\n\ttristate "Sharp LS050T3SX01 Sony Yuga diagnostic panel"\n\tdepends on OF && DRM_MIPI_DSI && BACKLIGHT_CLASS_DEVICE\n\thelp\n\t  Source-backed R63311 panel bring-up for Sony Xperia Z.\n'
         pending['drivers/gpu/drm/panel/Makefile'] += '\nobj-$(CONFIG_DRM_PANEL_SHARP_LS050T3SX01) += panel-sharp-ls050t3sx01.o\n'
         for name, source in {
