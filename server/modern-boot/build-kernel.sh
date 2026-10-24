@@ -21,6 +21,11 @@ python3 "$script_dir/adjust-source.py" "$source_dir"
 python3 "$script_dir/trace-firmware.py" "$source_dir"
 python3 "$script_dir/trace-touch.py" "$source_dir"
 python3 "$script_dir/install-display.py" "$source_dir"
+# Touch wiring appends to the same board DTS after the display integration;
+# enable-touch refuses boards that already carry gsbi3/touch nodes.
+touch_board="$source_dir/arch/arm/boot/dts/qcom/qcom-apq8064-sony-xperia-lagan-yuga.dts"
+python3 "$script_dir/enable-touch.py" "$touch_board" "$build/yuga-touch-wired.dts"
+mv "$build/yuga-touch-wired.dts" "$touch_board"
 make -C "$source_dir" O="$build" olddefconfig
 settings="$source_dir/scripts/config"
 for option in DEVTMPFS DEVTMPFS_MOUNT CGROUPS MEMCG CGROUP_PIDS NAMESPACES \
