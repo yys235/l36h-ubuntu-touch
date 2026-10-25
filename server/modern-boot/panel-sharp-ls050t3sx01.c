@@ -12,7 +12,11 @@
 #include <drm/drm_modes.h>
 #include <drm/drm_mipi_dsi.h>
 #include <drm/drm_panel.h>
-#include "../msm/dsi/dsi.h"
+
+/* Host test-pattern hook from drivers/gpu/drm/msm/dsi/dsi_host.c; declared
+ * here because the panel directory does not get the msm include path. */
+struct mipi_dsi_host;
+void msm_dsi_host_test_pattern_en(struct mipi_dsi_host *host);
 
 struct yuga_panel {
 	struct drm_panel panel;
