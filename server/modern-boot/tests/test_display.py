@@ -69,6 +69,19 @@ class Display(unittest.TestCase):
         with self.assertRaises(ValueError):
             self.mod.patch_host(patched)
 
+    def test_phy_lane_timing_uses_sony_panel_tuned_value(self):
+        sample = 'writel(0x45, base + REG_DSI_28nm_8960_PHY_LN_CFG_1(i));\n'
+        patched = self.mod.patch_phy(sample)
+        self.assertEqual(patched, 'writel(0xef, base + REG_DSI_28nm_8960_PHY_LN_CFG_1(i));\n')
+        self.assertIn('PHY_PATH', self.mod.__dict__)
+        self.assertNotIn('0x45', patched)
+        with self.assertRaises(ValueError):
+            self.mod.patch_phy(patched)
+
+    def test_phy_unknown_source_rejected(self):
+        with self.assertRaises(ValueError):
+            self.mod.patch_phy('writel(0x44, base + REG_DSI_28nm_8960_PHY_LN_CFG_1(i));\n')
+
     def test_unknown_source_rejected_without_partial_install(self):
         with tempfile.TemporaryDirectory() as tmp:
             root = pathlib.Path(tmp)
