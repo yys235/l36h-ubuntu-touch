@@ -46,9 +46,60 @@ def patch_host(text):
                         '\tret = yuga_dsi_regulators_enable(msm_host);')
     # The panel bring-up diagnostics call the host test-pattern hook from a
     # separate module, so the symbol must be exported.
-    return replace_once(text,
+    text = replace_once(text,
                         '\tif (!is_video_mode)\n\t\tdsi_write(msm_host, REG_DSI_TEST_PATTERN_GEN_CMD_STREAM0_TRIGGER,\n\t\t\t\tDSI_TEST_PATTERN_GEN_CMD_STREAM0_TRIGGER_SW_TRIGGER);\n}',
                         '\tif (!is_video_mode)\n\t\tdsi_write(msm_host, REG_DSI_TEST_PATTERN_GEN_CMD_STREAM0_TRIGGER,\n\t\t\t\tDSI_TEST_PATTERN_GEN_CMD_STREAM0_TRIGGER_SW_TRIGGER);\n}\n\nEXPORT_SYMBOL_GPL(msm_dsi_host_test_pattern_en);')
+    # Sony R63311 bring-up: mirror the working legacy mipi_dsi_cmds_tx().
+    # The legacy driver stops the video engine and sets CMD_MODE_EN for
+    # every panel command, because long init sequences cannot fit the
+    # BLLP window and the panel fails to decode BLLP-interleaved packets
+    # (DCS 0x0A read returns 0 bytes on device; the panel stays black).
+    text = replace_once(text,
+                        '\tint len, ret;\n\tint bllp_len = msm_host->mode->hdisplay *\n\t\t\tmipi_dsi_pixel_format_to_bpp(msm_host->format) / 8;\n',
+                        '\tint len, ret;\n\tint bllp_len = msm_host->mode->hdisplay *\n\t\t\tmipi_dsi_pixel_format_to_bpp(msm_host->format) / 8;\n\tu32 dsi_ctrl_saved = 0;\n\tbool video_switch = false;\n')
+    return replace_once(text,
+                        '\tret = dsi_cmd_dma_tx(msm_host, len);\n'
+                        '\tif (ret < 0) {\n'
+                        '\t\tpr_err("%s: cmd dma tx failed, type=0x%x, data0=0x%x, len=%d, ret=%d\\n",\n'
+                        '\t\t\t__func__, msg->type, (*(u8 *)(msg->tx_buf)), len, ret);\n'
+                        '\t\treturn ret;\n'
+                        '\t} else if (ret < len) {\n'
+                        '\t\tpr_err("%s: cmd dma tx failed, type=0x%x, data0=0x%x, ret=%d len=%d\\n",\n'
+                        '\t\t\t__func__, msg->type, (*(u8 *)(msg->tx_buf)), ret, len);\n'
+                        '\t\treturn -EIO;\n'
+                        '\t}\n'
+                        '\n'
+                        '\treturn len;\n'
+                        '}',
+                        '\tvideo_switch = false;\n'
+                        '\tif (msm_host->enabled && (msm_host->mode_flags & MIPI_DSI_MODE_VIDEO)) {\n'
+                        '\t\tdsi_ctrl_saved = dsi_read(msm_host, REG_DSI_CTRL);\n'
+                        '\t\tdsi_wait4video_eng_busy(msm_host);\n'
+                        '\t\tdsi_write(msm_host, REG_DSI_CTRL,\n'
+                        '\t\t\t  dsi_ctrl_saved | DSI_CTRL_CMD_MODE_EN);\n'
+                        '\t\twmb(); /* command mode latched before the DMA */\n'
+                        '\t\tvideo_switch = true;\n'
+                        '\t}\n'
+                        '\n'
+                        '\tret = dsi_cmd_dma_tx(msm_host, len);\n'
+                        '\n'
+                        '\tif (video_switch) {\n'
+                        '\t\twmb();\n'
+                        '\t\tdsi_write(msm_host, REG_DSI_CTRL, dsi_ctrl_saved);\n'
+                        '\t}\n'
+                        '\n'
+                        '\tif (ret < 0) {\n'
+                        '\t\tpr_err("%s: cmd dma tx failed, type=0x%x, data0=0x%x, len=%d, ret=%d\\n",\n'
+                        '\t\t\t__func__, msg->type, (*(u8 *)(msg->tx_buf)), len, ret);\n'
+                        '\t\treturn ret;\n'
+                        '\t} else if (ret < len) {\n'
+                        '\t\tpr_err("%s: cmd dma tx failed, type=0x%x, data0=0x%x, ret=%d len=%d\\n",\n'
+                        '\t\t\t__func__, msg->type, (*(u8 *)(msg->tx_buf)), ret, len);\n'
+                        '\t\treturn -EIO;\n'
+                        '\t}\n'
+                        '\n'
+                        '\treturn len;\n'
+                        '}')
 
 
 def patch_mfd(text):

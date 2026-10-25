@@ -63,9 +63,29 @@ class Display(unittest.TestCase):
                   '\tif (!is_video_mode)\n'
                   '\t\tdsi_write(msm_host, REG_DSI_TEST_PATTERN_GEN_CMD_STREAM0_TRIGGER,\n'
                   '\t\t\t\tDSI_TEST_PATTERN_GEN_CMD_STREAM0_TRIGGER_SW_TRIGGER);\n'
+                  '}\n'
+                  '\tint len, ret;\n'
+                  '\tint bllp_len = msm_host->mode->hdisplay *\n'
+                  '\t\t\tmipi_dsi_pixel_format_to_bpp(msm_host->format) / 8;\n'
+                  '\tret = dsi_cmd_dma_tx(msm_host, len);\n'
+                  '\tif (ret < 0) {\n'
+                  '\t\tpr_err("%s: cmd dma tx failed, type=0x%x, data0=0x%x, len=%d, ret=%d\\n",\n'
+                  '\t\t\t__func__, msg->type, (*(u8 *)(msg->tx_buf)), len, ret);\n'
+                  '\t\treturn ret;\n'
+                  '\t} else if (ret < len) {\n'
+                  '\t\tpr_err("%s: cmd dma tx failed, type=0x%x, data0=0x%x, ret=%d len=%d\\n",\n'
+                  '\t\t\t__func__, msg->type, (*(u8 *)(msg->tx_buf)), ret, len);\n'
+                  '\t\treturn -EIO;\n'
+                  '\t}\n'
+                  '\n'
+                  '\treturn len;\n'
                   '}\n')
         patched = self.mod.patch_host(sample)
         self.assertIn('EXPORT_SYMBOL_GPL(msm_dsi_host_test_pattern_en);', patched)
+        self.assertIn('u32 dsi_ctrl_saved = 0;', patched)
+        self.assertIn('bool video_switch = false;', patched)
+        self.assertIn('dsi_ctrl_saved | DSI_CTRL_CMD_MODE_EN', patched)
+        self.assertIn('\tif (video_switch) {', patched)
         with self.assertRaises(ValueError):
             self.mod.patch_host(patched)
 
