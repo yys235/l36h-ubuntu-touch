@@ -70,11 +70,37 @@ class Display(unittest.TestCase):
             self.mod.patch_host(patched)
 
     def test_phy_lane_timing_uses_sony_panel_tuned_value(self):
-        sample = 'writel(0x45, base + REG_DSI_28nm_8960_PHY_LN_CFG_1(i));\n'
+        sample = ('writel(0x45, base + REG_DSI_28nm_8960_PHY_LN_CFG_1(i));\n'
+                  '\twritel(DSI_28nm_8960_PHY_TIMING_CTRL_0_CLK_ZERO(timing->clk_zero),\n'
+                  '\t       base + REG_DSI_28nm_8960_PHY_TIMING_CTRL_0);\n'
+                  '\twritel(DSI_28nm_8960_PHY_TIMING_CTRL_1_CLK_TRAIL(timing->clk_trail),\n'
+                  '\t       base + REG_DSI_28nm_8960_PHY_TIMING_CTRL_1);\n'
+                  '\twritel(DSI_28nm_8960_PHY_TIMING_CTRL_2_CLK_PREPARE(timing->clk_prepare),\n'
+                  '\t       base + REG_DSI_28nm_8960_PHY_TIMING_CTRL_2);\n'
+                  '\twritel(0, base + REG_DSI_28nm_8960_PHY_TIMING_CTRL_3);\n'
+                  '\twritel(DSI_28nm_8960_PHY_TIMING_CTRL_4_HS_EXIT(timing->hs_exit),\n'
+                  '\t       base + REG_DSI_28nm_8960_PHY_TIMING_CTRL_4);\n'
+                  '\twritel(DSI_28nm_8960_PHY_TIMING_CTRL_5_HS_ZERO(timing->hs_zero),\n'
+                  '\t       base + REG_DSI_28nm_8960_PHY_TIMING_CTRL_5);\n'
+                  '\twritel(DSI_28nm_8960_PHY_TIMING_CTRL_6_HS_PREPARE(timing->hs_prepare),\n'
+                  '\t       base + REG_DSI_28nm_8960_PHY_TIMING_CTRL_6);\n'
+                  '\twritel(DSI_28nm_8960_PHY_TIMING_CTRL_7_HS_TRAIL(timing->hs_trail),\n'
+                  '\t       base + REG_DSI_28nm_8960_PHY_TIMING_CTRL_7);\n'
+                  '\twritel(DSI_28nm_8960_PHY_TIMING_CTRL_8_HS_RQST(timing->hs_rqst),\n'
+                  '\t       base + REG_DSI_28nm_8960_PHY_TIMING_CTRL_8);\n'
+                  '\twritel(DSI_28nm_8960_PHY_TIMING_CTRL_9_TA_GO(timing->ta_go) |\n'
+                  '\t       DSI_28nm_8960_PHY_TIMING_CTRL_9_TA_SURE(timing->ta_sure),\n'
+                  '\t       base + REG_DSI_28nm_8960_PHY_TIMING_CTRL_9);\n'
+                  '\twritel(DSI_28nm_8960_PHY_TIMING_CTRL_10_TA_GET(timing->ta_get),\n'
+                  '\t       base + REG_DSI_28nm_8960_PHY_TIMING_CTRL_10);\n'
+                  '\twritel(DSI_28nm_8960_PHY_TIMING_CTRL_11_TRIG3_CMD(0),\n'
+                  '\t       base + REG_DSI_28nm_8960_PHY_TIMING_CTRL_11);\n')
         patched = self.mod.patch_phy(sample)
-        self.assertEqual(patched, 'writel(0xef, base + REG_DSI_28nm_8960_PHY_LN_CFG_1(i));\n')
-        self.assertIn('PHY_PATH', self.mod.__dict__)
+        self.assertIn('writel(0xef, base + REG_DSI_28nm_8960_PHY_LN_CFG_1(i));', patched)
+        self.assertIn('writel(0xe6, base + REG_DSI_28nm_8960_PHY_TIMING_CTRL_0);', patched)
+        self.assertIn('writel(0xa0, base + REG_DSI_28nm_8960_PHY_TIMING_CTRL_11);', patched)
         self.assertNotIn('0x45', patched)
+        self.assertNotIn('timing->clk_zero', patched)
         with self.assertRaises(ValueError):
             self.mod.patch_phy(patched)
 
