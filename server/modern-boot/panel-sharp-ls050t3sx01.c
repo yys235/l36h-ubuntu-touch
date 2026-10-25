@@ -7,10 +7,12 @@
 #include <linux/gpio/consumer.h>
 #include <linux/module.h>
 #include <linux/of.h>
+#include <linux/pm_runtime.h>
 #include <drm/drm_connector.h>
 #include <drm/drm_modes.h>
 #include <drm/drm_mipi_dsi.h>
 #include <drm/drm_panel.h>
+#include "../msm/dsi/dsi.h"
 
 struct yuga_panel {
 	struct drm_panel panel;
@@ -123,6 +125,48 @@ static const struct drm_panel_funcs yuga_funcs = {
 	.get_modes = yuga_get_modes,
 };
 
+/*
+ * Bring-up diagnostics written over the probe telnet:
+ *   on   re-send DISPLAY_ON while video is already running
+ *   read DCS 0x0A power mode as the panel itself reports it
+ *   tpg  enable the DSI host video test pattern (bypasses the MDP)
+ */
+static ssize_t yuga_test_store(struct device *dev,
+			       struct device_attribute *attr,
+			       const char *buf, size_t count)
+{
+	struct yuga_panel *ctx = dev_get_drvdata(dev);
+	struct mipi_dsi_device *dsi = ctx->dsi;
+	struct mipi_dsi_multi_context dsi_ctx = { .dsi = dsi };
+	u8 power_mode = 0;
+	ssize_t ret;
+
+	if (sysfs_streq(buf, "on")) {
+		dsi->mode_flags &= ~MIPI_DSI_MODE_LPM;
+		mipi_dsi_dcs_set_display_on_multi(&dsi_ctx);
+		dev_info(dev, "Yuga test display-on: %d\n", dsi_ctx.accum_err);
+		return count;
+	}
+	if (sysfs_streq(buf, "read")) {
+		pm_runtime_get_sync(dev);
+		ret = mipi_dsi_dcs_read(dsi, MIPI_DCS_GET_POWER_MODE,
+					&power_mode, 1);
+		pm_runtime_put_sync(dev);
+		dev_info(dev, "Yuga test power-mode read: ret=%d value=0x%02x\n",
+			 (int)ret, power_mode);
+		return count;
+	}
+	if (sysfs_streq(buf, "tpg")) {
+		pm_runtime_get_sync(dev);
+		msm_dsi_host_test_pattern_en(dsi->host);
+		pm_runtime_put_sync(dev);
+		dev_info(dev, "Yuga test pattern enabled\n");
+		return count;
+	}
+	return -EINVAL;
+}
+static DEVICE_ATTR_WO(yuga_test);
+
 static int yuga_probe(struct mipi_dsi_device *dsi)
 {
 	struct yuga_panel *ctx;
@@ -148,6 +192,9 @@ static int yuga_probe(struct mipi_dsi_device *dsi)
 	dsi->format = MIPI_DSI_FMT_RGB888;
 	dsi->mode_flags = MIPI_DSI_MODE_VIDEO | MIPI_DSI_MODE_VIDEO_HSE | MIPI_DSI_MODE_LPM;
 	mipi_dsi_set_drvdata(dsi, ctx);
+	ret = device_create_file(&dsi->dev, &dev_attr_yuga_test);
+	if (ret)
+		dev_warn(&dsi->dev, "yuga_test sysfs unavailable: %d\n", ret);
 	drm_panel_add(&ctx->panel);
 	ret = mipi_dsi_attach(dsi);
 	if (ret)
@@ -159,6 +206,7 @@ static void yuga_remove(struct mipi_dsi_device *dsi)
 {
 	struct yuga_panel *ctx = mipi_dsi_get_drvdata(dsi);
 
+	device_remove_file(&dsi->dev, &dev_attr_yuga_test);
 	mipi_dsi_detach(dsi);
 	drm_panel_remove(&ctx->panel);
 }

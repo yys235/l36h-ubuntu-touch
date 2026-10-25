@@ -90,6 +90,17 @@ class Display(unittest.TestCase):
         # Measured PLL=898 MHz, DIV3=2. Pixel RCG allows parent error <=100 kHz.
         self.assertLessEqual(abs(clock_khz * 1000 * 3 - 449000000), 100000)
 
+    def test_bringup_diagnostics_wired_to_dsi_device(self):
+        source = (HERE / 'panel-sharp-ls050t3sx01.c').read_text()
+        self.assertIn('static DEVICE_ATTR_WO(yuga_test);', source)
+        self.assertIn('device_create_file(&dsi->dev, &dev_attr_yuga_test)', source)
+        self.assertIn('device_remove_file(&dsi->dev, &dev_attr_yuga_test)', source)
+        for op in ['sysfs_streq(buf, "on")', 'sysfs_streq(buf, "read")',
+                   'sysfs_streq(buf, "tpg")']:
+            self.assertIn(op, source)
+        self.assertIn('msm_dsi_host_test_pattern_en(dsi->host)', source)
+        self.assertIn('mipi_dsi_dcs_read(dsi, MIPI_DCS_GET_POWER_MODE', source)
+
     @unittest.skipUnless(shutil.which('cc'), 'host C compiler required')
     def test_actual_panel_callbacks_use_lp_prepare_and_hs_video_commands(self):
         source = (HERE / 'panel-sharp-ls050t3sx01.c').read_text()
