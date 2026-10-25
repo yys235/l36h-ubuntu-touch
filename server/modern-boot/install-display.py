@@ -80,9 +80,49 @@ def patch_phy(text):
     # (mipi_dsi_panel_r63311_sharp_ls050t3sx01.c dsi_video_mode_phy_db);
     # the generic upstream value 0x45 leaves the panel unable to decode HS
     # packets: host TX completes but the panel never ACKs or displays.
-    return replace_once(text,
+    text = replace_once(text,
                         'writel(0x45, base + REG_DSI_28nm_8960_PHY_LN_CFG_1(i));',
                         'writel(0xef, base + REG_DSI_28nm_8960_PHY_LN_CFG_1(i));')
+    # Replace the computed D-PHY timings with the complete Sony panel table
+    # {e6,38,27,00,69,72,2b,3c,41,03,04,a0} so the whole PHY matches the
+    # working legacy configuration exactly.
+    return replace_once(text,
+                        '	writel(DSI_28nm_8960_PHY_TIMING_CTRL_0_CLK_ZERO(timing->clk_zero),\n'
+                        '	       base + REG_DSI_28nm_8960_PHY_TIMING_CTRL_0);\n'
+                        '	writel(DSI_28nm_8960_PHY_TIMING_CTRL_1_CLK_TRAIL(timing->clk_trail),\n'
+                        '	       base + REG_DSI_28nm_8960_PHY_TIMING_CTRL_1);\n'
+                        '	writel(DSI_28nm_8960_PHY_TIMING_CTRL_2_CLK_PREPARE(timing->clk_prepare),\n'
+                        '	       base + REG_DSI_28nm_8960_PHY_TIMING_CTRL_2);\n'
+                        '	writel(0, base + REG_DSI_28nm_8960_PHY_TIMING_CTRL_3);\n'
+                        '	writel(DSI_28nm_8960_PHY_TIMING_CTRL_4_HS_EXIT(timing->hs_exit),\n'
+                        '	       base + REG_DSI_28nm_8960_PHY_TIMING_CTRL_4);\n'
+                        '	writel(DSI_28nm_8960_PHY_TIMING_CTRL_5_HS_ZERO(timing->hs_zero),\n'
+                        '	       base + REG_DSI_28nm_8960_PHY_TIMING_CTRL_5);\n'
+                        '	writel(DSI_28nm_8960_PHY_TIMING_CTRL_6_HS_PREPARE(timing->hs_prepare),\n'
+                        '	       base + REG_DSI_28nm_8960_PHY_TIMING_CTRL_6);\n'
+                        '	writel(DSI_28nm_8960_PHY_TIMING_CTRL_7_HS_TRAIL(timing->hs_trail),\n'
+                        '	       base + REG_DSI_28nm_8960_PHY_TIMING_CTRL_7);\n'
+                        '	writel(DSI_28nm_8960_PHY_TIMING_CTRL_8_HS_RQST(timing->hs_rqst),\n'
+                        '	       base + REG_DSI_28nm_8960_PHY_TIMING_CTRL_8);\n'
+                        '	writel(DSI_28nm_8960_PHY_TIMING_CTRL_9_TA_GO(timing->ta_go) |\n'
+                        '	       DSI_28nm_8960_PHY_TIMING_CTRL_9_TA_SURE(timing->ta_sure),\n'
+                        '	       base + REG_DSI_28nm_8960_PHY_TIMING_CTRL_9);\n'
+                        '	writel(DSI_28nm_8960_PHY_TIMING_CTRL_10_TA_GET(timing->ta_get),\n'
+                        '	       base + REG_DSI_28nm_8960_PHY_TIMING_CTRL_10);\n'
+                        '	writel(DSI_28nm_8960_PHY_TIMING_CTRL_11_TRIG3_CMD(0),\n'
+                        '	       base + REG_DSI_28nm_8960_PHY_TIMING_CTRL_11);\n',
+                        '	writel(0xe6, base + REG_DSI_28nm_8960_PHY_TIMING_CTRL_0);\n'
+                        '	writel(0x38, base + REG_DSI_28nm_8960_PHY_TIMING_CTRL_1);\n'
+                        '	writel(0x27, base + REG_DSI_28nm_8960_PHY_TIMING_CTRL_2);\n'
+                        '	writel(0x00, base + REG_DSI_28nm_8960_PHY_TIMING_CTRL_3);\n'
+                        '	writel(0x69, base + REG_DSI_28nm_8960_PHY_TIMING_CTRL_4);\n'
+                        '	writel(0x72, base + REG_DSI_28nm_8960_PHY_TIMING_CTRL_5);\n'
+                        '	writel(0x2b, base + REG_DSI_28nm_8960_PHY_TIMING_CTRL_6);\n'
+                        '	writel(0x3c, base + REG_DSI_28nm_8960_PHY_TIMING_CTRL_7);\n'
+                        '	writel(0x41, base + REG_DSI_28nm_8960_PHY_TIMING_CTRL_8);\n'
+                        '	writel(0x03, base + REG_DSI_28nm_8960_PHY_TIMING_CTRL_9);\n'
+                        '	writel(0x04, base + REG_DSI_28nm_8960_PHY_TIMING_CTRL_10);\n'
+                        '	writel(0xa0, base + REG_DSI_28nm_8960_PHY_TIMING_CTRL_11);\n')
 
 
 def install(root):
