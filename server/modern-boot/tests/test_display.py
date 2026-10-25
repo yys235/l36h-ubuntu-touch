@@ -55,6 +55,20 @@ class Display(unittest.TestCase):
             with self.subTest(source=source), self.assertRaises(ValueError):
                 self.mod.patch_fbdev(source)
 
+    def test_host_patch_exports_test_pattern_hook(self):
+        sample = ('int msm_dsi_host_init(struct msm_dsi *msm_dsi)\n{\n'
+                  '\tcfg = msm_host->cfg_hnd->cfg;\n'
+                  '\tret = regulator_bulk_enable(msm_host->cfg_hnd->cfg->num_regulators,\n'
+                  '\t\t\t\t    msm_host->supplies);\n'
+                  '\tif (!is_video_mode)\n'
+                  '\t\tdsi_write(msm_host, REG_DSI_TEST_PATTERN_GEN_CMD_STREAM0_TRIGGER,\n'
+                  '\t\t\t\tDSI_TEST_PATTERN_GEN_CMD_STREAM0_TRIGGER_SW_TRIGGER);\n'
+                  '}\n')
+        patched = self.mod.patch_host(sample)
+        self.assertIn('EXPORT_SYMBOL_GPL(msm_dsi_host_test_pattern_en);', patched)
+        with self.assertRaises(ValueError):
+            self.mod.patch_host(patched)
+
     def test_unknown_source_rejected_without_partial_install(self):
         with tempfile.TemporaryDirectory() as tmp:
             root = pathlib.Path(tmp)

@@ -39,9 +39,14 @@ def patch_host(text):
                         '#include "yuga-dsi-power.h"\n\nint msm_dsi_host_init(struct msm_dsi *msm_dsi)')
     text = replace_once(text, '\tcfg = msm_host->cfg_hnd->cfg;\n',
                         '\tret = yuga_dsi_configure(msm_host);\n\tif (ret)\n\t\treturn ret;\n\tcfg = msm_host->cfg_hnd->cfg;\n')
-    return replace_once(text,
+    text = replace_once(text,
                         '\tret = regulator_bulk_enable(msm_host->cfg_hnd->cfg->num_regulators,\n\t\t\t\t    msm_host->supplies);',
                         '\tret = yuga_dsi_regulators_enable(msm_host);')
+    # The panel bring-up diagnostics call the host test-pattern hook from a
+    # separate module, so the symbol must be exported.
+    return replace_once(text,
+                        '\tif (!is_video_mode)\n\t\tdsi_write(msm_host, REG_DSI_TEST_PATTERN_GEN_CMD_STREAM0_TRIGGER,\n\t\t\t\tDSI_TEST_PATTERN_GEN_CMD_STREAM0_TRIGGER_SW_TRIGGER);\n}',
+                        '\tif (!is_video_mode)\n\t\tdsi_write(msm_host, REG_DSI_TEST_PATTERN_GEN_CMD_STREAM0_TRIGGER,\n\t\t\t\tDSI_TEST_PATTERN_GEN_CMD_STREAM0_TRIGGER_SW_TRIGGER);\n}\n\nEXPORT_SYMBOL_GPL(msm_dsi_host_test_pattern_en);')
 
 
 def patch_mfd(text):
