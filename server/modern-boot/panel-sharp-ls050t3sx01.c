@@ -12,6 +12,7 @@
 #include <drm/drm_modes.h>
 #include <drm/drm_mipi_dsi.h>
 #include <drm/drm_panel.h>
+#include <video/mipi_display.h>
 
 /* Host test-pattern hook from drivers/gpu/drm/msm/dsi/dsi_host.c; declared
  * here because the panel directory does not get the msm include path. */
