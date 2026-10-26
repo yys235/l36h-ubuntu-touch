@@ -45,7 +45,8 @@ static int yuga_prepare(struct drm_panel *panel)
 	struct mipi_dsi_multi_context dsi_ctx = { .dsi = ctx->dsi };
 
 	ctx->dsi->mode_flags |= MIPI_DSI_MODE_LPM;
-	/* Host has already sequenced L29 then L2. Reset GPIO is active low. */
+	/* Host has already sequenced L29 then L2 and reached LP-11
+	 * (prepare_prev_first). Reset GPIO is active low. */
 	gpiod_set_value_cansleep(ctx->dcdc, 1);
 	gpiod_set_value_cansleep(ctx->reset, 1);
 	usleep_range(25000, 26000);
@@ -213,18 +214,17 @@ static ssize_t yuga_test_store(struct device *dev,
 		return count;
 	}
 	if (sysfs_streq(buf, "read")) {
-		pm_runtime_get_sync(dev);
+		/* No panel pm_runtime here: put_sync runtime-suspends the DSI
+		 * host under the running video stream and wedges the SoC
+		 * (R9 post-TPG, R11 post-read hangs; TF logs show no oops). */
 		ret = mipi_dsi_dcs_read(dsi, MIPI_DCS_GET_POWER_MODE,
 					&power_mode, 1);
-		pm_runtime_put_sync(dev);
 		dev_info(dev, "Yuga test power-mode read: ret=%d value=0x%02x\n",
 			 (int)ret, power_mode);
 		return count;
 	}
 	if (sysfs_streq(buf, "tpg")) {
-		pm_runtime_get_sync(dev);
 		msm_dsi_host_test_pattern_en(dsi->host);
-		pm_runtime_put_sync(dev);
 		dev_info(dev, "Yuga test pattern enabled\n");
 		return count;
 	}
