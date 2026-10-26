@@ -69,6 +69,29 @@ def patch_host(text):
                         '\n'
                         '\treturn ret;\n'
                         '}')
+    # Live-decode the error/timeout state right after a failed RX: without
+    # this the only readout path (kms snapshot) does its own pm_runtime
+    # get/put and wedges the USB gadget while video streams.
+    text = replace_once(text,
+                        '\tdefault:\n'
+                        '\t\tpr_warn("%s:Invalid response cmd dt=0x%02x b1=0x%02x b2=0x%02x b3=0x%02x dlen=%d\\n",\n'
+                        '\t\t\t__func__, buf[0], buf[1], buf[2], buf[3], dlen);\n'
+                        '\t\tret = 0;\n'
+                        '\t}\n',
+                        '\tdefault:\n'
+                        '\t\tpr_warn("%s:Invalid response cmd dt=0x%02x b1=0x%02x b2=0x%02x b3=0x%02x dlen=%d\\n",\n'
+                        '\t\t\t__func__, buf[0], buf[1], buf[2], buf[3], dlen);\n'
+                        '\t\tpr_warn("%s:YUGA ack=0x%08x to=0x%08x lpt=0x%08x hst=0x%08x phy=0x%08x lane=0x%08x fifo=0x%08x\\n",\n'
+                        '\t\t\t__func__,\n'
+                        '\t\t\tdsi_read(msm_host, REG_DSI_ACK_ERR_STATUS),\n'
+                        '\t\t\tdsi_read(msm_host, REG_DSI_TIMEOUT_STATUS),\n'
+                        '\t\t\tdsi_read(msm_host, REG_DSI_LP_TIMER_CTRL),\n'
+                        '\t\t\tdsi_read(msm_host, REG_DSI_HS_TIMER_CTRL),\n'
+                        '\t\t\tdsi_read(msm_host, REG_DSI_DLN0_PHY_ERR),\n'
+                        '\t\t\tdsi_read(msm_host, REG_DSI_LANE_STATUS),\n'
+                        '\t\t\tdsi_read(msm_host, REG_DSI_FIFO_STATUS));\n'
+                        '\t\tret = 0;\n'
+                        '\t}\n')
     # Sony sets esc_byte_ratio=9 (byte/9 = 12.47 MHz escape clock). The
     # generic loop picks esc_div=6 (18.7 MHz); the R63311 cannot decode LP
     # packets at that rate, so every panel command was silently ignored
