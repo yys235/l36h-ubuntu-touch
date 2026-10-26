@@ -42,16 +42,22 @@
 	};
 };
 &pm8921_gpio {
-	yuga_panel_pins: yuga-panel-state {
-		pins = "gpio24", "gpio25";
-		bias-disable;
+		yuga_panel_pins: yuga-panel-state {
+			pins = "gpio24", "gpio25";
+			/* FUNC_SEL=0: without this the pins keep the
+			 * bootloader's func2 mux and the GPIO output
+			 * register never reaches the pin (debugfs shows
+			 * func2; legacy pm_gpio request forces normal). */
+			function = "normal";
+			bias-disable;
 		drive-push-pull;
 		power-source = <2>; /* PM_GPIO_VIN_S4, 1.8 V */
 		qcom,drive-strength = <PMIC_GPIO_STRENGTH_LOW>;
 	};
-	yuga_backlight_pins: yuga-backlight-state {
-		pins = "gpio26";
-		bias-disable;
+		yuga_backlight_pins: yuga-backlight-state {
+			pins = "gpio26";
+			function = "normal";
+			bias-disable;
 		drive-push-pull;
 		power-source = <2>;
 		qcom,drive-strength = <PMIC_GPIO_STRENGTH_LOW>;

@@ -152,6 +152,40 @@ static ssize_t yuga_test_store(struct device *dev,
 		dev_info(dev, "Yuga test display-on: %d\n", dsi_ctx.accum_err);
 		return count;
 	}
+	if (sysfs_streq(buf, "hardreset")) {
+		/* Full legacy board-sony_fusion3-display power cycle:
+		 * dcdc off, reset low; dcdc on, reset low 25 ms, reset high
+		 * 11 ms; exit_sleep 150 ms; then the display_on command set.
+		 * Rules out a stuck-in-reset or first-boot power glitch. */
+		int err;
+
+		gpiod_set_value_cansleep(ctx->dcdc, 0);
+		gpiod_set_value_cansleep(ctx->reset, 1);
+		usleep_range(25000, 26000);
+		gpiod_set_value_cansleep(ctx->dcdc, 1);
+		usleep_range(25000, 26000);
+		gpiod_set_value_cansleep(ctx->reset, 0);
+		usleep_range(11000, 12000);
+		err = mipi_dsi_dcs_exit_sleep_mode(dsi);
+		msleep(150);
+		dsi->mode_flags &= ~MIPI_DSI_MODE_LPM;
+		mipi_dsi_generic_write_seq_multi(&dsi_ctx, 0xb0, 0x04);
+		mipi_dsi_dcs_write_seq_multi(&dsi_ctx, 0x00);
+		mipi_dsi_dcs_write_seq_multi(&dsi_ctx, 0x00);
+		mipi_dsi_generic_write_seq_multi(&dsi_ctx, 0xc7,
+			0x0f, 0x13, 0x17, 0x1d, 0x28, 0x3c, 0x2a, 0x42, 0x4f, 0x5d, 0x6c, 0x75,
+			0x0f, 0x14, 0x18, 0x1e, 0x2a, 0x3e, 0x2d, 0x46, 0x54, 0x62, 0x70, 0x78);
+		mipi_dsi_generic_write_seq_multi(&dsi_ctx, 0xc8,
+			0x20, 0x23, 0x26, 0x2b, 0x32, 0x43, 0x2d, 0x42, 0x4f, 0x5d, 0x6c, 0x75,
+			0x22, 0x25, 0x28, 0x2d, 0x34, 0x46, 0x30, 0x46, 0x54, 0x62, 0x70, 0x78);
+		mipi_dsi_generic_write_seq_multi(&dsi_ctx, 0xc9,
+			0x1a, 0x22, 0x27, 0x2d, 0x36, 0x45, 0x2e, 0x43, 0x52, 0x62, 0x6f, 0x75,
+			0x1b, 0x23, 0x28, 0x2f, 0x38, 0x48, 0x32, 0x47, 0x57, 0x66, 0x73, 0x78);
+		mipi_dsi_dcs_set_display_on_multi(&dsi_ctx);
+		dev_info(dev, "Yuga test hardreset: exit_sleep=%d seq=%d\n",
+			 err, dsi_ctx.accum_err);
+		return count;
+	}
 	if (sysfs_streq(buf, "reinit")) {
 		/* Full Sony display_on_cmds re-send while video streams:
 		 * exit_sleep, 150 ms, mcap_protect_off, nops, gamma, DISPLAY_ON.
