@@ -69,6 +69,24 @@ def patch_host(text):
                         '\n'
                         '\treturn ret;\n'
                         '}')
+    # Sony sets esc_byte_ratio=9 (12.5 MHz escape clock). The generic
+    # iteration picks esc_div=6 (18.7 MHz); the R63311 cannot decode LP
+    # packets at that rate, so every panel command was silently ignored
+    # (R10/R11: dt=0x00 zeros, panel never left sleep). Pin the legacy
+    # divider byte-exact.
+    text = replace_once(text,
+                        '\tbyte_mhz = msm_host->byte_clk_rate / 1000000;\n'
+                        '\n'
+                        '\tfor (esc_mhz = 20; esc_mhz >= 5; esc_mhz--) {\n',
+                        '\tbyte_mhz = msm_host->byte_clk_rate / 1000000;\n'
+                        '\n'
+                        '\t/* Yuga R63311: legacy esc_byte_ratio=9, LP timing\n'
+                        '\t * the panel provably decodes; see mipi_dsi_panel_\n'
+                        '\t * r63311_sharp_ls050t3sx01.c. */\n'
+                        '\tesc_mhz = 9;\n'
+                        '\tesc_div = DIV_ROUND_UP(byte_mhz, esc_mhz);\n'
+                        '\tif (0) {\n'
+                        '\tfor (esc_mhz = 20; esc_mhz >= 5; esc_mhz--) {\n')
     # Sony R63311 bring-up: mirror the working legacy mipi_dsi_cmds_tx().
     # The legacy driver stops the video engine and sets CMD_MODE_EN for
     # every panel command, because long init sequences cannot fit the

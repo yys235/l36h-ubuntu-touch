@@ -71,6 +71,9 @@ class Display(unittest.TestCase):
                   '\n'
                   '\treturn ret;\n'
                   '}\n'
+                  '\tbyte_mhz = msm_host->byte_clk_rate / 1000000;\n'
+                  '\n'
+                  '\tfor (esc_mhz = 20; esc_mhz >= 5; esc_mhz--) {\n'
                   '\tint len, ret;\n'
                   '\tint bllp_len = msm_host->mode->hdisplay *\n'
                   '\t\t\tmipi_dsi_pixel_format_to_bpp(msm_host->format) / 8;\n'
@@ -90,6 +93,8 @@ class Display(unittest.TestCase):
         patched = self.mod.patch_host(sample)
         self.assertIn('EXPORT_SYMBOL_GPL(msm_dsi_host_test_pattern_en);', patched)
         self.assertIn('Invalid response cmd dt=0x%02x b1=0x%02x b2=0x%02x b3=0x%02x dlen=%d', patched)
+        self.assertIn('esc_mhz = 9;', patched)
+        self.assertIn('legacy esc_byte_ratio=9', patched)
         self.assertIn('u32 dsi_ctrl_saved = 0;', patched)
         self.assertIn('bool video_switch = false;', patched)
         self.assertIn('dsi_ctrl_saved | DSI_CTRL_CMD_MODE_EN', patched)
