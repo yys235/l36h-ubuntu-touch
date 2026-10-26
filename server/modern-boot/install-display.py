@@ -49,6 +49,26 @@ def patch_host(text):
     text = replace_once(text,
                         '\tif (!is_video_mode)\n\t\tdsi_write(msm_host, REG_DSI_TEST_PATTERN_GEN_CMD_STREAM0_TRIGGER,\n\t\t\t\tDSI_TEST_PATTERN_GEN_CMD_STREAM0_TRIGGER_SW_TRIGGER);\n}',
                         '\tif (!is_video_mode)\n\t\tdsi_write(msm_host, REG_DSI_TEST_PATTERN_GEN_CMD_STREAM0_TRIGGER,\n\t\t\t\tDSI_TEST_PATTERN_GEN_CMD_STREAM0_TRIGGER_SW_TRIGGER);\n}\n\nEXPORT_SYMBOL_GPL(msm_dsi_host_test_pattern_en);')
+    # Diagnostic: the panel's DCS read path returns "Invalid response cmd",
+    # which hides whether the panel is silent (rx_buf stays zero), replies
+    # with an ACK/error packet, or the host mis-parses a valid read response.
+    # Dump the raw response bytes so the data type decides the next fix.
+    text = replace_once(text,
+                        '\tdefault:\n'
+                        '\t\tpr_warn("%s:Invalid response cmd\\n", __func__);\n'
+                        '\t\tret = 0;\n'
+                        '\t}\n'
+                        '\n'
+                        '\treturn ret;\n'
+                        '}',
+                        '\tdefault:\n'
+                        '\t\tpr_warn("%s:Invalid response cmd dt=0x%02x b1=0x%02x b2=0x%02x b3=0x%02x dlen=%d\\n",\n'
+                        '\t\t\t__func__, buf[0], buf[1], buf[2], buf[3], dlen);\n'
+                        '\t\tret = 0;\n'
+                        '\t}\n'
+                        '\n'
+                        '\treturn ret;\n'
+                        '}')
     # Sony R63311 bring-up: mirror the working legacy mipi_dsi_cmds_tx().
     # The legacy driver stops the video engine and sets CMD_MODE_EN for
     # every panel command, because long init sequences cannot fit the
