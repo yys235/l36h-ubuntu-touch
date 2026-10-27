@@ -255,7 +255,12 @@ static int yuga_probe(struct mipi_dsi_device *dsi)
 		return ret;
 	dsi->lanes = 4;
 	dsi->format = MIPI_DSI_FMT_RGB888;
-	dsi->mode_flags = MIPI_DSI_MODE_VIDEO | MIPI_DSI_MODE_VIDEO_HSE | MIPI_DSI_MODE_LPM;
+	/* Clock lane must fall back to LP-11 between HS bursts: the legacy
+	 * R63311 bring-up never forces the clock lane into HS, and with
+	 * CLKLN_HS_FORCE_REQUEST set the host cannot send any LP command or
+	 * BTA (R15: ack=0 yet to(BTA)=1 forever, panel silent). */
+	dsi->mode_flags = MIPI_DSI_MODE_VIDEO | MIPI_DSI_MODE_VIDEO_HSE
+			| MIPI_DSI_MODE_LPM | MIPI_DSI_CLOCK_NON_CONTINUOUS;
 	mipi_dsi_set_drvdata(dsi, ctx);
 	ret = device_create_file(&dsi->dev, &dev_attr_yuga_test);
 	if (ret)
