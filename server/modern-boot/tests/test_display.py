@@ -187,6 +187,18 @@ class Display(unittest.TestCase):
         self.assertIn('msm_dsi_host_test_pattern_en(dsi->host)', source)
         self.assertIn('mipi_dsi_dcs_read(dsi, MIPI_DCS_GET_POWER_MODE', source)
 
+    def test_ramoops_reserved_for_crash_logs(self):
+        source = (HERE / 'yuga-display.dtsi').read_text()
+        self.assertIn('ramoops@bf000000', source)
+        self.assertIn('compatible = "ramoops";', source)
+        self.assertIn('reg = <0xbf000000 0x100000>;', source)
+        self.assertIn('no-map;', source)
+        # Top of the 2 GiB bank: clear of smem@80000000, wcnss@8f000000 and
+        # the peripheral VM area; must not collide with either.
+        for taken in ('0x80000000', '0x8f000000', '0xbf0', '0xc0000000'):
+            self.assertNotIn('reg = <' + taken, source.replace(
+                'reg = <0xbf000000 0x100000>;', ''))
+
     @unittest.skipUnless(shutil.which('cc'), 'host C compiler required')
     def test_actual_panel_callbacks_use_lp_prepare_and_hs_video_commands(self):
         source = (HERE / 'panel-sharp-ls050t3sx01.c').read_text()

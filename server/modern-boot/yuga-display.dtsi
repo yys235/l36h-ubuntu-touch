@@ -1,4 +1,25 @@
 /* Sony Yuga wiring from board-sony_fusion3-display.c and fusion3_yuga.c. */
+
+/* Crash log survives the wedge: without this every hard reset loses the
+ * kernel log (pstore/ram is compiled in but finds no region). Sits at the
+ * top of the 2 GiB bank, clear of smem/wcnss/peripheral mappings. */
+/ {
+	reserved-memory {
+		#address-cells = <1>;
+		#size-cells = <1>;
+		ranges;
+
+		ramoops@bf000000 {
+			compatible = "ramoops";
+			reg = <0xbf000000 0x100000>;
+			console-size = <0x40000>;
+			pmsg-size = <0x20000>;
+			record-size = <0x10000>;
+			no-map;
+		};
+	};
+};
+
 &mdp { status = "okay"; };
 /* Software scanout needs no 3D firmware or acceleration. */
 &gpu { status = "disabled"; };
