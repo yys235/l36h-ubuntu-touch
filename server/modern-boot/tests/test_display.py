@@ -74,6 +74,15 @@ class Display(unittest.TestCase):
                   '\tbyte_mhz = msm_host->byte_clk_rate / 1000000;\n'
                   '\n'
                   '\tfor (esc_mhz = 20; esc_mhz >= 5; esc_mhz--) {\n'
+                  '\tif (!(flags & MIPI_DSI_CLOCK_NON_CONTINUOUS)) {\n'
+                  '\t\tlane_ctrl = dsi_read(msm_host, REG_DSI_LANE_CTRL);\n'
+                  '\n'
+                  '\t\tif (msm_dsi_phy_set_continuous_clock(phy, true))\n'
+                  '\t\t\tlane_ctrl &= ~DSI_LANE_CTRL_HS_REQ_SEL_PHY;\n'
+                  '\n'
+                  '\t\tdsi_write(msm_host, REG_DSI_LANE_CTRL,\n'
+                  '\t\t\tlane_ctrl | DSI_LANE_CTRL_CLKLN_HS_FORCE_REQUEST);\n'
+                  '\t}\n'
                   '\tint len, ret;\n'
                   '\tint bllp_len = msm_host->mode->hdisplay *\n'
                   '\t\t\tmipi_dsi_pixel_format_to_bpp(msm_host->format) / 8;\n'
@@ -95,6 +104,11 @@ class Display(unittest.TestCase):
         self.assertIn('Invalid response cmd dt=0x%02x b1=0x%02x b2=0x%02x b3=0x%02x dlen=%d', patched)
         self.assertIn('for (esc_mhz = 13; esc_mhz >= 5; esc_mhz--) {', patched)
         self.assertIn('esc_byte_ratio=9', patched)
+        # The R18 patch must remove CLKLN_HS_FORCE_REQUEST so the clock lane
+        # falls back to LP-11 (R15/R17: 0xa8=0x10000000 blocked every LP
+        # transfer; the legacy driver never writes this bit).
+        self.assertNotIn('DSI_LANE_CTRL_CLKLN_HS_FORCE_REQUEST', patched)
+        self.assertIn('leave the clock lane free to fall back to', patched)
         self.assertIn('u32 dsi_ctrl_saved = 0;', patched)
         self.assertIn('bool video_switch = false;', patched)
         self.assertIn('dsi_ctrl_saved | DSI_CTRL_CMD_MODE_EN', patched)

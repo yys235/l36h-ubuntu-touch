@@ -104,6 +104,32 @@ def patch_host(text):
                         '\t * byte clock. The generic loop picks esc_div=6 (18.7 MHz),\n'
                         '\t * too fast for the panel to decode LP packets. */\n'
                         '\tfor (esc_mhz = 13; esc_mhz >= 5; esc_mhz--) {\n')
+    # The R63311 needs the clock lane back in LP-11 between HS bursts: with
+    # CLKLN_HS_FORCE_REQUEST latched (R15/R17 measured 0xa8=0x10000000) the
+    # host cannot transmit any LP command or BTA, so the panel sees nothing
+    # at all. msm_host->mode_flags does not carry the panel's
+    # MIPI_DSI_CLOCK_NON_CONTINUOUS, so clear the bit unconditionally here —
+    # the legacy 3.4 bring-up never writes it either.
+    text = replace_once(text,
+                        '\tif (!(flags & MIPI_DSI_CLOCK_NON_CONTINUOUS)) {\n'
+                        '\t\tlane_ctrl = dsi_read(msm_host, REG_DSI_LANE_CTRL);\n'
+                        '\n'
+                        '\t\tif (msm_dsi_phy_set_continuous_clock(phy, true))\n'
+                        '\t\t\tlane_ctrl &= ~DSI_LANE_CTRL_HS_REQ_SEL_PHY;\n'
+                        '\n'
+                        '\t\tdsi_write(msm_host, REG_DSI_LANE_CTRL,\n'
+                        '\t\t\tlane_ctrl | DSI_LANE_CTRL_CLKLN_HS_FORCE_REQUEST);\n'
+                        '\t}\n',
+                        '\tif (!(flags & MIPI_DSI_CLOCK_NON_CONTINUOUS)) {\n'
+                        '\t\tlane_ctrl = dsi_read(msm_host, REG_DSI_LANE_CTRL);\n'
+                        '\n'
+                        '\t\tif (msm_dsi_phy_set_continuous_clock(phy, true))\n'
+                        '\t\t\tlane_ctrl &= ~DSI_LANE_CTRL_HS_REQ_SEL_PHY;\n'
+                        '\n'
+                        '\t\t/* Yuga: leave the clock lane free to fall back to\n'
+                        '\t\t * LP-11; forcing HS blocks every LP transfer. */\n'
+                        '\t\tdsi_write(msm_host, REG_DSI_LANE_CTRL, lane_ctrl);\n'
+                        '\t}\n')
     # Sony R63311 bring-up: mirror the working legacy mipi_dsi_cmds_tx().
     # The legacy driver stops the video engine and sets CMD_MODE_EN for
     # every panel command, because long init sequences cannot fit the
